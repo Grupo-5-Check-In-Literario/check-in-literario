@@ -20,8 +20,8 @@ Layout do projeto:
 https://www.figma.com/file/1OiB6BwICLu9lfjWCyiKuY/Main?type=design&node-id=0-1&mode=design&t=tbIzYXrdltT4SDfY-0
 
 ## Colaboradores
-Bianca Viana
-Breno Mascarenhas
-Jeovan Delavechea
-Patricia Taha
-Taise Souza
+- Bianca Viana
+- Breno Mascarenhas
+- Jeovan Delavechea
+- Patricia Taha
+- Taise Souza

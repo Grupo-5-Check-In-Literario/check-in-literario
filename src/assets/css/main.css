@@ -110,3 +110,57 @@ h3 {
   width: calc(46px + 0.03125vw);
   height: auto;
 }
+
+@media (max-width: 1200px) {
+  .logo {
+    max-width: 20%;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-items {
+    display: none;
+  }
+
+  .auth-buttons {
+    margin-right: 2%;
+  }
+
+  .carrinho {
+    margin-right: 2%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 30%;
+  }
+
+  .search-bar {
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 5%;
+  }
+
+  .auth-buttons {
+    margin-right: 2%;
+  }
+
+  .carrinho {
+    margin-right: 2%;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    max-width: 40%;
+  }
+
+  .search-bar input {
+    padding: 5px;
+  }
+
+  .auth-buttons button {
+    padding: 5px 10px;
+  }
+}

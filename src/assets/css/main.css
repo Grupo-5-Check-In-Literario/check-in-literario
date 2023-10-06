@@ -66,6 +66,8 @@ h3 {
   z-index: 101;
   height: auto;
   max-width: 15%;
+  width: calc(192px + 0.13333vw);  /* 192px at 1440px screen width */
+  height: calc(72px + 0.05vw);  
 }
 
 .nav-items {
@@ -101,4 +103,10 @@ h3 {
 
 .carrinho {
   margin-right: 5%;
+  max-width: 10%;
+}
+
+.carrinho svg {
+  width: calc(46px + 0.03125vw);
+  height: auto;
 }

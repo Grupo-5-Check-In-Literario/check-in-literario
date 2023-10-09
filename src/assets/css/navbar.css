@@ -1,0 +1,151 @@
+h1 {
+	font-size: var(--h1-font-size);
+}
+
+h2 {
+	font-size: var(--h2-font-size);
+}
+
+h3 {
+	font-size: var(--h3-font-size);
+}
+
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1440px;
+  height: 100px;
+  margin: 0 auto;
+  padding: 0 90px;
+  background-color: var(--secondary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  z-index: 101;
+}
+
+.logo {
+  z-index: 101;
+  height: auto;
+  max-width: 15%;
+  width: calc(192px + 0.13333vw);  /* 192px at 1440px screen width */
+  height: calc(72px + 0.05vw);
+  transition: 0.3s all ease-in-out; 
+}
+.logo:hover{
+  transform: scale(1.1);
+}
+
+.logo-img{
+  width: 100%;
+}
+
+.nav-items {
+  display: flex;
+}
+
+.nav-items a, .auth-buttons .login{
+  padding: 14px 20px;
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.nav-items a:hover, .auth-buttons .login:hover{
+  color: var(--tertiary-color);
+  cursor: pointer;
+}
+
+.search-bar {
+  text-align: center;
+}
+
+.search-bar input {
+  padding: 6px;
+  border-radius: 5px;
+  font-size: var(--default-font-size);
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login:hover{
+    cursor: pointer;
+}
+.search-bar button, .auth-buttons button{
+    transition: 0.15s ease-in-out;
+}
+
+.search-bar button:hover, .auth-buttons button:hover {
+    border-color: var(--tertiary-color);
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+}
+
+.carrinho {
+    transition: 0.3s ease-in-out
+}
+
+.carrinho svg {
+  width: calc(46px + 0.03125vw);
+  height: auto;
+}
+main{
+  padding-top: 100px;
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    max-width: 20%;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-items {
+    display: none;
+  }
+
+  .auth-buttons {
+    margin-right: 2%;
+  }
+
+  .carrinho {
+    margin-right: 2%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 30%;
+  }
+
+  .search-bar {
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 5%;
+  }
+
+  .auth-buttons {
+    margin-right: 2%;
+  }
+
+  .carrinho {
+    margin-right: 2%;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    max-width: 40%;
+  }
+
+  .search-bar input {
+    padding: 5px;
+  }
+
+  .auth-buttons button {
+    padding: 5px 10px;
+  }
+}

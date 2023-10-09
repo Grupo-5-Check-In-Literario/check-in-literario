@@ -1,0 +1,51 @@
+:root {
+	/* Cores */
+	--primary-color: #fff;
+	--secondary-color: #305A72;
+	--tertiary-color: #7ED957;
+	--black-color: #000;
+	--bg-green: #94bc9d;
+	--bg-card-green: #e8f4ed;
+
+	/* Fontes */
+	--font-inter: "Inter", sans-serif;
+	--font-pinyon: "Pinyon Script", cursive;
+
+	/* Tamanhos de Fonte */
+	--button-font-size: 14px;
+	--default-font-size: 16px;
+	--h1-font-size: 36px;
+	--h2-font-size: 24px;
+	--h3-font-size: 20px;
+}
+*{
+    margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-inter);
+	font-size: var(--default-font-size);
+	color: var(--black-color);
+}
+body {
+	background-color: var(--primary-color);
+    min-height: 100vh;
+}
+button{
+    text-align: center;
+    border-radius: 5px;
+    font-size: var(--button-font-size);
+    padding: 8px;
+    height: 34px;
+    cursor: pointer;
+}
+a{ 
+  text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    width: 100%;
+}

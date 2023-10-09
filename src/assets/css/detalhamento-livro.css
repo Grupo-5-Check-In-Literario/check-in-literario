@@ -1,0 +1,121 @@
+.book-details{
+    padding: 90px;
+    display: flex;
+    gap: 130px;
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.book-box{
+    max-width: 280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.book-box .book-image{
+    width: 280px;
+    height: 360px;
+}
+
+.book-box .book-buttons{
+    display: flex;
+    gap: 15px;
+}
+
+.book-request, .search-signaling, .change-signaling{
+    border: none;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    transition: 0.3s all ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.book-request:hover, .search-signaling:hover, .change-signaling:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.book-data{
+    position: relative;
+}
+.book-info{
+    display: flex;
+    justify-content: space-between;
+    gap: 75px;
+    margin-bottom: 60px;
+}
+
+.book-info .sinopse{
+    width: 325px;
+}
+
+.book-info .sinopse h3{
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.book-info .data-box{
+    border-bottom: 0.5px solid var(--tertiary-color);
+}
+.book-info .data{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 0;
+    border-top: 0.5px solid var(--tertiary-color);
+    width: 398px;
+}
+
+.coments-title-box{
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 28px;
+    padding: 18px 0;
+    border-bottom: 3px solid var(--tertiary-color);
+    border-top: 3px solid var(--tertiary-color);
+}
+
+.about-coments{
+    max-width: 798px;
+    margin-top: 30px;
+}
+.about-coment{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.about-coment .user{
+    display: flex;
+    max-width: 167px;
+    gap: 10px;
+}
+
+.about-coment .user .user-photo{
+    width: 56px;
+    height: 56px;
+}
+
+
+.about-coment .coment{
+    max-width: 490px;
+    max-height: 90px;
+}
+
+.about-coments .more-info{
+    position: absolute;
+    left: 798px;
+    border: none;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    transition: 0.3s all ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.about-coments .more-info:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}

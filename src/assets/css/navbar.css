@@ -79,8 +79,8 @@ h3 {
 	height: 40px;
 	margin-left: 5px;
 	padding: 0 15px;
-	background-color: var(--tertiary-color);
-	color: white;
+	background-color: var(--bg-card-green);
+	color: var(--secondary-color);
 	border: none;
 	flex-basis: calc(15% - 10px);
 	font-size: var(--button-font-size);

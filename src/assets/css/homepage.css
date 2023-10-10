@@ -1,8 +1,9 @@
 .intro-section {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
-	padding: 5% 5%;
+	justify-content: center;
+	padding: 2% 5%;
+	margin: 0 auto;
 	background: var(--bg-card-green, #e8f4ed);
 	min-height: 400px;
 }
@@ -20,7 +21,22 @@
 	color: rgba(52, 115, 58, 0.72);
 }
 
-.intro-image img {
+.intro-text,
+.intro-image {
+	margin: 0;
+	padding: 0;
+}
+
+.intro-text {
+	max-width: 45%;
+}
+
+.intro-image {
 	border-radius: 55px;
+	overflow: hidden;
+}
+
+.intro-image img {
+	display: block;
 	backdrop-filter: blur(2px);
 }

@@ -17,6 +17,13 @@
 	--h1-font-size: 36px;
 	--h2-font-size: 24px;
 	--h3-font-size: 20px;
+
+	/* Margem */
+	--base-margin: 73px;
+	--base-viewport-width: 1440px;
+	--scaled-margin: calc(
+		1vw * var(--base-margin) / var(--base-viewport-width)
+	);
 }
 * {
 	margin: 0;
@@ -31,6 +38,8 @@ body {
 	min-height: 100vh;
 	display: grid;
 	grid-template-rows: 1fr auto;
+	padding-left: var(--scaled-margin);
+	padding-right: var(--scaled-margin);
 }
 button {
 	text-align: center;

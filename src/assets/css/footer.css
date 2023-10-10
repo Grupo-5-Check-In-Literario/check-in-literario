@@ -1,0 +1,20 @@
+.footer-section {
+	flex: 1; /* Makes sure both sections take equal width */
+}
+
+.footer-section h4 {
+	margin-bottom: 10px;
+	font-size: var(--h3-font-size);
+	color: white; /* Adjust font size as per your design */
+}
+
+.footer-section a,
+.footer-section p {
+	margin-bottom: 10px;
+	text-decoration: none;
+	color: #ffffff; /* Font color */
+}
+
+.footer-section a:hover {
+	text-decoration: underline; /* Underline on hover for links */
+}

@@ -1,0 +1,26 @@
+.intro-section {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5% 5%;
+	background: var(--bg-card-green, #e8f4ed);
+	min-height: 400px;
+}
+
+.intro-text p,
+.highlight {
+	font-size: var(--h1-font-size);
+	font-weight: 600;
+	line-height: 1.5;
+	max-width: 60%;
+	color: var(--secondary-color);
+}
+
+.highlight {
+	color: rgba(52, 115, 58, 0.72);
+}
+
+.intro-image img {
+	border-radius: 55px;
+	backdrop-filter: blur(2px);
+}

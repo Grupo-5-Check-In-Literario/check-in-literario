@@ -70,13 +70,13 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--secondary-color);
-	padding: 20px 5%; /* Adjust padding based on your design */
-	color: #ffffff; /* Font color */
-	margin-top: auto; /* pushes the footer to the bottom */
+	padding: 20px 5%;
+	color: white;
+	margin-top: auto;
 }
 
 footer div {
 	display: flex;
 	flex-direction: column;
-	align-items: center; /* centers the text horizontally */
+	align-items: center;
 }

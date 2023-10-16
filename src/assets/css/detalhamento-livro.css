@@ -8,7 +8,6 @@
 }
 
 .book-box{
-    max-width: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,11 +16,18 @@
 
 .book-box .book-image{
     width: 280px;
-    height: 360px;
+    height: auto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.book-box .book-rating{
+    width: 110px;
+    height: 30px;
 }
 
 .book-box .book-buttons{
     display: flex;
+    justify-content: space-between;
     gap: 15px;
 }
 
@@ -38,13 +44,6 @@
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-.book-box .book-status{
-    color: var(--tertiary-color);
-}
-
-.book-data{
-    position: relative;
-}
 .book-info{
     display: flex;
     justify-content: space-between;
@@ -71,6 +70,7 @@
     padding: 7px 0;
     border-top: 0.5px solid var(--tertiary-color);
     width: 398px;
+    transition: 0.15s all ease-in-out;
 }
 
 .coments-title-box{
@@ -82,44 +82,147 @@
     border-top: 3px solid var(--tertiary-color);
 }
 
+.coments-and-more{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 15px 0 0;
+    
+}
+
 .about-coments{
-    max-width: 798px;
-    margin-top: 30px;
+    height: 230px;
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    overflow-y: auto;
+
 }
 .about-coment{
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    transition: 0.3s all ease-in-out;
+}
+
+.about-coment.hidden{
+    display: none;
+}
+
+.about-coment:hover, .book-info .data:hover{
+    transform: scale(1.02);
 }
 
 .about-coment .user{
     display: flex;
-    max-width: 167px;
+    align-items: center;
+    max-width: 160px;
     gap: 10px;
+    background-color: var(--bg-green);
+    padding: 4px 16px 4px 4px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border: 1px solid var(--tertiary-color);
 }
 
 .about-coment .user .user-photo{
     width: 56px;
     height: 56px;
+    border-radius: 50%;
+    border: 1px solid var(--tertiary-color);
 }
 
+.about-coment .user .user-name p, .about-coment .user .user-name p strong{
+    color: var(--primary-color);
+}
 
 .about-coment .coment{
     max-width: 490px;
-    max-height: 90px;
+    height: 90px;
+    padding: 10px 16px;
+    border: 1px dashed var(--tertiary-color);
 }
 
-.about-coments .more-info{
-    position: absolute;
-    left: 798px;
+.about-coment .coment .day{
+    text-align: end;
+}
+
+.coments-and-more .more-info{
     border: none;
+    ;
     background-color: var(--tertiary-color);
     color: var(--primary-color);
     transition: 0.3s all ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.about-coments .more-info:hover{
+.coments-and-more .more-info:hover{
     transform: scale(1.1);
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+@media(max-width: 1370px){
+    .book-details{
+        gap: 45px;
+        padding: 60px 30px;
+        justify-content: center;
+    }
+    .book-details .book-info .sinopse, .book-details .book-info .data{
+        width: 280px;
+    }
+    .about-coments{
+        width: 600px;
+    }
+}
+
+@media(max-width: 1016px){
+    .book-info{
+        gap: 10px;
+    }
+    .book-details .book-box .book-image{
+        min-width: 220px;
+    }
+    .coments-and-more{
+        gap: 15px;
+        
+    }
+    .about-coment .coment{
+        height: 110px;
+    }
+}
+
+@media(max-width: 768px){
+    .book-details{
+        flex-direction: column;
+        padding: 30px;
+        gap: 45px;
+    }
+    .book-details .book-info{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .book-data{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-coments{
+        width: 300px;
+        align-items: center;
+        overflow-y: auto;
+    }
+    .about-coment {
+        flex-direction: column;
+        align-items: center;    
+    }
+    .about-coment .user{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 30px;
+    }
+    .about-coment .coment{
+    height: 140px;
+    }
 }

@@ -6,22 +6,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Detalhes do livro | Checkin Literário</title>
 						<!-- css desativado -->
-	<!-- <link rel="stylesheet" href="./src/assets/css/navbar.css" />
+<!-- 	<link rel="stylesheet" href="./src/assets/css/navbar.css" />
 	<link rel="stylesheet" href="src/assets/css/footer.css">
 	<link rel="stylesheet" href="./src/assets/css/global.css" />
-	<link rel="stylesheet" href="./src/assets/css/detalhamento-livro.css"> -->
+	<link rel="stylesheet" href="./src/assets/css/detalhamento-livro.css">
+	<link rel="stylesheet" href="src/assets/css/scroll-bar.css"> -->
 </head>
 
 <body>
 	<header>
 		<nav class="navbar">
-			<a href="#home" class="logo"><img class="logo-img" src="src/assets/images/logo.png" alt="Logo" /></a>
+			<a href="./index.html" class="logo"><img class="logo-img" src="src/assets/images/logo.png" alt="Logo" /></a>
 			<ul class="nav-items">
 				<li>
-					<a href="#home">quem somos</a>
+					<a href="./quem-somos.html">quem somos</a>
 				</li>
 				<li>
-					<a href="#about">catálogo</a>
+					<a href="./catalogo.html">catálogo</a>
 				</li>
 			</ul>
 			<div class="search-bar">
@@ -50,12 +51,14 @@
 	<main class="book-details">
 		<div class="book-box">
 			<h2 class="book-name">Nome do Livro</h2>
-			<img class="book-image" src="./src/assets/images/livro-exemplo.webp" alt="capa do livro xpto">
+			<img class="book-image" src="./src/assets/images/livro1.jpg" alt="capa do livro">
 			<div class="book-rating">
 				<img src="./src/assets/images/stars.jpg" alt="Estrelas de avaliação">
 			</div>
 			<div class="book-buttons">
-				<button class="book-request">SOLICITAR</button>
+				<a href="./tela-de-pagamento.html">
+					<button class="book-request">SOLICITAR</button>
+				</a>
 				<button class="search-signaling">PROCURO</button>
 			</div>
 			<button class="change-signaling">TENHO PARA TROCAR</button>
@@ -97,8 +100,24 @@
 				</div>
 			</div>
 			<h2 class="coments-title-box">Comentários</h2>
-			<div class="about-coments">
-				<div class="about-coment">
+			<div class="coments-and-more">
+				<div class="about-coments">
+					<div class="about-coment">
+					<div class="user">
+						<img class="user-photo" src="src/assets/images/perfil-usuario.jpg"
+							alt="imagem de perfil do usuário">
+						<div class="user-name">
+							<p><strong>Usuário</strong></p>
+							<p>Escreve:</p>
+						</div>
+					</div>
+					<div class="coment">
+						<p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+							been the industry's standard dummy text ever since the 1500s”</p>
+						<p class="day">xx/xx/xxxx</p>
+					</div>
+					</div>
+					<div class="about-coment">
 					<div class="user">
 						<img class="user-photo" src="src/assets/images/perfil-usuario2.jpg"
 							alt="imagem de perfil do usuário">
@@ -112,8 +131,23 @@
 							been the industry's standard dummy text ever since the 1500s”</p>
 						<p class="day">xx/xx/xxxx</p>
 					</div>
-				</div>
-				<div class="about-coment">
+					</div>
+					<div class="about-coment hidden">
+					<div class="user">
+						<img class="user-photo" src="src/assets/images/perfil-usuario3.jpg"
+							alt="imagem de perfil do usuário">
+						<div class="user-name">
+							<p><strong>Usuário</strong></p>
+							<p>Escreve:</p>
+						</div>
+					</div>
+					<div class="coment">
+						<p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+							been the industry's standard dummy text ever since the 1500s”</p>
+						<p class="day">xx/xx/xxxx</p>
+					</div>
+					</div>
+					<div class="about-coment hidden">
 					<div class="user">
 						<img class="user-photo" src="src/assets/images/perfil-usuario4.jpg"
 							alt="imagem de perfil do usuário">
@@ -126,6 +160,22 @@
 						<p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
 							been the industry's standard dummy text ever since the 1500s”</p>
 						<p class="day">xx/xx/xxxx</p>
+					</div>
+					</div>
+					<div class="about-coment hidden">
+					<div class="user">
+						<img class="user-photo" src="src/assets/images/perfil-usuario5.jpg"
+							alt="imagem de perfil do usuário">
+						<div class="user-name">
+							<p><strong>Usuário</strong></p>
+							<p>Escreve:</p>
+						</div>
+					</div>
+					<div class="coment">
+						<p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+							been the industry's standard dummy text ever since the 1500s”</p>
+						<p class="day">xx/xx/xxxx</p>
+					</div>
 					</div>
 				</div>
 				<button class="more-info">MAIS</button>

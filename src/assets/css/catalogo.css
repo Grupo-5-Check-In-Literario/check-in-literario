@@ -1,0 +1,8 @@
+main {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	background: var(--fundo-dark-blue);
+	padding: 40px 5%;
+	color: white;
+}

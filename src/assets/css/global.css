@@ -65,6 +65,10 @@ img {
 
 header {
 	padding-top: 100px;
+	width: 1440px;
+	height: 84px;
+	flex-shrink: 0;
+	z-index: 2;
 }
 
 footer {

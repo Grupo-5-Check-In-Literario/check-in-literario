@@ -251,6 +251,29 @@ main {
 	background: var(--fundo-dark-blue);
 	padding: 40px 5%;
 	color: white;
+	height: 2000px;
+}
+.catalog ul{
+	text-align: center;
+	position: relative;
+	top: 0px;
+	right: 1%;
+}
+.catalog ul li{
+	display: inline-block;
+	text-align: justify;
+	width: 172px;
+	height: 32px;
+	flex-direction: column;
+	justify-content: center;
+	flex-shrink: 0;
+	color: var(--primary-color);
+	text-align: center;
+	font-family: var(--font-inter);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
 }
 div#catalog-conteiner {
 	position: fixed;
@@ -259,6 +282,8 @@ div#catalog-conteiner {
 	border-radius: 47px;
 	width: 318px;
 	height: 92px;
+	left: 44%;
+	top: 16%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -270,25 +295,30 @@ div#catalog-text {
 	font-size: var(--h1-font-size);
 	text-align: center;
 }
-div#catalog-list{
-	text-align: center;
+.content h2{
 	position: relative;
-}
-div#catalog-list ul li{
-	flex-wrap: wrap;
-	gap: 30px;
-	margin-top: 40px;
-	width: 148px;
-	height: 29px;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	flex-shrink: 0;
-	color: var(--primary-color);
+	right: 6px;
+	top: 130px;
+	color: var(--tertiary-color);
 	text-align: center;
 	font-family: var(--font-inter);
-	font-size: 16px;
+	font-size: 40px;
 	font-style: normal;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: normal;
+}
+.card-wrapper{
+	display: grid;
+  	grid-template-columns: repeat(4, 1fr);
+  	justify-content: center;
+  	align-items: center;
+  	gap: 200px;
+}
+.card-item{
+	position: relative;
+	top: 200px;
+	vertical-align: middle;
+	width: 205px;
+	height: 285px;
+	flex-shrink: 0;
 }

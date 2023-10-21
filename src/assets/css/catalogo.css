@@ -243,7 +243,6 @@ button {
 		padding: 5px 10px;
 	}
 }
-
 main {
 	display: flex;
 	align-items: center;
@@ -268,7 +267,6 @@ main {
 	justify-content: center;
 	flex-shrink: 0;
 	color: var(--primary-color);
-	text-align: center;
 	font-family: var(--font-inter);
 	font-size: 16px;
 	font-style: normal;
@@ -284,14 +282,14 @@ div#catalog-conteiner {
 	height: 92px;
 	left: 44%;
 	top: 16%;
-	display: flex;
 	align-items: center;
 	justify-content: center;
-	z-index: 3;
+	z-index: 102;
 }
 div#catalog-text {
 	position: relative;
-	z-index: 1;
+	top: 30%;
+	z-index: 0;
 	font-size: var(--h1-font-size);
 	text-align: center;
 }
@@ -317,8 +315,105 @@ div#catalog-text {
 .card-item{
 	position: relative;
 	top: 200px;
-	vertical-align: middle;
+	width: 245px;
+	height: 457px;
+	flex-shrink: 0;
+	border-radius: 10px;
+	background: var(--fundo-card-dark);
+	box-shadow: 0px 4px 15px 10px rgba(0, 0, 0, 0.25);
+}
+.card-item img{
+	position: absolute;
+  	top: 20px; 
+  	left: 20px; 
+  	bottom: 152px; 
+  	max-width: 100%; 
+  	max-height: 100%;
 	width: 205px;
 	height: 285px;
 	flex-shrink: 0;
+}
+.card-content h5{
+	position: absolute;
+	text-align: center;
+	left: 10%;
+	top: 69%;
+	bottom: 123px;
+	color: var(--primary-color);
+	font-family: var(--font-inter);
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+.card-content p{
+	position: absolute;
+	justify-content: center;
+	bottom: 12%;
+	left: 34%;
+	color: var(--tertiary-color);
+	text-align: center;
+	font-family: var(--font-inter);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.card-content img{
+	position: absolute;
+	justify-self: center;
+	top: 344px;
+	bottom: 92px;
+	left: 19%;
+	top: 62%;
+	width: 150px;
+	height: 150px;
+	flex-shrink: 0;
+	margin: 0;
+	padding: 0;
+}
+.book-request{
+	position: absolute;
+	bottom: 3%;
+	left: 8%;
+	width: 83px;
+	height: 35px;
+	flex-shrink: 0;
+	border-radius: 5px;
+	background: var(--button-blue);
+	color: var(--primary-color);
+	text-align: center;
+	font-family: var(--font-inter);
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.book-details{
+	position: absolute;
+	bottom: 3%;
+	left: 56%;
+	width: 83px;
+	height: 35px;
+	flex-shrink: 0;
+	border-radius: 5px;
+	border: 3px solid var(--button-blue);
+	background: var(--primary-color);
+	color: var(--button-blue);
+	text-align: center;
+	font-family: var(--font-inter);
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+@media (max-height: 600px){
+	#catalog-conteiner{
+		display: none;
+	}
+	#catalog-text{
+		display: none;
+	}
 }

@@ -7,6 +7,8 @@
 	--bg-green: #94bc9d;
 	--bg-card-green: #e8f4ed;
 	--fundo-dark-blue: #203643;
+	--fundo-card-dark: #21323C;
+	--button-dark-blue:#345C73;
 
 	/* Fontes */
 	--font-inter: "Inter", sans-serif;
@@ -68,7 +70,7 @@ header {
 	width: 1440px;
 	height: 84px;
 	flex-shrink: 0;
-	z-index: 2;
+	z-index: 1;
 }
 
 footer {

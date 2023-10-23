@@ -32,7 +32,7 @@ h3 {
 }
 
 .logo {
-	z-index: 101;
+	z-index: 102;
 	height: auto;
 	max-width: 15%;
 	width: calc(192px + 0.13333vw); /* 192px at 1440px screen width */

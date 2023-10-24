@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detalhes da compra | Checkin-Literário</title>
-                     <!-- css desativado -->
-    <!-- <link rel="stylesheet" href="./src/assets/css/navbar.css" />
+
+    <link rel="stylesheet" href="./src/assets/css/navbar.css" />
     <link rel="stylesheet" href="/src/assets/css/footer.css">
-    <link rel="stylesheet" href="./src/assets/css/global.css" /> -->
+    <link rel="stylesheet" href="./src/assets/css/global.css" />
+    <link rel="stylesheet" href="src/assets/css/pagamento.css">
 </head>
 
 <body>
@@ -49,125 +50,170 @@
 
     <main>
         <!-- descrição do livro -->
-        <section>
-            <img src="src/assets/images/livro-exemplo.webp" alt="imagem ilustrativa de um livro" />
-            <ul>
-                <li><strong>Nome do livro</strong></li>
-                <li>Editora: xxxxxxxx</li>
-                <li>Autor: xxxxxxx</li>
-                <li>Ano: 0000</li>
-                <li><img src="src/assets/images/stars.jpg" alt="estrelas do livro"></li>
+        <div class="container">
+            <section class="book-details">
+                <div class="book-img">
+                    <img src="src/assets/images/livro-exemplo-(2).jpg" alt="imagem ilustrativa de um livro" />
+                </div>
+
+                <ul class="book-info">
+                    <li class="book-info-items" id="book-name">Nome do livro</li>
+                    <li class="book-info-items">Editora: xxxxxxxx</li>
+                    <li class="book-info-items">Autor: xxxxxxx</li>
+                    <li class="book-info-items">Ano: 0000</li>
+                    <li class="book-info-items">
+                        <img src="src/assets/images/stars.jpg" alt="estrelas do livro"
+                            class="book-fake-star">
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                    <form action="" class="adress-info">
+                        <h3>O endereço para entrega está correto?</h3>
+                        <!-- campo de endereço -->
+                        <fieldset>
+                            <div class="adress-items grid-1">
+                                <label for="rua">Rua</label>
+                                <input type="text" placeholder="xxxxxxxxx xxxxxxxxxx" id="rua">
+                            </div>
+
+                            <div class="adress-items grid-2">
+                                <label for="cep">Cep</label>
+                                <input type="text" placeholder="xxxxx-xxx" id="cep">
+                            </div>
+
+                            <div class="adress-items grid-3">
+
+                                <label for="bairro">Bairro</label>
+                                <input type="text" placeholder="xxxxxxxxxxxxxxx" id="bairro">
+                            </div>
+
+                            <div class="adress-items grid-4">
+                                <label for="mun">Município</label>
+                                <input type="text" placeholder="xxxxxxxxxxxxxx" id="mun">
+                            </div>
+
+                            <div class="adress-items grid-5">
+                                <label for="num">Nº</label>
+                                <input type="text" placeholder="xx" id="num">
+                            </div>
+
+                            <div class="adress-items grid-6">
+                                <label for="comp">Complemento</label>
+                                <input type="text" placeholder="xxxxxxxxxxxxxxxxxxxxx" id="comp">
+                            </div>
+                        </fieldset>
+
+                        <div class="user-comments">
+                            <label for="info">Comentário adicional sobre a entrega</label>
+                            <textarea name="info" id="info" cols="50" rows="3"></textarea>
+                        </div>
+                        <button type="button">
+                            Alterar
+                        </button>
+                    </form>
+            </section>
+        </div>
+
+        <section class="request-section">
+            <h3>Escolha um usuário que tem esse livro</h3>
+
+            <ul class="sellers-list">
+                <li class="seller-card">
+                    <div class="seller">
+                        <img src="src/assets/images/user_8742495.png" alt="user thumbail">
+                        <p>User</p>
+                    </div>
+
+                    <div class="seller-info">
+                        <div>
+                            <p>Localização: xxxxxxx-xx</p>
+                            <p>Ultimo acesso: xx/xx/xxxx</p>  
+                        </div>
+                        <div>
+                           <p>Estado de conservação do livro:  
+                        </p> 
+                        <q class="quote">
+                                Livro em bom estado de conservação.
+                            </q>
+                        </div>
+                        
+                    </div>
+
+                    <div class="request-field">
+                        <p>Prazo máximo para sua solicitação ser aceita é de 4 dias úteis, após esse prazo caso
+                            não obtenha resposta do solicitado, o pedido é automáticamente cancelado. Você
+                            também pode cancelar sua solicitação a qualquer momento.</p>
+                        <button>
+                            Solicitar
+                        </button>
+                    </div>
+                </li>
+                <li class="seller-card">
+                    <div class="seller">
+                        <img src="src/assets/images/user_8742495.png" alt="user thumbail">
+                        <p>User</p>
+                    </div>
+
+                    <div class="seller-info">
+                        <div>
+                            <p>Localização: xxxxxxx-xx</p>
+                            <p>Ultimo acesso: xx/xx/xxxx</p>  
+                        </div>
+                        <div>
+                           <p>Estado de conservação do livro:  
+                        </p> 
+                        <q class="quote">
+                                Livro em bom estado de conservação.
+                            </q>
+                        </div>
+                        
+                    </div>
+
+                    <div class="request-field">
+                        <p>Prazo máximo para sua solicitação ser aceita é de 4 dias úteis, após esse prazo caso
+                            não obtenha resposta do solicitado, o pedido é automáticamente cancelado. Você
+                            também pode cancelar sua solicitação a qualquer momento.</p>
+                        <button>
+                            Solicitar
+                        </button>
+                    </div>
+                </li>
+                <li class="seller-card">
+                    <div class="seller">
+                        <img src="src/assets/images/user_8742495.png" alt="user thumbail">
+                        <p>User</p>
+                    </div>
+
+                    <div class="seller-info">
+                        <div>
+                            <p>Localização: xxxxxxx-xx</p>
+                            <p>Ultimo acesso: xx/xx/xxxx</p>  
+                        </div>
+                        <div>
+                           <p>Estado de conservação do livro:  
+                        </p> 
+                        <q class="quote">
+                                Livro em bom estado de conservação.
+                            </q>
+                        </div>
+                        
+                    </div>
+
+                    <div class="request-field">
+                        <p>Prazo máximo para sua solicitação ser aceita é de 4 dias úteis, após esse prazo caso
+                            não obtenha resposta do solicitado, o pedido é automáticamente cancelado. Você
+                            também pode cancelar sua solicitação a qualquer momento.</p>
+                        <button>
+                            Solicitar
+                        </button>
+                    </div>
+                </li>
             </ul>
-
-        </section>
-        <section>
-            <div>
-                <form action="">
-
-                    <p>O endereço para entrega está correto?</p>
-
-                    <!-- campo de endereço -->
-                    <fieldset>
-                        <label for="rua">Rua</label>
-                        <input type="text" placeholder="xxxxxxxxx xxxxxxxxxx" id="rua">
-                        <br>
-                        <label for="cep">Cep</label>
-                        <input type="text" placeholder="xxxxx-xxx" id="cep">
-                        <br>
-                        <label for="bairro">Bairro</label>
-                        <input type="text" placeholder="xxxxxxxxxxxxxxx" id="bairro">
-                        <br>
-                        <label for="mun">Município</label>
-                        <input type="text" placeholder="xxxxxxxxxxxxxx" id="mun">
-                        <br>
-                        <label for="num">Nº</label>
-                        <input type="text" placeholder="xx" id="num">
-                        <br>
-                        <label for="comp">Complemento</label>
-                        <input type="text" placeholder="xxxxxxxxxxxxxxxxxxxxx" id="comp">
-                    </fieldset>
-
-                    <p>Comentário adicional sobre a entrega</p>
-                    <textarea name="info" id="" cols="50" rows="5"></textarea>
-
-                    <button>
-                        Alterar
-                    </button>
-                </form>
-
-                <section>
-                    <h3>Escolha um usuário que tem esse livro</h3>
-
-                    <ul>
-                        <li>
-                            <img src="src/assets/images/user_8742495.png" alt="">
-                            <p>User</p>
-
-                            <div>
-                                <p>Localização: xxxxxxx-xx</p>
-                                <p>Ultimo acesso: xx/xx/xxxx</p>
-                                <p>Estado de conservação do livro:
-                                    <q>
-                                        Livro em bom estado de conservação.
-                                    </q>
-                                </p>
-                            </div>
-                            <div>
-                                <p>Prazo máximo para sua solicitação ser aceita é de 4 dias úteis, após esse prazo caso
-                                    não obtenha resposta do solicitado, o pedido é automáticamente cancelado. Você
-                                    também pode cancelar sua solicitação a qualquer momento.</p>
-                                <button>
-                                    Solicitar
-                                </button>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="src/assets/images/user_8742495.png" alt="">
-                            <p>User</p>
-                            <div>
-                                <p>Localização: xxxxxxx-xx</p>
-                                <p>Ultimo acesso: xx/xx/xxxx</p>
-                                <p>Estado de conservação do livro:
-                                    <q>
-                                        Livro em bom estado de conservação.
-                                    </q>
-                                </p>
-                            </div>
-                            <div>
-                                <p>Prazo máximo para sua solicitação ser aceita é de 4 dias úteis, após esse prazo caso
-                                    não obtenha resposta do solicitado, o pedido é automáticamente cancelado. Você
-                                    também pode cancelar sua solicitação a qualquer momento.</p>
-                                <button>
-                                    Solicitar
-                                </button>
-                            </div>
-                        </li>
-                        <li>
-                            <img src="src/assets/images/user_8742495.png" alt="">
-                            <p>User</p>
-                            <div>
-                                <p>Localização: xxxxxxx-xx</p>
-                                <p>Ultimo acesso: xx/xx/xxxx</p>
-                                <p>Estado de conservação do livro:
-                                    <q>
-                                        Livro em bom estado de conservação.
-                                    </q>
-                                </p>
-                            </div>
-                            <div>
-                                <p>Prazo máximo para sua solicitação ser aceita é de 4 dias úteis, após esse prazo caso
-                                    não obtenha resposta do solicitado, o pedido é automáticamente cancelado. Você
-                                    também pode cancelar sua solicitação a qualquer momento.</p>
-                                <button type="button">
-                                    Solicitar
-                                </button>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-            </div>
         </section>
     </main>
+
     <footer>
         <div class="footer-section">
             <h3>Atendimento</h2>

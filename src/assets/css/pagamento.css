@@ -1,0 +1,223 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.book-details {
+    display: flex;
+    gap: 15px;
+}
+
+.book-img img {
+    width: 250px;
+}
+
+.book-info {
+    line-height: 20px;
+}
+
+.book-info #book-name {
+    font-size: var(--h2-font-size);
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.book-info img {
+    width: 100px;
+    margin-top: 10px;
+}
+
+.adress-info {
+    border: 4px solid var(--bg-green);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: var(--bg-card-green);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.adress-info h3 {
+    font-weight: bold;
+    margin: 5px 0;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.adress-info input,
+.adress-info textarea {
+    border: 1px solid var(--bg-green);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.adress-info input::placeholder {
+    color: #a19d9d;
+}
+
+.adress-info label {
+    color: var(--bg-green);
+    font-size: var(--small-font-size);
+}
+
+.adress-items {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+/* grid */
+.adress-info fieldset {
+    border: none;
+    display: grid;
+    grid-template-columns: 150px 1fr 1fr;
+    max-width: 450px;
+}
+
+fieldset .grid-1 {
+    grid-column: 1/3;
+}
+
+fieldset .grid-2 {
+    grid-column: 3/4;
+    width: 100px;
+}
+
+fieldset .grid-5 {
+    grid-column: 3/4;
+    width: 100px;
+}
+
+fieldset .grid-6 {
+    grid-column: 1/4;
+}
+
+/* grid */
+
+.user-comments {
+    margin: 30px 0;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.adress-info button {
+    border: none;
+    font-size: var(--button-font-size);
+    background-color: var(--bg-green);
+    color: var(--bg-card-green);
+
+    margin: 0 auto 20px;
+    padding: 0 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.adress-info button:active {
+    background-color: var(--bg-card-green);
+    color: var(--bg-green);
+    border: 2px solid var(--bg-green);
+    transition: .1s ease-in;
+}
+
+.request-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 150px 0;
+}
+
+.request-section h3 {
+    margin: 50px 0 30PX;
+    text-transform: uppercase;
+}
+
+.sellers-list {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 2px;
+}
+
+.seller-card img {
+    width: 120px;
+}
+
+.seller-card {
+    display: flex;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.seller-card:nth-child(odd) {
+    background-color: var(--bg-card-green);
+}
+
+.seller {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 60px;
+    gap: 10px;
+}
+
+.seller-info {
+    padding: 30px 60px 30px 10px;
+    width: 50%;
+}
+
+.seller-info div:nth-child(1) {
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.seller-info div:nth-child(2) {
+    margin-bottom: 20px;
+    border: 2px solid var(--bg-green);
+    padding: 10px;
+    height: 100px;
+}
+
+.seller-info div:nth-child(2)>p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.request-field {
+    background-color: var(--bg-green);
+    width: 50%;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.request-field > p {
+    color: var(--bg-card-green);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.request-field button {
+    border: none;
+    font-size: var(--button-font-size);
+    background-color: var(--bg-card-green);
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+
+.request-field button:active {
+    background-color: var(--secondary-color);
+    color: var(--bg-card-green);
+    transition: .1s ease-in;
+}

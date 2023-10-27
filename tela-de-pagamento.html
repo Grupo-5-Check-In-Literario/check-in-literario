@@ -26,7 +26,10 @@
             </ul>
             <div class="search-bar">
                 <input type="text" placeholder="pesquisar..." />
-                <button type="submit">Buscar</button>
+                <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <path
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg></button>
             </div>
             <div class="user-profile">
                 <img src="src/assets/images/user_8742495.png" alt="foto do usuario">
@@ -45,6 +48,12 @@
                     </svg>
                 </a>
             </div>
+            <button class="menu-hamburguer">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                    <path
+                        d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                </svg>
+            </button>
         </nav>
     </header>
 
@@ -53,7 +62,7 @@
         <div class="container">
             <section class="book-details">
                 <div class="book-img">
-                    <img src="src/assets/images/livro-exemplo-(2).jpg" alt="imagem ilustrativa de um livro" />
+                    <img src="src/assets/images/livro1.jpg" alt="imagem ilustrativa de um livro" />
                 </div>
 
                 <ul class="book-info">
@@ -62,57 +71,56 @@
                     <li class="book-info-items">Autor: xxxxxxx</li>
                     <li class="book-info-items">Ano: 0000</li>
                     <li class="book-info-items">
-                        <img src="src/assets/images/stars.jpg" alt="estrelas do livro"
-                            class="book-fake-star">
+                        <img src="src/assets/images/stars.jpg" alt="estrelas do livro" class="book-fake-star">
                     </li>
                 </ul>
             </section>
 
-            <section>
-                    <form action="" class="adress-info">
-                        <h3>O endereço para entrega está correto?</h3>
-                        <!-- campo de endereço -->
-                        <fieldset>
-                            <div class="adress-items grid-1">
-                                <label for="rua">Rua</label>
-                                <input type="text" placeholder="xxxxxxxxx xxxxxxxxxx" id="rua">
-                            </div>
-
-                            <div class="adress-items grid-2">
-                                <label for="cep">Cep</label>
-                                <input type="text" placeholder="xxxxx-xxx" id="cep">
-                            </div>
-
-                            <div class="adress-items grid-3">
-
-                                <label for="bairro">Bairro</label>
-                                <input type="text" placeholder="xxxxxxxxxxxxxxx" id="bairro">
-                            </div>
-
-                            <div class="adress-items grid-4">
-                                <label for="mun">Município</label>
-                                <input type="text" placeholder="xxxxxxxxxxxxxx" id="mun">
-                            </div>
-
-                            <div class="adress-items grid-5">
-                                <label for="num">Nº</label>
-                                <input type="text" placeholder="xx" id="num">
-                            </div>
-
-                            <div class="adress-items grid-6">
-                                <label for="comp">Complemento</label>
-                                <input type="text" placeholder="xxxxxxxxxxxxxxxxxxxxx" id="comp">
-                            </div>
-                        </fieldset>
-
-                        <div class="user-comments">
-                            <label for="info">Comentário adicional sobre a entrega</label>
-                            <textarea name="info" id="info" cols="50" rows="3"></textarea>
+            <section class="adress-section">
+                <form action="" class="adress-info">
+                    <h3>O endereço para entrega está correto?</h3>
+                    <!-- campo de endereço -->
+                    <fieldset>
+                        <div class="adress-items grid-1">
+                            <label for="rua">Rua</label>
+                            <input type="text" placeholder="xxxxxxxxx xxxxxxxxxx" id="rua">
                         </div>
-                        <button type="button">
-                            Alterar
-                        </button>
-                    </form>
+
+                        <div class="adress-items grid-2">
+                            <label for="cep">Cep</label>
+                            <input type="text" placeholder="xxxxx-xxx" id="cep">
+                        </div>
+
+                        <div class="adress-items grid-3">
+
+                            <label for="bairro">Bairro</label>
+                            <input type="text" placeholder="xxxxxxxxxxxxxxx" id="bairro">
+                        </div>
+
+                        <div class="adress-items grid-4">
+                            <label for="mun">Município</label>
+                            <input type="text" placeholder="xxxxxxxxxxxxxx" id="mun">
+                        </div>
+
+                        <div class="adress-items grid-5">
+                            <label for="num">Nº</label>
+                            <input type="text" placeholder="xx" id="num">
+                        </div>
+
+                        <div class="adress-items grid-6">
+                            <label for="comp">Complemento</label>
+                            <input type="text" placeholder="xxxxxxxxxxxxxxxxxxxxx" id="comp">
+                        </div>
+                    </fieldset>
+
+                    <div class="user-comments">
+                        <label for="info">Comentário adicional sobre a entrega</label>
+                        <textarea name="info" id="info" cols="50" rows="3"></textarea>
+                    </div>
+                    <button type="button">
+                        Alterar
+                    </button>
+                </form>
             </section>
         </div>
 
@@ -126,19 +134,19 @@
                         <p>User</p>
                     </div>
 
-                    <div class="seller-info">
+                    <div class="seller-data">
                         <div>
                             <p>Localização: xxxxxxx-xx</p>
-                            <p>Ultimo acesso: xx/xx/xxxx</p>  
+                            <p>Ultimo acesso: xx/xx/xxxx</p>
                         </div>
                         <div>
-                           <p>Estado de conservação do livro:  
-                        </p> 
-                        <q class="quote">
+                            <p>Estado de conservação do livro:
+                            </p>
+                            <q>
                                 Livro em bom estado de conservação.
                             </q>
                         </div>
-                        
+
                     </div>
 
                     <div class="request-field">
@@ -156,19 +164,19 @@
                         <p>User</p>
                     </div>
 
-                    <div class="seller-info">
+                    <div class="seller-data">
                         <div>
                             <p>Localização: xxxxxxx-xx</p>
-                            <p>Ultimo acesso: xx/xx/xxxx</p>  
+                            <p>Ultimo acesso: xx/xx/xxxx</p>
                         </div>
                         <div>
-                           <p>Estado de conservação do livro:  
-                        </p> 
-                        <q class="quote">
+                            <p>Estado de conservação do livro:
+                            </p>
+                            <q>
                                 Livro em bom estado de conservação.
                             </q>
                         </div>
-                        
+
                     </div>
 
                     <div class="request-field">
@@ -186,19 +194,19 @@
                         <p>User</p>
                     </div>
 
-                    <div class="seller-info">
+                    <div class="seller-data">
                         <div>
                             <p>Localização: xxxxxxx-xx</p>
-                            <p>Ultimo acesso: xx/xx/xxxx</p>  
+                            <p>Ultimo acesso: xx/xx/xxxx</p>
                         </div>
                         <div>
-                           <p>Estado de conservação do livro:  
-                        </p> 
-                        <q class="quote">
+                            <p>Estado de conservação do livro:
+                            </p>
+                            <q class="quote">
                                 Livro em bom estado de conservação.
                             </q>
                         </div>
-                        
+
                     </div>
 
                     <div class="request-field">

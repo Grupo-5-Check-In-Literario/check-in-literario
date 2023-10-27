@@ -10,6 +10,22 @@ h3 {
 	font-size: var(--h3-font-size);
 }
 
+/*menu hamburguer*/
+.menu-hamburguer {
+	border: none;
+	height: 45px;
+	background-color: #ffff;
+	display: none;
+
+	margin: 10px;
+}
+
+.menu-hamburguer svg {
+	width: calc(26px + 0.03125vw);
+	height: auto;	
+}
+
+
 .navbar {
 	position: fixed;
 	top: 0;
@@ -93,7 +109,10 @@ h3 {
 	border: none;
 	flex-basis: calc(15% - 10px);
 	font-size: var(--button-font-size);
-	text-transform: uppercase;
+}
+
+.search-bar button svg {
+	fill: var(--secondary-color)
 }
 
 .search-bar input,
@@ -135,7 +154,7 @@ h3 {
 .search-bar button:hover {
 	border-color: var(--tertiary-color);
 	background-color: var(--tertiary-color);
-	color: var(--primary-color);
+	/* color: var(--primary-color); */
 }
 
 .carrinho {
@@ -191,6 +210,12 @@ button {
 	}
 }
 
+@media (max-width: 1040px){
+	.user-profile img {
+		display: none;
+	}
+}
+
 @media (max-width: 992px) {
 	.nav-items {
 		display: none;
@@ -202,6 +227,15 @@ button {
 
 	.carrinho {
 		margin-right: 2%;
+		display: none;
+	}
+
+	.user-profile {
+		display: none;
+	}
+
+	.menu-hamburguer {
+		display: block;
 	}
 }
 
@@ -213,7 +247,7 @@ button {
 	.search-bar {
 		flex-grow: 1;
 		text-align: left;
-		margin-left: 5%;
+		/* margin-left: 5%; */
 	}
 
 	.auth-buttons {
@@ -228,6 +262,7 @@ button {
 @media (max-width: 576px) {
 	.logo {
 		max-width: 40%;
+		display: none;
 	}
 
 	.search-bar input {

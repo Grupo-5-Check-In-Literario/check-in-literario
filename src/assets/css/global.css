@@ -36,6 +36,7 @@
 	font-family: var(--font-inter);
 	font-size: var(--default-font-size);
 	color: var(--black-color);
+	
 }
 body {
 	background-color: var(--primary-color);
@@ -44,6 +45,7 @@ body {
 	grid-template-rows: 1fr auto;
 	padding-left: var(--scaled-margin);
 	padding-right: var(--scaled-margin);
+	overflow-x: hidden;
 }
 button {
 	text-align: center;
@@ -64,22 +66,23 @@ ul {
 img {
 	width: 100%;
 }
-
 header {
 	padding-top: 100px;
-	width: 1440px;
+	/* width: 1440px; */
+	width: 100vw;
 	height: 84px;
 	flex-shrink: 0;
 	z-index: 1;
 }
-
 footer {
+	width: 100vw;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
 	background-color: var(--secondary-color);
 	padding: 40px 5%;
 	color: white;
+	overflow: hidden;
 }
 
 footer div {

@@ -1,4 +1,10 @@
-h1{
+/*
+
+O css inteiro do header está na página de catalogo sendo que ja tem o navbar.css linkado na pagina para o menu. Eu apenas comentei ele para vocÊs verem e é só excluir tudo que esta comentado.
+
+*/
+
+/* h1{
 	color: var(--primary-color);
 	text-align: center;
 	font-family: var(--font-inter);
@@ -35,7 +41,7 @@ h3 {
 	z-index: 102;
 	height: auto;
 	max-width: 15%;
-	width: calc(192px + 0.13333vw); /* 192px at 1440px screen width */
+	width: calc(192px + 0.13333vw);
 	transition: 0.3s all ease-in-out;
 }
 
@@ -57,7 +63,6 @@ h3 {
 }
 
 .nav-items a {
-	/* padding: 14px 20px; */
 	color: white;
 	transition: 0.3s ease-in-out;
 	text-decoration: none;
@@ -237,7 +242,9 @@ button {
 	.auth-buttons button {
 		padding: 5px 10px;
 	}
-}
+} */
+
+
 main {
 	display: flex;
 	align-items: center;
@@ -247,14 +254,16 @@ main {
 	color: white;
 	height: 2400px;
 }
-.catalog ul{
+
+.catalog ul {
 	text-align: center;
 	position: relative;
 	margin-top: -16%;
 	align-items: center;
 	justify-content: center;
 }
-.catalog ul li{
+
+.catalog ul li {
 	display: inline-block;
 	position: relative;
 	text-align: center;
@@ -272,6 +281,7 @@ main {
 	line-height: normal;
 	padding: 20px;
 }
+
 div#catalog-conteiner {
 	position: fixed;
 	margin-left: -4%;
@@ -285,6 +295,7 @@ div#catalog-conteiner {
 	justify-content: center;
 	z-index: 102;
 }
+
 div#catalog-text {
 	position: relative;
 	top: 30%;
@@ -292,7 +303,8 @@ div#catalog-text {
 	font-size: var(--h1-font-size);
 	text-align: center;
 }
-.content h2{
+
+.content h2 {
 	position: relative;
 	justify-content: center;
 	top: 130px;
@@ -305,15 +317,17 @@ div#catalog-text {
 	font-weight: 700;
 	line-height: normal;
 }
-.card-wrapper{
+
+.card-wrapper {
 	display: grid;
-  	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	vertical-align: middle;
-  	justify-content: center;
-  	align-items: center;
-  	gap: 50px;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
 }
-.card-item{
+
+.card-item {
 	position: relative;
 	top: 200px;
 	width: 245px;
@@ -323,18 +337,20 @@ div#catalog-text {
 	background: var(--fundo-card-dark);
 	box-shadow: 0px 4px 15px 10px rgba(0, 0, 0, 0.25);
 }
-.card-item img{
+
+.card-item img {
 	position: absolute;
-  	top: 20px; 
-  	left: 20px; 
-  	bottom: 152px; 
-  	max-width: 100%; 
-  	max-height: 100%;
+	top: 20px;
+	left: 20px;
+	bottom: 152px;
+	max-width: 100%;
+	max-height: 100%;
 	width: 205px;
 	height: 285px;
 	flex-shrink: 0;
 }
-.card-content h5{
+
+.card-content h5 {
 	position: absolute;
 	text-align: center;
 	left: 10%;
@@ -347,7 +363,8 @@ div#catalog-text {
 	font-weight: 600;
 	line-height: normal;
 }
-.card-content p{
+
+.card-content p {
 	position: absolute;
 	justify-content: center;
 	bottom: 12%;
@@ -360,7 +377,8 @@ div#catalog-text {
 	font-weight: 700;
 	line-height: normal;
 }
-.card-content img{
+
+.card-content img {
 	position: absolute;
 	justify-self: center;
 	top: 344px;
@@ -373,7 +391,8 @@ div#catalog-text {
 	margin: 0;
 	padding: 0;
 }
-.book-request{
+
+.book-request {
 	position: absolute;
 	bottom: 3%;
 	left: 8%;
@@ -391,7 +410,7 @@ div#catalog-text {
 	line-height: normal;
 }
 
-.book-details{
+.book-details {
 	position: absolute;
 	bottom: 3%;
 	left: 56%;
@@ -409,32 +428,36 @@ div#catalog-text {
 	font-weight: 700;
 	line-height: normal;
 }
-.see-moore{
+
+.see-moore {
 	position: absolute;
 	justify-self: center;
 	vertical-align: middle;
 	bottom: -180%;
 	width: 134px;
-height: 42px;
-flex-shrink: 0;
-border-radius: 5px;
-border: 3px solid var(--tertiary-color);
-background: var(--tertiary-color);
+	height: 42px;
+	flex-shrink: 0;
+	border-radius: 5px;
+	border: 3px solid var(--tertiary-color);
+	background: var(--tertiary-color);
 }
-.see-moore b{
+
+.see-moore b {
 	color: var(--primary-color);
 	text-align: center;
-font-family: var(--font-inter);
-font-size: 12px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+	font-family: var(--font-inter);
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
 }
-@media (max-height: 600px){
-	#catalog-conteiner{
+
+@media (max-height: 600px) {
+	#catalog-conteiner {
 		display: none;
 	}
-	#catalog-text{
+
+	#catalog-text {
 		display: none;
 	}
 }

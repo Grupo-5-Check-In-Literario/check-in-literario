@@ -9,6 +9,7 @@
 	--fundo-dark-blue: #203643;
 	--fundo-card-dark: #21323C;
 	--button-blue:#345C73;
+	--thumb-span-color: #549437;
 
 	/* Fontes */
 	--font-inter: "Inter", sans-serif;
@@ -46,7 +47,11 @@ body {
 	padding-left: var(--scaled-margin);
 	padding-right: var(--scaled-margin);
 	overflow-x: hidden;
+	position: relative;
 }
+h1{font-size: var(--h1-font-size);}
+h2{font-size: var(--h2-font-size);}
+h3{font-size: var(--h3-font-size);}
 button {
 	text-align: center;
 	border-radius: 5px;

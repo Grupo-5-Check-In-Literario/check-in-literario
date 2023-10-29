@@ -1,20 +1,42 @@
 .footer-section {
-	flex: 1; /* Makes sure both sections take equal width */
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	width: 100%;
+	margin: 0 auto;
+
+	gap: 10px;
+
 }
 
-.footer-section h4 {
+.footer-section h3 {
 	margin-bottom: 10px;
-	font-size: var(--h3-font-size);
+
 	color: white; /* Adjust font size as per your design */
 }
 
 .footer-section a,
 .footer-section p {
-	margin-bottom: 10px;
-	text-decoration: none;
+	/* margin-bottom: 10px; */
+	/* text-decoration: none; */
 	color: #ffffff; /* Font color */
+	font-size: var(--default-font-size);
 }
 
 .footer-section a:hover {
 	text-decoration: underline; /* Underline on hover for links */
+}
+
+/*media querie*/
+@media (max-width: 768px) {
+
+	footer {
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	
+	
+	
 }

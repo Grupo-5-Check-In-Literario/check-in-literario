@@ -6,6 +6,7 @@
 	--black-color: #000;
 	--bg-green: #94bc9d;
 	--bg-card-green: #e8f4ed;
+  --fundo-dark-blue: #203643;
 
 	/* Fontes */
 	--font-inter: "Inter", sans-serif;
@@ -26,7 +27,7 @@ html {
 
 body {
   margin: 0;
-  padding 0;
+  padding: 0;
 	font-family: var(--font-inter);
 	font-size: var(--default-font-size);
 	color: var(--black-color);

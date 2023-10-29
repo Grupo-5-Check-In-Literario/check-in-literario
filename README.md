@@ -25,3 +25,5 @@ https://www.figma.com/file/1OiB6BwICLu9lfjWCyiKuY/Main?type=design&node-id=0-1&m
 - Jeovan Delavechea - https://github.com/jeovan-delavechea
 - Patricia Taha - https://github.com/patytaha123
 - Taise Souza - https://github.com/TaiseSouza92
+- Caio Daniel -
+https://github.com/Caio2a7

@@ -10,6 +10,22 @@ h3 {
 	font-size: var(--h3-font-size);
 }
 
+/*menu hamburguer*/
+.menu-hamburguer {
+	border: none;
+	height: 45px;
+	background-color: #ffff;
+	display: none;
+
+	margin: 10px;
+}
+
+.menu-hamburguer svg {
+	width: calc(26px + 0.03125vw);
+	height: auto;	
+}
+
+
 .navbar {
 	position: fixed;
 	top: 0;
@@ -33,6 +49,7 @@ h3 {
 	width: calc(192px + 0.13333vw); /* 192px at 1440px screen width */
 	transition: 0.3s all ease-in-out;
 }
+
 .logo:hover {
 	transform: scale(1.1);
 }
@@ -41,44 +58,52 @@ h3 {
 	width: 100%;
 }
 
+.login:hover {
+	cursor: pointer;
+}
+
 .nav-items {
-	display: flex;
+	display: flex;	
 	flex: 0 0 auto;
 }
 
 .nav-items a {
-	padding: 14px 20px;
+	/* padding: 14px 20px; */
 	color: white;
 	transition: 0.3s ease-in-out;
 	text-decoration: none;
-	font-size: 18px;
-	margin: 0 25px;
+	margin: 0 10px;
+	font-size: var(--small-font-size);
+	text-transform: uppercase;
 }
+
 .nav-items a:hover {
 	color: var(--tertiary-color);
 	cursor: pointer;
 }
 
 .search-bar {
-	gap: 10px;
+	gap: 5px;
 	display: flex;
 	justify-content: space-between;
-	width: calc(443px + 0.15vw);
+	width: calc(500px + 0.15vw);
 	align-items: center;
+	margin: 0 10px;
 }
 
 .search-bar input {
 	flex-grow: 1;
-	height: 40px;
+	height: 35px;
 	padding: 0 15px;
-	font-size: var(--default-font-size);
+	font-size: var(--small-font-size);
 	border-radius: 5px;
+	border: none;
 }
 
 .search-bar button {
-	height: 40px;
+	height: 35px;
 	margin-left: 5px;
-	padding: 0 15px;
+	padding: 0 10px;
 	background-color: var(--bg-card-green);
 	color: var(--secondary-color);
 	border: none;
@@ -86,29 +111,50 @@ h3 {
 	font-size: var(--button-font-size);
 }
 
+.search-bar button svg {
+	fill: var(--secondary-color)
+}
+
 .search-bar input,
 .search-bar button {
 	box-sizing: border-box;
 }
 
-.auth-buttons {
+.user-profile {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	gap: 10px;
+	margin: 0 10px;
 }
-.login:hover {
-	cursor: pointer;
+
+.user-profile img {
+	width: 55px;
 }
-.search-bar button,
-.auth-buttons button {
+
+.user-profile-buttons a {
+	color: var(--tertiary-color);
+	font-weight: bold;
+	font-size: var(--small-font-size);
+}
+
+.user-profile-buttons p, strong {
+	color: var(--primary-color);
+	font-size: var(--small-font-size);
+}
+
+.user-profile-buttons a:hover{
+	text-decoration: underline;
+}
+
+.search-bar button {
 	transition: 0.15s ease-in-out;
 }
 
-.search-bar button:hover,
-.auth-buttons button:hover {
+.search-bar button:hover {
 	border-color: var(--tertiary-color);
 	background-color: var(--tertiary-color);
-	color: var(--primary-color);
+	/* color: var(--primary-color); */
 }
 
 .carrinho {
@@ -119,8 +165,8 @@ h3 {
 .carrinho svg {
 	width: calc(46px + 0.03125vw);
 	height: auto;
-	margin-left: 30px;
 }
+
 main {
 	padding-top: 100px;
 }
@@ -164,6 +210,12 @@ button {
 	}
 }
 
+@media (max-width: 1040px){
+	.user-profile img {
+		display: none;
+	}
+}
+
 @media (max-width: 992px) {
 	.nav-items {
 		display: none;
@@ -175,6 +227,15 @@ button {
 
 	.carrinho {
 		margin-right: 2%;
+		display: none;
+	}
+
+	.user-profile {
+		display: none;
+	}
+
+	.menu-hamburguer {
+		display: block;
 	}
 }
 
@@ -186,7 +247,7 @@ button {
 	.search-bar {
 		flex-grow: 1;
 		text-align: left;
-		margin-left: 5%;
+		/* margin-left: 5%; */
 	}
 
 	.auth-buttons {
@@ -201,6 +262,7 @@ button {
 @media (max-width: 576px) {
 	.logo {
 		max-width: 40%;
+		display: none;
 	}
 
 	.search-bar input {

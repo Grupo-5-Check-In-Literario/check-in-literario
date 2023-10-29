@@ -6,12 +6,16 @@
 	--black-color: #000;
 	--bg-green: #94bc9d;
 	--bg-card-green: #e8f4ed;
+	--fundo-dark-blue: #203643;
+	--fundo-card-dark: #21323C;
+	--button-blue:#345C73;
 
 	/* Fontes */
 	--font-inter: "Inter", sans-serif;
 	--font-pinyon: "Pinyon Script", cursive;
 
 	/* Tamanhos de Fonte */
+	--small-font-size: 14px;
 	--button-font-size: 14px;
 	--default-font-size: 16px;
 	--h1-font-size: 36px;
@@ -32,6 +36,7 @@
 	font-family: var(--font-inter);
 	font-size: var(--default-font-size);
 	color: var(--black-color);
+	
 }
 body {
 	background-color: var(--primary-color);
@@ -40,6 +45,7 @@ body {
 	grid-template-rows: 1fr auto;
 	padding-left: var(--scaled-margin);
 	padding-right: var(--scaled-margin);
+	overflow-x: hidden;
 }
 button {
 	text-align: center;
@@ -60,23 +66,26 @@ ul {
 img {
 	width: 100%;
 }
-
 header {
 	padding-top: 100px;
+	/* width: 1440px; */
+	width: 100vw;
+	height: 84px;
+	flex-shrink: 0;
+	z-index: 1;
 }
-
 footer {
+	width: 100vw;
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-around;
 	background-color: var(--secondary-color);
-	padding: 20px 5%;
+	padding: 40px 5%;
 	color: white;
-	margin-top: auto;
+	overflow: hidden;
 }
 
 footer div {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 }

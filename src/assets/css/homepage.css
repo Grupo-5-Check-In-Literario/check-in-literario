@@ -50,9 +50,7 @@
 	align-items: center;
 	justify-content: center;
 	gap: 2rem;
-	width: 1440px;
-	padding: 5rem 3rem;
-	margin: 0 auto;
+	padding: 2rem 0;
 }
 
 .hero .hero-box .thumb{
@@ -76,9 +74,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 1440px;
-	margin: 0 auto;
-	padding: 12rem 3rem;
+	padding: 9rem 0;
 	gap: 50px;
 }
 
@@ -126,9 +122,7 @@
 	align-items: center;
 	gap: 6rem;
 	align-content: space-around;
-	width: 1440px;
 	height: 44%;
-	margin: 0 auto;
 }
 
 .step-card-odd,
@@ -213,14 +207,12 @@
 	height: 82px;
 	background-color: var(--black-color);
 	border-radius: 50px;
-
 }
 
 .encaixe .black-block{
-	content: 'skdljfhldjfhk';
+	content: '';
 	background-color: var(--black-color);
 	width: 474px;
-
 }
 
 .steps-info h2, .steps-info h3{
@@ -228,32 +220,50 @@
 }
 
 .reviews-section {
-	padding: 50px 10%;
+	padding: 90px 0;
 	text-align: center;
+}
+
+.reviews-section h1{
+	padding: 90px 0 110px 0;
+	text-align: center;
+	color: var(--secondary-color);
 }
 
 .reviews-grid {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 30px;
+	gap: 60px;
 	justify-content: center;
 }
 
 .book-card {
-	width: 200px;
-	border: 1px solid var(--secondary-color);
+	width: 245px;
+	height: 456px;
 	padding: 20px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	transition: 0.3s;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	transition: 0.3s all ease-in-out;
+	justify-content: space-between;
 }
 
 .book-card:hover {
+	transform: scale(1.1);
 	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
+.book-image{
+	height: 285px;
+}
 .book-image img {
 	max-width: 100%;
-	height: auto;
+	height: 100%;
+}
+
+.book-card h2{
+	font-size: 16px;
+	color: var(--secondary-color);
 }
 
 .stars-rating {
@@ -261,26 +271,23 @@
 }
 
 .availability-status {
-	color: green;
+	color: var(--tertiary-color);
 	font-weight: bold;
 }
 
 .request-button,
 .details-button {
-	margin: 5px 0;
 	padding: 5px 10px;
 	border-radius: 5px;
-	transition: 0.3s;
+	transition: 0.15s ease-in-out;
+	color: var(--primary-color);
 }
 
 .request-button {
 	background-color: var(--tertiary-color);
-	color: #fff;
 }
-
 .details-button {
 	background-color: var(--secondary-color);
-	color: #fff;
 }
 
 .view-more-button {
@@ -289,9 +296,23 @@
 	background-color: var(--tertiary-color);
 	color: #fff;
 	border-radius: 5px;
-	transition: 0.3s;
+	transition: 0.15s ease-in-out;
+}
+
+.request-button:hover{
+	background-color: rgb(38, 114, 61);
+}
+.details-button:hover{
+	background-color: rgb(15, 44, 82);
 }
 
 .view-more-button:hover {
 	background-color: var(--secondary-color);
+}
+
+
+.reviews-grid, .hero-box, .intro-box, .steps-card-container{
+	max-width: 1440px;
+	margin: 0 auto;
+	padding: 3rem;
 }

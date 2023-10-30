@@ -37,7 +37,9 @@
 	font-family: var(--font-inter);
 	font-size: var(--default-font-size);
 	color: var(--black-color);
-	
+	border: none;
+	text-decoration: none;
+	list-style: none;
 }
 body {
 	background-color: var(--primary-color);
@@ -59,13 +61,6 @@ button {
 	padding: 8px;
 	height: 34px;
 	cursor: pointer;
-}
-a {
-	text-decoration: none;
-}
-
-ul {
-	list-style: none;
 }
 
 img {

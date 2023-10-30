@@ -14,8 +14,8 @@
 }
 
 .book-img img {
-    max-width: 250px;
-    width: 100%;
+    max-width: 280px;
+    width: 280px;
 }
 
 .book-info {
@@ -160,7 +160,7 @@ fieldset .grid-6 {
 
 .request-section h3 {
     margin: 50px 0 30px;
-
+    text-align: center;
     text-transform: uppercase;
 }
 
@@ -201,13 +201,13 @@ fieldset .grid-6 {
     width: 50%;
 }
 
-.seller-data div:nth-child(1) {
+.seller-data .seller-info {
     margin-bottom: 20px;
 
     line-height: 25px;
 }
 
-.seller-data div:nth-child(2) {
+.seller-data .seller-comments {
     /* margin-bottom: 20px; */
     padding: 10px;
     height: 100px;
@@ -215,7 +215,7 @@ fieldset .grid-6 {
     border: 2px solid var(--bg-green);
 }
 
-.seller-data div:nth-child(2) > p {
+.seller-data .seller-comments > p {
     margin-bottom: 10px;
 
     font-weight: bold;
@@ -264,9 +264,7 @@ fieldset .grid-6 {
 }
 
 /*media queries*/
-
 @media(max-width: 1200px){
-
     .container {
         gap: 40px
     }
@@ -274,19 +272,36 @@ fieldset .grid-6 {
     .adress-info {
        width: 40vw;
     }
-
-
 }
 
-
 @media(max-width: 1025px){
+    .sellers-list {
+        gap: 20px;
+    }
+
     .seller-card {
-         flex-direction: column;
+        padding: 20px 40px;
+
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 20px;
+
         text-align: center;
-        padding: 20px 40px;
+        border: solid 4px var(--bg-green);
+        border-left: none;
+        border-right: none;
+        /* background-color: var(--bg-card-green); */
+    }
+
+    .seller {
+        margin: 0px;
+    }
+
+    .seller-data {
+       padding: 0;
+       display: flex;
+       flex-direction: column;
     }
     
     .request-field {
@@ -304,27 +319,12 @@ fieldset .grid-6 {
 
     .request-field button {
         background-color: var(--bg-green);
-        color: var(--bg-card-green);
-        
-    }
-
-    .seller {
-        margin: 0px;
-    }
-
-    .seller-data {
-       padding: 0;
-       display: flex;
-       flex-direction: column;
-      gap: 20px
-    }
-
+        color: var(--bg-card-green);      
+    }   
 }
-
 
 @media (max-width: 910px){
     .container {
-
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -338,32 +338,25 @@ fieldset .grid-6 {
     
     .adress-info {
         width: 80vw;
-     }
-}
+     }     
 
-@media (max-width:770px) {
-    
-  /*mudar font size*/
-    /* .adress-info fieldset {
-        
-        display: flex;
-        flex-direction: column;
-       
-    } */
 }
 
 @media (max-width:427px) {
-    .book-details{
+    .book-details {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+
         text-align: center;
     }
 
     .adress-info fieldset {
-        
         display: flex;
         flex-direction: column;
-       
+    }
+
+    .seller-data {
+       width: 100%;
     }
 }

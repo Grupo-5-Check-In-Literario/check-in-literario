@@ -18,8 +18,6 @@
 
 .footer-section a,
 .footer-section p {
-	/* margin-bottom: 10px; */
-	/* text-decoration: none; */
 	color: #ffffff; /* Font color */
 	font-size: var(--default-font-size);
 }

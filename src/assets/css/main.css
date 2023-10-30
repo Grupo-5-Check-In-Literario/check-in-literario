@@ -1,32 +1,3 @@
-:root {
-	/* Cores */
-	--primary-color: #fff;
-	--secondary-color: #345c73;
-	--tertiary-color: #81d463;
-	--black-color: #000;
-	--bg-green: #94bc9d;
-	--bg-card-green: #e8f4ed;
-  --fundo-dark-blue: #203643;
-
-	/* Fontes */
-	--font-inter: "Inter", sans-serif;
-	--font-pinyon: "Pinyon Script", cursive;
-
-	/* Tamanhos de Fonte */
-	--button-font-size: 14px;
-	--default-font-size: 16px;
-	--h1-font-size: 36px;
-	--h2-font-size: 24px;
-	--h3-font-size: 20px;
-}
-
-body {
-	font-family: var(--font-inter);
-	font-size: var(--default-font-size);
-	color: var(--black-color);
-	background-color: var(--primary-color);
-}
-
 button {
 	font-size: var(--button-font-size);
 }

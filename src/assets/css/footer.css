@@ -1,24 +1,31 @@
-.footer-section {
-	position: relative;
+footer {
+	background-color: var(--secondary-color);
+}
+
+.footer-box{
+	max-width: 1440px;
+	margin: 0 auto;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
+	padding: 40px 30px;
+}
 
-	width: 100%;
-	margin: 0 auto;
-
-	gap: 10px;
-
+.footer-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .footer-section h3 {
 	margin-bottom: 10px;
 
-	color: white; /* Adjust font size as per your design */
+	color: var(--primary-color); /* Adjust font size as per your design */
 }
 
 .footer-section a,
 .footer-section p {
-	color: #ffffff; /* Font color */
+	color: var(--primary-color); /* Font color */
 	font-size: var(--default-font-size);
 }
 
@@ -29,7 +36,7 @@
 /*media querie*/
 @media (max-width: 768px) {
 
-	footer {
+	.footer-box {
 		flex-direction: column;
 		gap: 40px;
 	}

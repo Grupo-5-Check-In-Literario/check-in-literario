@@ -1,9 +1,9 @@
 .book-details{
-    padding: 90px;
+    padding: 90px 30px;
     display: flex;
-    gap: 130px;
     max-width: 1440px;
     margin: 0 auto;
+    align-items: flex-start;
     justify-content: space-between;
 }
 
@@ -162,42 +162,42 @@
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
-@media(max-width: 1370px){
+@media(max-width: 1200px){
     .book-details{
-        gap: 45px;
         padding: 60px 30px;
-        justify-content: center;
     }
-    .book-details .book-info .sinopse, .book-details .book-info .data{
-        width: 280px;
-    }
-    .about-coments{
-        width: 600px;
-    }
-}
-
-@media(max-width: 1016px){
     .book-info{
         gap: 10px;
     }
     .book-details .book-box .book-image{
         min-width: 220px;
     }
+    .book-details .book-info .sinopse, .book-details .book-info .data{
+        width: 280px;
+    }
     .coments-and-more{
         gap: 15px;
-        
+    }
+    .about-coments{
+        width: 600px;
     }
     .about-coment .coment{
         height: 110px;
     }
 }
 
-@media(max-width: 768px){
+@media(max-width: 950px){
     .book-details{
         flex-direction: column;
+        align-items: center;
         padding: 30px;
         gap: 45px;
     }
+}
+
+
+@media(max-width: 650px){
+    
     .book-details .book-info{
         flex-direction: column;
         align-items: center;

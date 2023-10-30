@@ -167,9 +167,9 @@ h3 {
 	height: auto;
 }
 
-main {
+/* main {
 	padding-top: 100px;
-}
+} */
 
 button {
 	font-size: var(--button-font-size);

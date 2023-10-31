@@ -1,41 +1,19 @@
 /* responsive */
-.header-box nav .nav-items{
-    display: flex;
-}
-
-.navbar nav .menu-lista li a{
-    font-size: 2rem;
-    font-weight: 500;
-    padding: 10px 30px;
-    border-radius: 50px;
-    transition: 0.2s all ease-in-out;
-}
-
-.navbar nav .menu-lista li a:hover{
-    color: var(--cor-da-navbar);
-    background-color: var(--cor-da-tela-principal);
-}
 
 .header-box  .menu{
     display: none;
-    width: 60px;
+    width: 30px;
     height: 60px;
-    align-self: flex-end;
-}
-
-.header-box nav label{
-    display: flex;
-    flex-direction: column;
 }
 
 .header-box .hamburguer{
     background-color: var(--primary-color);
     position: relative;
     display: block;
-    width: 30px;
+    width: 100%;
     height: 2px;
-    top: 22px;
-    left: 15px;
+    top: 31px;
+    right: 9px;
     transition: 0.2s ease-in-out;
 }
 
@@ -75,37 +53,52 @@
     bottom: 0;
 }
 
-@media(max-width: 1310px){
-    
-    .header-box .menu{
+@media(max-width: 1024px){
+
+    .navbar .menu{
         display: block;
+        cursor: pointer;
     }
 
-    .header-box nav .nav-items, .header-box nav .user-profile, .header-box nav .carrinho{
+    .navbar label{
+        display: flex;
+        align-self: flex-end;
+        margin-bottom: 15px;
+    }
+
+    .navbar .nav-items{
         display: none;
     }
 
-    .header-box .navbar input:checked ~ ul, .header-box .navbar input:checked ~ .user-profile, .header-box .navbar input:checked ~ .carrinho{
-        display: block;
+    .header-box .navbar input:checked ~ .nav-items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 220px;
+        gap: 20px;
+        background-color: var(--secondary-color);
+        opacity: 0.8;
+        border-bottom-left-radius: 2rem;
+        border-bottom-right-radius: 2rem;
+        margin-right: 8px;
     }
 
-    .header-box .navbar{
+    .navbar{
         position: absolute;
         top: 8px;
         right: 20px;
         z-index: 1;
         flex-direction: column;
-        justify-content: center;
     }
 
-    .header-box .navbar .nav-items, .header-box .navbar .user-profile, .header-box .navbar .carrinho{
-        width: 200px;
-        background-color: var(--secondary-color);
+    .navbar .nav-items{
+        
+        
         padding: 20px;
-        opacity: 0.8;
     }
 
-    .header-box .navbar .nav-items a{
+    .navbar nav .nav-items a{
         display: block;
         padding: 20px;
         text-align: center;

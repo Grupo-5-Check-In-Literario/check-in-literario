@@ -1,13 +1,21 @@
+@media(max-width:420px){
+    header{
+        height: 120px;
+    }
+    .search-bar{
+        width: 300px;
+        right: calc(50% - 150px);
+    }
+}
+
+
 main {
     background: var(--fundo-dark-blue);
     text-align: center;
 }
 
 #catalog-text {
-    padding: 5px;
-
     position: relative;
-
     background-color: var(--secondary-color);
 }
 
@@ -19,9 +27,8 @@ main {
     padding: 0 30px 15px;
     border-radius: 50px;
     font-size: var(--h1-font-size);
-
     position: relative;
-    top: 20px;
+    top: 12px;
 }
 
 .catalog-menu {

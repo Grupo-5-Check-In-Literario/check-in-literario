@@ -1,4 +1,6 @@
-
+html {
+     overflow-x: hidden;
+}
 .container {
     /* max-width: 90%;
     margin: 0 auto; */
@@ -6,6 +8,10 @@
     display: flex;
     justify-content: center;
     gap: 100px; 
+
+    padding-top: 100px;
+
+   
 }
 
 .book-details {
@@ -208,9 +214,7 @@ fieldset .grid-6 {
 }
 
 .seller-data .seller-comments {
-    /* margin-bottom: 20px; */
-    padding: 10px;
-    height: 100px;
+    padding: 15px 10px;
 
     border: 2px solid var(--bg-green);
 }
@@ -339,7 +343,6 @@ fieldset .grid-6 {
     .adress-info {
         width: 80vw;
      }     
-
 }
 
 @media (max-width:427px) {
@@ -358,5 +361,5 @@ fieldset .grid-6 {
 
     .seller-data {
        width: 100%;
-    }
+    }   
 }

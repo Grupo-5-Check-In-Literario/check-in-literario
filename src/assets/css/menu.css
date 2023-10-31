@@ -1,0 +1,113 @@
+/* responsive */
+.header-box nav .nav-items{
+    display: flex;
+}
+
+.navbar nav .menu-lista li a{
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 10px 30px;
+    border-radius: 50px;
+    transition: 0.2s all ease-in-out;
+}
+
+.navbar nav .menu-lista li a:hover{
+    color: var(--cor-da-navbar);
+    background-color: var(--cor-da-tela-principal);
+}
+
+.header-box  .menu{
+    display: none;
+    width: 60px;
+    height: 60px;
+    align-self: flex-end;
+}
+
+.header-box nav label{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-box .hamburguer{
+    background-color: var(--primary-color);
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 2px;
+    top: 22px;
+    left: 15px;
+    transition: 0.2s ease-in-out;
+}
+
+.header-box .hamburguer:before, .header-box .hamburguer:after{
+    background-color: var(--primary-color);
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+}
+
+.header-box .hamburguer:before{
+    top: -10px;
+}
+
+.header-box .hamburguer:after{
+    bottom: -10px;
+}
+
+.header-box .navbar input{
+    display: none;
+}
+
+.header-box .navbar input:checked ~ label .hamburguer{
+    transform: rotate(45deg);
+}
+
+.header-box .navbar input:checked ~ label .hamburguer:before{
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.header-box .navbar input:checked ~ label .hamburguer:after{
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+@media(max-width: 1310px){
+    
+    .header-box .menu{
+        display: block;
+    }
+
+    .header-box nav .nav-items, .header-box nav .user-profile, .header-box nav .carrinho{
+        display: none;
+    }
+
+    .header-box .navbar input:checked ~ ul, .header-box .navbar input:checked ~ .user-profile, .header-box .navbar input:checked ~ .carrinho{
+        display: block;
+    }
+
+    .header-box .navbar{
+        position: absolute;
+        top: 8px;
+        right: 20px;
+        z-index: 1;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .header-box .navbar .nav-items, .header-box .navbar .user-profile, .header-box .navbar .carrinho{
+        width: 200px;
+        background-color: var(--secondary-color);
+        padding: 20px;
+        opacity: 0.8;
+    }
+
+    .header-box .navbar .nav-items a{
+        display: block;
+        padding: 20px;
+        text-align: center;
+    }
+}

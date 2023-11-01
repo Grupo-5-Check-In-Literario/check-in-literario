@@ -18,10 +18,10 @@
 	/* Tamanhos de Fonte */
 	--small-font-size: 14px;
 	--button-font-size: 14px;
-	--default-font-size: 16px;
-	--h1-font-size: 36px;
-	--h2-font-size: 24px;
-	--h3-font-size: 20px;
+	--default-font-size: clamp(14px, 14px + 1vw, 16px);;
+	--h1-font-size: clamp(24px, 24px + 1vw, 36px);
+	--h2-font-size: clamp(20px, 20px + 1vw, 24px);
+	--h3-font-size: clamp(16px, 16px + 1vw, 20px);
 
 	/* Margem */
 	--base-margin: 73px;
@@ -51,7 +51,6 @@ h3{font-size: var(--h3-font-size);}
 
 button {
 	text-align: center;
-	border-radius: 5px;
 	font-size: var(--button-font-size);
 	padding: 8px;
 	height: 34px;

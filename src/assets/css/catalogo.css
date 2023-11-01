@@ -2,10 +2,6 @@
     header{
         height: 120px;
     }
-    .search-bar{
-        width: 300px;
-        right: calc(50% - 150px);
-    }
 }
 
 

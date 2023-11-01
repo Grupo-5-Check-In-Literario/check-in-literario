@@ -1,41 +1,37 @@
-button {
-	font-size: var(--button-font-size);
+@media(max-width:420px){
+    header{
+        height: 120px;
+    }
+    .search-bar{
+        width: 300px;
+        right: calc(50% - 150px);
+    }
 }
 
-.user-info {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	margin-right: 5%;
+main{
+    background: var(--bg-green);
+    text-align: center;
+    align-items: center;
 }
-
-.user-icon {
-	border-radius: 50%;
-	width: 50px;
-	height: 50px;
+h1{
+    padding: 90px 0px 51px;
+    color: var(--primary-color);
+    text-align: center;
+    font-family: var(--font-inter);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
-
-.user-text {
-	margin-left: 15px;
-}
-
-.user-text span {
-	display: block;
-	color: white;
-	font-size: var(--default-font-size);
-}
-
-.user-text small {
-	display: block;
-	color: var(--tertiary-color);
-	font-size: smaller;
-}
+/* 
+Comentei a antiga estilização de conteiner que estava sendo utilizada
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
+
 
 .container {
  display: -ms-flexbox ;
@@ -47,66 +43,75 @@ button {
  text-align: unset;
  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.container1{
-display: flex;
-justify-content: space-around;
-margin-top: 30px;
-border: 5px  #305a72 solid ;
-border-radius: 5px;
-text-align: unset;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+*/
+.container{
+    padding: 51px 0px 90px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    vertical-align: middle;
+    align-items: center;
+    text-align: unset;
 }
-  
 
-.person1, .person2, .person3 {
+.person{
     width: 100%;
-    padding: 20px;
-    background-color: #7ed957;
-    border: 3px #305a72 solid; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    transition: 0.15s ease-in-out;
 }
-
-.person h2 {
-    font-size: 18px;
-}
-
-.person p {
-    font-size: 14px;
-}
-.person1 img, .person2 img, .person3 img {
-    max-width: 150px;
-    max-height: 150px;
+.container img{
+    fill: var(--primary-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    max-width: 280px;
+    max-height: 280px;
+    width: auto;
+    height: auto;
+    flex-shrink: 0;
     border-radius: 50%;
 }
- 
-.container2{
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
-  border: 5px #305a72 solid ;
-  border-radius: 5px;
-  text-align: unset;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-.person4, .person5, .person6 {
-    width: 100%;
-    padding: 20px;
-    background-color: #7ed957;
-    border: 3px  #305a72 solid;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.container h2{
+    margin: 8px;
+    color: var(--primary-color);
+    text-align: center;
+    font-family: var(--font-inter);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
-       
-.person h2 {
-  font-size: 18px;
+.container p{
+    color: var(--primary-color);
+    text-align: center;
+    font-family: var(--font-inter);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
-
-.person p {
-    font-size: 14px;
+.linkedin-button{
+    margin: 17px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    background: var(--primary-color);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    color: #94ACBC;
+    text-align: center;
+    font-family: var(--font-inter);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+} 
+.person:hover{
+    background-color: #7ca886;
+    padding: 20px 0px 0px;
+    border-radius: 15%;
+    transform: scale(1.1); /* Aumenta o tamanho em 20% */
+    transition: transform 0.3s;
 }
-.person4 img, .person5 img, .person6 img {
-    max-width: 150px;
-    max-height: 150px;
-    border-radius: 50%;
+.linkedin-button:hover{
+    color: var(--primary-color);
+    transition: transform 0.3s;
+    background-color: #94ACBC;
 }
-

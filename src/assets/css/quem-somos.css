@@ -58,8 +58,6 @@ Comentei a antiga estilização de conteiner que estava sendo utilizada
     width: 100%;
     justify-content: center;
     transition: 0.15s ease-in-out;
-    width: auto;
-    height: auto;
 }
 .container img{
     fill: var(--primary-color);

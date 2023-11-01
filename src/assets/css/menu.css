@@ -5,6 +5,10 @@
     width: 30px;
     height: 60px;
 }
+.header-box .navbar .nav-items .carrinho .text{
+    display: none;
+    width: 100%;
+}
 
 .header-box .hamburguer{
     background-color: var(--primary-color);
@@ -14,7 +18,9 @@
     height: 2px;
     top: 31px;
     right: 9px;
+    border-radius: 2px;
     transition: 0.2s ease-in-out;
+    
 }
 
 .header-box .hamburguer:before, .header-box .hamburguer:after{
@@ -25,6 +31,7 @@
     height: 100%;
     position: absolute;
     transition: 0.2s ease-in-out;
+    border-radius: 2px;
 }
 
 .header-box .hamburguer:before{
@@ -59,15 +66,26 @@
         display: block;
         cursor: pointer;
     }
-
     .navbar label{
         display: flex;
         align-self: flex-end;
         margin-bottom: 15px;
     }
 
-    .navbar .nav-items{
+    .navbar .nav-items, .navbar .nav-items .carrinho .carrinho-img{
         display: none;
+    }
+
+    .navbar .nav-items .user-profile img,  .navbar .nav-items .user-profile .user-profile-buttons p{
+        display: none;
+    }
+
+    .navbar .nav-items .user-profile .user-profile-buttons a{
+        text-transform: uppercase;
+        color: var(--bg-green);
+    }
+    .navbar .nav-items .user-profile .user-profile-buttons a:hover{
+        color: var(--tertiary-color);
     }
 
     .header-box .navbar input:checked ~ .nav-items{
@@ -75,13 +93,17 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 220px;
+        width: 190px;
         gap: 20px;
         background-color: var(--secondary-color);
         opacity: 0.8;
         border-bottom-left-radius: 2rem;
         border-bottom-right-radius: 2rem;
         margin-right: 8px;
+    }
+
+    .header-box .navbar input:checked ~ .nav-items .carrinho .text{
+        display: block;
     }
 
     .navbar{
@@ -93,14 +115,19 @@
     }
 
     .navbar .nav-items{
-        
-        
         padding: 20px;
     }
 
     .navbar nav .nav-items a{
-        display: block;
         padding: 20px;
         text-align: center;
+    }
+
+    .header-box .navbar .nav-items li .carrinho{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
     }
 }

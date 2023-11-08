@@ -2,16 +2,11 @@ html {
      overflow-x: hidden;
 }
 .container {
-    /* max-width: 90%;
-    margin: 0 auto; */
+    padding-top: 100px;
 
     display: flex;
     justify-content: center;
     gap: 100px; 
-
-    padding-top: 100px;
-
-   
 }
 
 .book-details {
@@ -136,6 +131,7 @@ fieldset .grid-6 {
     padding: 0 30px;
 
     border: none;
+    border-radius: 5px;
     font-size: var(--button-font-size);
     background-color: var(--bg-green);
     color: var(--bg-card-green);
@@ -151,6 +147,7 @@ fieldset .grid-6 {
 }
 
 .adress-info button:hover {
+    transform: scale(1.1);
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
@@ -249,6 +246,7 @@ fieldset .grid-6 {
     padding: 0 20px;
 
     border: none;
+    border-radius: 5px;
     font-size: var(--button-font-size);
     background-color: var(--bg-card-green);
     color: var(--secondary-color);

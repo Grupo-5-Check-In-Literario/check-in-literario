@@ -188,7 +188,7 @@
     }
 }
 
-@media(max-width: 950px){
+@media(max-width: 980px){
     .book-details{
         flex-direction: column;
         align-items: center;

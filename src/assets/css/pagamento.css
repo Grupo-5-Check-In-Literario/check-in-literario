@@ -137,13 +137,13 @@ fieldset .grid-6 {
     color: var(--bg-card-green);
     text-transform: uppercase;
     font-weight: bold;
+    transition: 0.15s all ease-in-out;
 }
 
 .adress-info button:active {
     background-color: var(--bg-card-green);
     color: var(--bg-green);
     border: 2px solid var(--bg-green);
-    transition: .1s ease-in;
 }
 
 .adress-info button:hover {
@@ -252,12 +252,12 @@ fieldset .grid-6 {
     color: var(--secondary-color);
     font-weight: bold;
     text-transform: uppercase;
+    transition: 0.15s all ease-in-out;
 }
 
 .request-field button:active {
     background-color: var(--secondary-color);
     color: var(--bg-card-green);
-    transition: .1s ease-in;
 }
 
 .request-field button:hover{

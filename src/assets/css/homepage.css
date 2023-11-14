@@ -107,6 +107,13 @@
 	padding: 2rem;
 }
 
+
+@media(max-width: 579px){
+	.steps-card-container{
+		padding: 1rem 2rem;
+	}
+}
+
 .step-card-odd,
 .step-card-even {
 	display: flex;
@@ -178,12 +185,6 @@
 
 .steps-info h2, .steps-info h3{
 	color: var(--primary-color);
-}
-
-@media(max-width: 579px){
-	.steps-card-container{
-		padding: 1rem 2rem;
-	}
 }
 
 .reviews-section {

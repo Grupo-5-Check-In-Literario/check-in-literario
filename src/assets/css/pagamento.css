@@ -162,7 +162,9 @@ fieldset .grid-6 {
 }
 
 .request-section h3 {
+    width: 80%;
     margin: 50px 0 30px;
+    
     text-align: center;
     text-transform: uppercase;
 }

@@ -109,6 +109,11 @@ main {
     text-transform: uppercase;
 }
 
+.book-buttons {
+    display: flex;
+    gap: 5px;
+}
+
 .request-button {
     background-color: var(--tertiary-color);
 }

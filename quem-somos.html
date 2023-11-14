@@ -1,132 +1,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>check-in-literario/quem-somos</title>
     <link rel="stylesheet" href="./src/assets/css/footer.css" />
-	<link rel="stylesheet" href="./src/assets/css/global.css" />
-	<link rel="stylesheet" href="./src/assets/css/homepage.css" />
-	<link rel="stylesheet" href="./src/assets/css/navbar.css" />
+    <link rel="stylesheet" href="./src/assets/css/global.css" />
+    <link rel="stylesheet" href="./src/assets/css/homepage.css" />
+    <link rel="stylesheet" href="./src/assets/css/navbar.css" />
     <link rel="stylesheet" href="./src/assets/css/quem-somos.css">
-    <link rel="stylesheet" href="./src/assets/css/menu.css"> 
+    <link rel="stylesheet" href="./src/assets/css/menu.css">
 </head>
 
 <body>
     <header>
-		<div class="header-box">
-			<a href="./index.html" class="logo"><img class="logo-img" src="src/assets/images/logo.png" alt="Logo"/></a>
+        <div class="header-box">
+            <a href="./index.html" class="logo"><img class="logo-img" src="src/assets/images/logo.png" alt="Logo" /></a>
 
-			<div class="search-bar">
+            <div class="search-bar">
                 <input type="text" placeholder="pesquisar..." />
-                <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                <button type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
                         <path
                             d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-                    </svg></button>
+                    </svg>
+                </button>
             </div>
-		
-        <nav class="navbar">
-			<input type="checkbox" id="menu-hamburguer">
 
-            	<label for="menu-hamburguer">
-                	<div class="menu">
-                    	<span class="hamburguer"></span>
-                	</div>
-            	</label>
+            <nav class="navbar">
+                <input type="checkbox" id="menu-hamburguer">
 
-            <ul class="nav-items">
-                <li>
-                    <a href="./quem-somos.html">quem somos</a>
-                </li>
-                <li>
-                    <a href="./catalogo.html">catálogo</a>
-                </li>
-				<li>
-					<div class="user-profile">
-						<img src="src/assets/images/user_8742495.png" alt="foto do usuario">
-						<div class="user-profile-buttons">
-							<p>Olá, <strong>user</strong></p>
-							<a href="#">Acesse seu perfil</a>
-						</div>
-					</div>
-				</li>
-				<li>
-					<div class="carrinho">
-						<a class="text" href="#">Ver Carrinho</a>
-						<a class="carrinho-img" href="#">
-							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 42" fill="none">
-								<path
-									d="M0 1.96875C0 0.877734 0.87309 0 1.95833 0H5.67101C7.46615 0 9.05729 1.05 9.79983 2.625H43.3363C45.4823 2.625 47.049 4.67578 46.4859 6.75938L43.1404 19.2527C42.4469 21.8285 40.1214 23.625 37.4694 23.625H13.9286L14.3693 25.9629C14.5488 26.8898 15.3566 27.5625 16.295 27.5625H39.8194C40.9047 27.5625 41.7778 28.4402 41.7778 29.5312C41.7778 30.6223 40.9047 31.5 39.8194 31.5H16.295C13.4717 31.5 11.0483 29.482 10.526 26.7012L6.31562 4.4707C6.25851 4.15898 5.98924 3.9375 5.67101 3.9375H1.95833C0.87309 3.9375 0 3.05977 0 1.96875ZM10.4444 38.0625C10.4444 37.5454 10.5458 37.0334 10.7426 36.5557C10.9394 36.078 11.2279 35.6439 11.5916 35.2783C11.9553 34.9126 12.3871 34.6226 12.8623 34.4247C13.3375 34.2268 13.8468 34.125 14.3611 34.125C14.8755 34.125 15.3848 34.2268 15.86 34.4247C16.3351 34.6226 16.7669 34.9126 17.1306 35.2783C17.4943 35.6439 17.7828 36.078 17.9796 36.5557C18.1765 37.0334 18.2778 37.5454 18.2778 38.0625C18.2778 38.5796 18.1765 39.0916 17.9796 39.5693C17.7828 40.047 17.4943 40.4811 17.1306 40.8467C16.7669 41.2124 16.3351 41.5024 15.86 41.7003C15.3848 41.8982 14.8755 42 14.3611 42C13.8468 42 13.3375 41.8982 12.8623 41.7003C12.3871 41.5024 11.9553 41.2124 11.5916 40.8467C11.2279 40.4811 10.9394 40.047 10.7426 39.5693C10.5458 39.0916 10.4444 38.5796 10.4444 38.0625ZM37.8611 34.125C38.8999 34.125 39.8961 34.5398 40.6306 35.2783C41.3651 36.0167 41.7778 37.0182 41.7778 38.0625C41.7778 39.1068 41.3651 40.1083 40.6306 40.8467C39.8961 41.5852 38.8999 42 37.8611 42C36.8223 42 35.8261 41.5852 35.0916 40.8467C34.3571 40.1083 33.9444 39.1068 33.9444 38.0625C33.9444 37.0182 34.3571 36.0167 35.0916 35.2783C35.8261 34.5398 36.8223 34.125 37.8611 34.125Z"
-									fill="white" />
-							</svg>
-						</a>
-					</div>
-				</li>
-            </ul>
-            
-            
-        </nav>
-		</div>
+                <label for="menu-hamburguer">
+                    <div class="menu">
+                        <span class="hamburguer"></span>
+                    </div>
+                </label>
+
+                <ul class="nav-items">
+                    <li>
+                        <a href="./quem-somos.html">quem somos</a>
+                    </li>
+                    <li>
+                        <a href="./catalogo.html">catálogo</a>
+                    </li>
+                    <li>
+                        <div class="user-profile">
+                            <img src="src/assets/images/user_8742495.png" alt="foto do usuario">
+                            <div class="user-profile-buttons">
+                                <p>Olá, <strong>user</strong></p>
+                                <a href="#">Acesse seu perfil</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="carrinho">
+                            <a class="text" href="#">Ver Carrinho</a>
+                            <a class="carrinho-img" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 42" fill="none">
+                                    <path
+                                        d="M0 1.96875C0 0.877734 0.87309 0 1.95833 0H5.67101C7.46615 0 9.05729 1.05 9.79983 2.625H43.3363C45.4823 2.625 47.049 4.67578 46.4859 6.75938L43.1404 19.2527C42.4469 21.8285 40.1214 23.625 37.4694 23.625H13.9286L14.3693 25.9629C14.5488 26.8898 15.3566 27.5625 16.295 27.5625H39.8194C40.9047 27.5625 41.7778 28.4402 41.7778 29.5312C41.7778 30.6223 40.9047 31.5 39.8194 31.5H16.295C13.4717 31.5 11.0483 29.482 10.526 26.7012L6.31562 4.4707C6.25851 4.15898 5.98924 3.9375 5.67101 3.9375H1.95833C0.87309 3.9375 0 3.05977 0 1.96875ZM10.4444 38.0625C10.4444 37.5454 10.5458 37.0334 10.7426 36.5557C10.9394 36.078 11.2279 35.6439 11.5916 35.2783C11.9553 34.9126 12.3871 34.6226 12.8623 34.4247C13.3375 34.2268 13.8468 34.125 14.3611 34.125C14.8755 34.125 15.3848 34.2268 15.86 34.4247C16.3351 34.6226 16.7669 34.9126 17.1306 35.2783C17.4943 35.6439 17.7828 36.078 17.9796 36.5557C18.1765 37.0334 18.2778 37.5454 18.2778 38.0625C18.2778 38.5796 18.1765 39.0916 17.9796 39.5693C17.7828 40.047 17.4943 40.4811 17.1306 40.8467C16.7669 41.2124 16.3351 41.5024 15.86 41.7003C15.3848 41.8982 14.8755 42 14.3611 42C13.8468 42 13.3375 41.8982 12.8623 41.7003C12.3871 41.5024 11.9553 41.2124 11.5916 40.8467C11.2279 40.4811 10.9394 40.047 10.7426 39.5693C10.5458 39.0916 10.4444 38.5796 10.4444 38.0625ZM37.8611 34.125C38.8999 34.125 39.8961 34.5398 40.6306 35.2783C41.3651 36.0167 41.7778 37.0182 41.7778 38.0625C41.7778 39.1068 41.3651 40.1083 40.6306 40.8467C39.8961 41.5852 38.8999 42 37.8611 42C36.8223 42 35.8261 41.5852 35.0916 40.8467C34.3571 40.1083 33.9444 39.1068 33.9444 38.0625C33.9444 37.0182 34.3571 36.0167 35.0916 35.2783C35.8261 34.5398 36.8223 34.125 37.8611 34.125Z"
+                                        fill="white" />
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <h1>QUEM SOMOS?</h1>
-         <!--
-            <section class= "container">
-           <p>
-            Check-In Literário é um portal online dedicado à troca de livros entre usuários. <br> 
-            O projeto tem como objetivo fomentar a cultura da leitura e oferecer uma plataforma segura<br> e eficiente para a troca de livros usados.<br> No site podemos encontrar: 
-            Homepage: com informações principais sobre o projeto;<br>
-            Páginas de login e cadastro do usuário na plataforma;<br>
-            Página de pefil do usuário, com informações sobre cadastro e solicitações de livro;<br>
-            Página de edição do perfil do usuário;<br>
-            Uma página de catálogo dos livros na plataforma;<br>
-            A página de compra/troca dos livros;<br>
-            A página de Quem Somos, um pouco sobre os fundadores do site;<br>
-            E a página para entrar em contato com os fundadores do site</p>
-         </section>
-         -->
-         <section class="container">
-            <div class= "person">
+
+        <section class="container">
+            <div class="person">
                 <img src="Img/person1.jpg" alt="Foto da person1">
                 <h2>Bianca Viana</h2>
                 <p>Função: Desenvolvedor Front-end </p>
-                <p>Experiênciana área de desenvolvimento.</p>
-                <a href="https://www.linkedin.com/in/Bianca Viana" target="_blank">
-                    <button class="linkedin-button">Linkedin</button>
-                </a>
-             </div>
+                <p>Experiência na área de desenvolvimento.</p>
+                <div class="contact-button">
+                    <a href="https://www.linkedin.com/in/Bianca Viana" target="_blank">
+                        <button class="linkedin-button">Linkedin</button>
+                    </a>
+                    <a href="https://github.com/BiancaAViana" target="_blank">
+                        <button class="github-button">Github</button>
+                    </a>
+                </div>
+
+            </div>
 
             <div class="person">
-                <img src="Img/person2.jpg" alt="Foto da Pessoa 2" >
+                <img src="Img/person2.jpg" alt="Foto da Pessoa 2">
                 <h2>Breno Mascarenhas</h2>
                 <p>Função: Desenvolvedor Front-end</p>
                 <p>Experiência na área de desenvolvimento.</p>
-                <a href="https://www.linkedin.com/in/Breno Mascarenhas" target="_blank">
-                    <button class="linkedin-button">Linkedin</button>
-                </a>        
+
+                <div class="contact-button">
+                    <a href="https://www.linkedin.com/in/Breno Mascarenhas" target="_blank">
+                        <button class="linkedin-button">Linkedin</button>
+                    </a>
+                    <a href="https://github.com/MascarenhasBreno" target="_blank">
+                        <button class="github-button">Github</button>
+                    </a>
+                </div>
             </div>
-        
+
             <div class="person">
-                <img src="Img/person3.jpg" alt="Foto da person3" >
+                <img src="Img/person3.jpg" alt="Foto da person3">
                 <h2>Caio de Araujo </h2>
                 <p>Função: Desenvolvedor Front-end</p>
                 <p>Experiência na área de desenvolvimento.</p>
-                <a href="https://www.linkedin.com/in/Caio Araujo" target="_blank">
-                    <button class="linkedin-button">Linkedin</button>
-                </a>
+                <div class="contact-button">
+                    <a href="https://www.linkedin.com/in/Caio Araujo" target="_blank">
+                        <button class="linkedin-button">Linkedin</button>
+                    </a>
+                    <a href="https://github.com/Caio2a7" target="_blank">
+                        <button class="github-button">Github</button>
+                    </a>
+                </div>
             </div>
-         </section>
 
-         <section class= "container">
             <div class="person">
                 <img src="Img/person4.jpg" alt="Foto da person4">
                 <h2>Jeovan Delavechea </h2>
                 <p>Função: Desenvolvedor Front-end</p>
                 <p>Experiência na área de desenvolvimento.</p>
-                <a href="https://www.linkedin.com/Jeovan Delavechea" target="_blank">
-                    <button class="linkedin-button">Linkedin</button>
-                </a>
+                <div class="contact-button">
+                    <a href="https://www.linkedin.com/Jeovan Delavechea" target="_blank">
+                        <button class="linkedin-button">Linkedin</button>
+                    </a>
+                    <a href="https://github.com/jeovan-delavechea" target="_blank">
+                        <button class="github-button">Github</button>
+                    </a>
+                </div>
             </div>
 
             <div class="person">
@@ -134,9 +141,14 @@
                 <h2>Patricia Taha </h2>
                 <p>Função: Desenvolvedor Front-end</p>
                 <p>Experiência na área de desenvolvimento.</p>
-                <a href="https://www.linkedin.com/in/Patricia Taha" target="_blank">
-                    <button class="linkedin-button">Linkedin</button>
-                </a>
+                <div class="contact-button">
+                    <a href="https://www.linkedin.com/in/Patricia Taha" target="_blank">
+                        <button class="linkedin-button">Linkedin</button>
+                    </a>
+                    <a href="https://github.com/patytaha123" target="_blank">
+                        <button class="github-button">Github</button>
+                    </a>
+                </div>
             </div>
 
             <div class="person">
@@ -144,26 +156,31 @@
                 <h2>Taise Jesus</h2>
                 <p>Função: Desenvolvedor Front-end</p>
                 <p>Experiência na área de desenvolvimento.</p>
-                <a href="https://www.linkedin.com/in/Taise Jesus" target="_blank">
-                    <button class="linkedin-button">Linkedin</button>
-                </a>
+                <div class="contact-button">
+                    <a href="https://www.linkedin.com/in/Taise Jesus" target="_blank">
+                        <button class="linkedin-button">Linkedin</button>
+                    </a>
+                    <a href="https://github.com/TaiseSouza92" target="_blank">
+                        <button class="github-button">Github</button>
+                    </a>
+                </div>
             </div>
-         </section>
-    </main>     
+        </section>
+    </main>
     <footer>
         <div class="footer-box">
-			<div class="footer-section">
-				<h3>Atendimento</h2>
-					<p>Whatsapp: (xx)xxxx-xxxx</p>
-					<p>Email: checkinliterario.g5@gmail.com</p>
-			</div>
-	
-			<div class="footer-section">
-				<a href="https://github.com/Grupo-5-Check-In-Literario/check-in-literario" target="_blank">
-					Link do repositório no <strong>Github</strong>
-				</a>
-			</div>
-		</div>
+            <div class="footer-section">
+                <h3>Atendimento</h2>
+                    <p>Whatsapp: (xx)xxxx-xxxx</p>
+                    <p>Email: checkinliterario.g5@gmail.com</p>
+            </div>
+
+            <div class="footer-section">
+                <a href="https://github.com/Grupo-5-Check-In-Literario/check-in-literario" target="_blank">
+                    Link do repositório no <strong>Github</strong>
+                </a>
+            </div>
+        </div>
     </footer>
 </body>
 

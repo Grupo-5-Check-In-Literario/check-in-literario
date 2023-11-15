@@ -1,8 +1,8 @@
-html{
-   overflow-x: hidden;
+html {
+    overflow-x: hidden;
 }
 
-main{
+main {
     margin: 90px 25px;
 
     display: flex;
@@ -12,17 +12,11 @@ main{
     gap: 90px;
 }
 
-.user-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 60px;
-}
-
-.user-box{
+.user-box {
     width: 270px;
     height: auto;
 
-    padding: 40px 20px; 
+    padding: 40px 20px;
     flex-shrink: 0;
 
     position: relative;
@@ -33,7 +27,8 @@ main{
     background: var(--bg-card-green);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.user-box img{
+
+.user-box img {
     width: 204px;
     height: 226px;
 
@@ -43,7 +38,7 @@ main{
     background: url(<path-to-image>), lightgray 50% / cover no-repeat;
 }
 
-p#username{
+p#username {
     margin: 22px 0px 0px;
 
     color: var(--black-color);
@@ -53,7 +48,8 @@ p#username{
     font-weight: 600;
     line-height: normal;
 }
-p#email{
+
+p#email {
     margin: 0px 0px 53px;
 
     color: #3695B2;
@@ -65,14 +61,13 @@ p#email{
     text-decoration-line: underline;
 }
 
-
 .user-data {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.user-data li{
 
+.user-data li {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -95,7 +90,13 @@ p#email{
     font-weight: bold;
 }
 
-.user-actions h3{
+.user-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.user-actions h3 {
     padding-bottom: 10px;
     position: relative;
     text-align: left;
@@ -107,50 +108,40 @@ p#email{
     line-height: normal;
 }
 
-.user-actions table{
+.user-actions table {
     border-collapse: collapse;
     width: 100%;
 }
 
-.user-actions th{
+.user-actions th {
     padding: 10px;
     min-width: 100px;
-border: 1px solid #94ACBC;
-background: #D9D9D9;
+    
+    border: 1px solid #94ACBC;
+    background: #D9D9D9;
 }
+
 .user-actions td {
     padding: 10px;
+
     border: 1px solid #94ACBC;
     background: #F0F0F0;
 }
 
-.book-title{
+.book-title {
     width: 350px;
 }
 
 
 
-@media (max-width: 1024px){
-    .registered-books table{
-        display: flex;
-        flex-direction: column;
-       table-layout: fixed;
-    }
-    /* main {
-        gap: 15px;
-    }
+/*media querie*/
 
-    .user-profile{
-        margin-bottom: 100px;
-    } */
-}
-
-@media (max-width: 325px){
+@media (max-width: 325px) {
     .user-box {
         width: 240px;
     }
 
-    .user-box img{
+    .user-box img {
         width: 100%;
     }
 }

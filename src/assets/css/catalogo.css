@@ -135,9 +135,12 @@ main {
     border-radius: 5px;
     transition: 0.15s ease-in-out;
     color: var(--primary-color);
+    font-weight: bold;
 }
 
 .see-moore {
+    font-weight: bold;
+    text-transform: uppercase;
     margin-top: 20px;
     padding: 10px 20px;
     background-color: var(--tertiary-color);

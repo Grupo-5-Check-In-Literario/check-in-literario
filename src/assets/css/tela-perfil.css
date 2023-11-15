@@ -1,17 +1,33 @@
+html{
+   overflow-x: hidden;
+}
+
 main{
+    margin: 90px 25px;
+
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
+    gap: 90px;
 }
+
+.user-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
 .user-box{
-    padding: 40px 20px 0;
-    margin: 40px 0px 200px;
-    position: relative;
-    text-align: center;
-    width: auto;
+    width: 270px;
     height: auto;
+
+    padding: 40px 20px; 
     flex-shrink: 0;
+
+    position: relative;
+
+    text-align: center;
     border-radius: 10px;
     border: 1px solid var(--tertiary-color);
     background: var(--bg-card-green);
@@ -20,23 +36,16 @@ main{
 .user-box img{
     width: 204px;
     height: 226px;
+
     flex-shrink: 0;
+
     border-radius: 5px;
     background: url(<path-to-image>), lightgray 50% / cover no-repeat;
 }
-.user-box li{
-    margin: 0px 0px 26px;
-    position: relative;
-    text-align: left;
-    color: var(--black-color);
-    font-family: var(--font-inter);
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
+
 p#username{
     margin: 22px 0px 0px;
+
     color: var(--black-color);
     font-family: var(--font-inter);
     font-size: 20px;
@@ -46,6 +55,7 @@ p#username{
 }
 p#email{
     margin: 0px 0px 53px;
+
     color: #3695B2;
     font-family: var(--font-inter);
     font-size: 16px;
@@ -54,13 +64,39 @@ p#email{
     line-height: normal;
     text-decoration-line: underline;
 }
-hr{
-    width: 302.002px;
-    height: 1px;
-    background: var(--tertiary-color);
+
+
+.user-data {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
+.user-data li{
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    border-top: 2px solid var(--bg-green);
+    padding-top: 10px;
+
+    position: relative;
+
+    text-align: left;
+    color: var(--black-color);
+    font-family: var(--font-inter);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.user-data span {
+    font-weight: bold;
+}
+
 .user-actions h3{
-    padding: 10px;
+    padding-bottom: 10px;
     position: relative;
     text-align: left;
     color: var(--black-color);
@@ -70,21 +106,51 @@ hr{
     font-weight: 700;
     line-height: normal;
 }
-.user-requests, .registered-books, .received-requests{
-    margin: 30px;
-}
+
 .user-actions table{
     border-collapse: collapse;
+    width: 100%;
 }
+
 .user-actions th{
     padding: 10px;
-    width: 200px;
+    min-width: 100px;
 border: 1px solid #94ACBC;
 background: #D9D9D9;
 }
-.user-actions td{
+.user-actions td {
     padding: 10px;
-    width: 200px;
     border: 1px solid #94ACBC;
-background: #F0F0F0;
+    background: #F0F0F0;
+}
+
+.book-title{
+    width: 350px;
+}
+
+
+
+@media (max-width: 1024px){
+    .registered-books table{
+        display: flex;
+        flex-direction: column;
+       table-layout: fixed;
+    }
+    /* main {
+        gap: 15px;
+    }
+
+    .user-profile{
+        margin-bottom: 100px;
+    } */
+}
+
+@media (max-width: 325px){
+    .user-box {
+        width: 240px;
+    }
+
+    .user-box img{
+        width: 100%;
+    }
 }

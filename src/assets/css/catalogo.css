@@ -108,7 +108,7 @@ main {
 }
 
 .request-button {
-    background-color: var(--tertiary-color);
+    background-color: rgb(38, 114, 61);;
 }
 
 .details-button {
@@ -116,7 +116,7 @@ main {
 }
 
 .request-button:hover {
-    background-color: rgb(38, 114, 61);
+    background-color: var(--tertiary-color);
 }
 
 .details-button:hover {

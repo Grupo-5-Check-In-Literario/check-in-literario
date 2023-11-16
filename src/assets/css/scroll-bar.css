@@ -1,20 +1,15 @@
-.about-coments {
-    scrollbar-width: thin;
-    scrollbar-color: var(--tertiary-color) #203b27;
-  }
-  
-  /* Works on Chrome, Edge, and Safari */
-  .about-coments::-webkit-scrollbar {
+/* Works on Chrome, Edge, and Safari */
+.about-coments::-webkit-scrollbar {
     width: 12px;
-  }
+}
   
-  .about-coments::-webkit-scrollbar-track {
+.about-coments::-webkit-scrollbar-track {
     background: #203b27;
     border-radius: 20px;
-  }
+}
   
-  .about-coments::-webkit-scrollbar-thumb {
+.about-coments::-webkit-scrollbar-thumb {
     background-color: var(--bg-green);
     border-radius: 20px;
     border: 2px solid var(--tertiary-color);
-  }
+}

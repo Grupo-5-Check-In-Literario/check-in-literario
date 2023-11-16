@@ -12,7 +12,8 @@ p{
 
 body{
     /* background: linear-gradient(to left, var(--secondary-color)); */
-    background: -webkit-linear-gradient(top right,  #031f3f 0%,#305a72 30%,#4d83a1 70%,#69a8d4 100%);
+    background: -webkit-linear-gradient(top right,  #031f3f 0%,#305a72 40%,#4d83a1 60%,#7bc3f7 100%);
+    display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -151,8 +152,58 @@ body{
 .mensagem-de-erro {
     color: #a70f0f;
     opacity: 0;
+    margin: 2px;
 }
+ /*---- ESTILOS DINÂMICOS ----*/
 
-.mensagem-de-erro .visible{
+ .input-box{
+    display: flex;
+    flex-direction: column;
+ }
+
+ .img-erro{
+    width: 28px;
+    position: relative;
+    align-self: flex-end;
+    opacity: 0;
+ }
+
+ .img-erro img{
+    position: absolute;
+    right: 2px;
+    bottom: 7px;
+ }
+
+.required-popup::after {
+    content: "*Campo obrigatório";
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #DFDFDF;
+    font-size: .65rem;
+    padding: .2rem .3rem;
+    width: auto;
+    display: block;
+    background-color: #202020;
+  }
+  
+  input.error {
+    border: solid 2px #992020;
+    color: #662020;
+    
+  }
+
+  input.error::after{
+    content: url(../images/erro.png);
+    width: 25px;
+    height: 25px;
+  }
+  
+  input.correct {
+    border: solid 2px #206620;
+    color: #206620;
+  }
+
+.visible{
     opacity: 1;
 }

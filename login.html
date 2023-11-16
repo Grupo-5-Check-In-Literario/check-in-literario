@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+
+    <script src="./src/assets/js/login.js" defer></script>
     <title>Faça o login | Checkin Literário</title>
 </head>
 <body>
@@ -32,17 +34,23 @@
                         <p>e encontre o que procura a apenas um clique de distância.</p>
                     </div>
                     <div class="login">
-                        <form action="">
-                            <div class="email">
+                        <form id="form-login" action="./index.html" >
+                            <div class="input-box">
                                 <input type="email" name="email" id="email-login" placeholder="E-mail">
-                                <p class="mensagem-de-erro">Mensagem de erro</p>
+                                <div id="img-login-erro" class="img-erro">
+                                    <img src="./src/assets/images/erro.png" alt="">
+                                </div>
+                                <p id="email-login-erro" class="mensagem-de-erro">Mensagem de erro</p>
                             </div>
             
-                            <div class="senha">
+                            <div class="input-box">
                                 <input type="password" name="senha" id="senha-login" placeholder="Senha">
-                                <p class="mensagem-de-erro">Mensagem de erro</p>
+                                <div id="img-senha-erro" class="img-erro">
+                                    <img src="./src/assets/images/erro.png" alt="">
+                                </div>
+                                <p id="senha-login-erro" class="mensagem-de-erro">Mensagem de erro</p>
                             </div>
-                            <button type="submit">Entrar</button>
+                            <button id="submit-login" type="submit">Entrar</button>
                             <a href="">Esqueceu a senha?</a>
                         </form>
                     </div>
@@ -58,27 +66,42 @@
                             </div>
                         <form action="">
                             <div class="nome-sobrenome">
-                                <div class="nome">
+                                <div class="input-box">
                                     <input type="text" name="nome" id="nome" placeholder="Nome">
+                                    <div id="img-nome-erro" class="img-erro">
+                                        <img src="./src/assets/images/erro.png" alt="">
+                                    </div>
                                     <p class="mensagem-de-erro">Mensagem de erro</p>
                                 </div>
-                                <div class="sobrenome">
-                                    <input type="text" name="nome" id="nome" placeholder="Sobrenome">
+                                <div class="input-box">
+                                    <input type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome">
+                                    <div id="img-sobrenome-erro" class="img-erro">
+                                        <img src="./src/assets/images/erro.png" alt="">
+                                    </div>
                                     <p class="mensagem-de-erro">Mensagem de erro</p>
                                 </div>
                             </div>
-                            <div class="email">
+                            <div class="input-box">
                                 <input type="email" name="email" id="email-cadastro" placeholder="E-mail">
+                                <div id="img-email-erro" class="img-erro">
+                                    <img src="./src/assets/images/erro.png" alt="">
+                                </div>
                                 <p class="mensagem-de-erro">Mensagem de erro</p>
                             </div>
-                            <div class="senha">
+                            <div class="input-box">
                                 <input type="password" name="senha" id="senha-cadastro" placeholder="Nova senha">
+                                <div id="img-nova-senha-erro" class="img-erro">
+                                    <img src="./src/assets/images/erro.png" alt="">
+                                </div>
                                 <p class="mensagem-de-erro">Mensagem de erro</p>
                             </div>
                             <div class="data">
                                 <h4>Data de Nascimento</h4>
-                                <div class="dia-mes-ano">
-                                    <input type="date" name="" id="">
+                                <div class="input-box">
+                                    <input type="date" name="data-nascimento" id="data-nascimento">
+                                    <div id="img-data-erro" class="img-erro">
+                                        <img src="./src/assets/images/erro.png" alt="">
+                                    </div>
                                     <p class="mensagem-de-erro">Mensagem de erro</p>
                                 </div>
                             </div>

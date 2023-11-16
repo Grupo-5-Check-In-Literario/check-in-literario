@@ -254,7 +254,7 @@
 
 .request-button {
 	font-weight: bold;
-	background-color: var(--tertiary-color);
+	background-color: rgb(38, 114, 61);;
 }
 .details-button {
 	font-weight: bold;
@@ -266,14 +266,14 @@
 	padding: 10px 20px;
 	font-weight: bold;
     text-transform: uppercase;
-	background-color: var(--tertiary-color);
+	background-color: rgb(38, 114, 61);
 	color: #fff;
 	border-radius: 5px;
 	transition: 0.15s ease-in-out;
 }
 
 .request-button:hover{
-	background-color: rgb(38, 114, 61);
+	background-color: var(--tertiary-color);
 }
 .details-button:hover{
 	background-color: rgb(15, 44, 82);

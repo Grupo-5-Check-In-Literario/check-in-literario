@@ -80,14 +80,21 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 15px;
     max-width: 370px;
     min-width: 220px;
 }
 
-.secao-login-cadastro span{
-    color: var(--primary-color);
-    
+.secao-login-cadastro .ou{
+    width: 50px;
+    position: relative;
+}
+
+.secao-login-cadastro .ou span{
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    color: var(--secondary-color);
+    font-weight: 600;
 }
 
 .login-e-cadastro{

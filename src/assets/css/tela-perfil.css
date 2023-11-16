@@ -3,7 +3,7 @@ html {
 }
 
 main {
-    margin: 90px 25px;
+    padding: 170px 25px;
 
     display: flex;
     flex-wrap: wrap;

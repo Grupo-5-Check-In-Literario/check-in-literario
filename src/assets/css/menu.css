@@ -1,4 +1,9 @@
 /* responsive */
+header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
 
 .header-box  .menu{
     display: none;

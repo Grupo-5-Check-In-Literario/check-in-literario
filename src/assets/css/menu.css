@@ -65,8 +65,7 @@ header {
     bottom: 0;
 }
 
-@media(max-width: 1024px){
-
+@media(max-width: 1024px){ 
     .navbar .menu{
         display: block;
         cursor: pointer;
@@ -81,7 +80,7 @@ header {
         display: none;
     }
 
-    .navbar .nav-items .user-profile img,  .navbar .nav-items .user-profile .user-profile-buttons p{
+    .navbar .nav-items .user-profile img,  .navbar .nav-items .user-profile .user-profile-buttons p, .navbar .nav-items .user-profile .user-profile-buttons .seta-abrir{
         display: none;
     }
 
@@ -96,18 +95,20 @@ header {
     .header-box .navbar input:checked ~ .nav-items{
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
         width: 190px;
+        height: 150px;
         gap: 20px;
         background-color: var(--secondary-color);
         opacity: 0.8;
-        border-bottom-left-radius: 2rem;
-        border-bottom-right-radius: 2rem;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
         margin-right: 8px;
+        animation-duration: 0.5s;
+	    animation-name: surgir;
     }
 
-    .header-box .navbar input:checked ~ .nav-items .carrinho .text{
+    .header-box .navbar input:checked ~ .nav-items .user-profile .user-profile-buttons .seta-abrir, .header-box .navbar input:checked ~ .nav-items .user-profile .user-profile-buttons .seta-abrir img{
         display: block;
     }
 
@@ -135,4 +136,15 @@ header {
         justify-content: center;
         max-width: 100%;
     }
+    
 }
+
+@keyframes surgir {
+	from {
+	  opacity: 0;
+	}
+  
+	to {
+	  opacity: 0.8;
+	}
+  }

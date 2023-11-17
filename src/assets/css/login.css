@@ -43,7 +43,7 @@ body{
     z-index: -1;
 }
 
-@media(max-width:999px) {
+@media(max-width:1017px) {
     .thumb-e-login .thumb img{
         position: fixed;
         right: 0;

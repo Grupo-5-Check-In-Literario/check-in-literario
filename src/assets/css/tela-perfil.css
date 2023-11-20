@@ -158,7 +158,7 @@ width: 100%;
     }
 }
 
-@media(max-width: 770px) {
+@media(max-width: 550px) {
     .registered-books,
 .user-requests,
 .received-requests {

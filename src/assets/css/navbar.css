@@ -160,19 +160,8 @@ header .header-box .navbar {
 	width: 55px;
 }
 
-.user-profile-buttons{
-	display: flex;
-	align-items: center;
-	gap: 8px;
-}
-
-.user-profile-buttons .seta-abrir{
-	width: 15px;
-	height: 15px;
-	cursor: pointer;
-	transition: 0.15s all ease-in-out;
-	background-color: var(--primary-color);
-	border-radius: 50%;
+.user-profile-buttons a{
+	text-transform: lowercase;
 }
 
 .user-profile-buttons .seta-abrir:hover{
@@ -220,74 +209,3 @@ button {
 	color: var(--tertiary-color);
 	font-size: smaller;
 }
-
-.options{
-	position: absolute;
-	width: 170px;
-	flex-direction: column;
-	top: 70px;
-	right: 0;
-	background-color: var(--bg-green);
-	padding: 10px;
-	display: none;
-	opacity: 0.9;
-	animation-duration: 0.5s;
-	animation-name: surgir;
-}
-
-.options a{
-	color: var(--primary-color);
-	text-transform: lowercase;
-	font-size: var(--small-font-size);
-	padding: 10px 10px;
-	transition: 0.3s all ease-in-out;
-	border-top: 1px solid var(--bg-green);
-	border-bottom: 1px solid var(--bg-green);
-}
-
-.options a:hover{
-	color: var(--primary-color);
-	letter-spacing: 1px;
-	border-top: 1px solid var(--primary-color);
-	border-bottom: 1px solid var(--primary-color);
-}
-
-
-@media(max-width: 1024px){
-	.options{
-		top: 20px;
-		left: -88px;
-		width: 190px;;
-		background-color: var(--secondary-color);
-		align-items: center;
-		opacity: 1;
-        border-bottom-left-radius: 5px;
-        border-bottom-right-radius: 5px;		
-	}
-	.options a{
-		border-top: none;
-		border-bottom: none;
-	}
-
-	.options a:hover{
-		letter-spacing: normal;
-		border-top: none;
-		border-bottom: none;
-	}
-}
-
-.visible{
-	display: flex;
-}
-
-@keyframes surgir {
-	from {
-	  top: 0; 
-	  opacity: 0;
-	}
-  
-	to {
-	  top: 70px;
-	  opacity: 0.9;
-	}
-  }

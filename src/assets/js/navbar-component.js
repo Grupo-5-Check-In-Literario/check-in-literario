@@ -61,7 +61,6 @@
 // customElements.define("navbar-component", NavbarComponent);
 
 let linkSair = document.getElementById('sair')
-console.log(linkSair)
 
 linkSair.addEventListener('click', (e) =>{
   let alertaSaida = confirm('Tem certeza que deseja sair?')

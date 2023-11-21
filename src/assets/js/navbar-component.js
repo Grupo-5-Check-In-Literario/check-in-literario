@@ -60,19 +60,14 @@
 
 // customElements.define("navbar-component", NavbarComponent);
 
-seta = document.querySelector('.seta-abrir')
-opcoesDaSeta = document.querySelector('.options')
-console.log(opcoesDaSeta)
+let linkSair = document.getElementById('sair')
+console.log(linkSair)
 
-seta.addEventListener('click', () => {
-  if(opcoesDaSeta.classList.contains('visible')){
-    opcoesDaSeta.classList.remove('visible')
-    seta.style.transform = 'rotateX(0deg)'
-    seta.style.backgroundColor = "var(--primary-color)"
+linkSair.addEventListener('click', (e) =>{
+  let alertaSaida = confirm('Tem certeza que deseja sair?')
+  if (!alertaSaida){
+    e.preventDefault()
   }else{
-    opcoesDaSeta.classList.add('visible')
-    seta.style.transform = 'rotateX(180deg)'
-    seta.style.backgroundColor = "var(--bg-green)"
+    alert("Até a próxima!")
   }
 })
-

@@ -39,14 +39,51 @@ elementos["nome"].addEventListener("blur", (e) => {
     if(valor == ""){
         elementos["nome-cadastro-erro"].innerText = 'Teste1';
         estilizarInputIncorreto(elementos.nome, elementos["nome-cadastro-erro"], elementos["img-nome-erro"]);
-        inputsCadastroCorretos.nomeCadastro = true;
+        inputsCadastroCorretos.nomeCadastro = false;
     }
     else{
         estilizarInputCorreto(elementos.nome, elementos["nome-cadastro-erro"], elementos["img-nome-erro"]);
-        inputsCadastroCorretos.nomeCadastro = false;
+        inputsCadastroCorretos.nomeCadastro = true;
     }
 });
 
+elementos["sobrenome"].addEventListener("blur", (e) => {
+    let valor = e.target.value;
+    if(valor == ""){
+        elementos["sobrenome-cadastro-erro"].innerText = 'Teste 2';
+        estilizarInputIncorreto(elementos.sobrenome, elementos["sobrenome-cadastro-erro"], elementos["img-sobrenome-erro"]);
+        inputsCadastroCorretos.sobrenomeCadastro = false;
+    }
+    else{
+        estilizarInputCorreto(elementos.sobrenome, elementos["sobrenome-cadastro-erro"], elementos["img-sobrenome-erro"]);
+        inputsCadastroCorretos.sobrenomeCadastro = true;
+    }
+});
+elementos["email-cadastro"].addEventListener("change", (e) => {
+    let valor = e.target.value;
+    if(valor.includes("@") && valor.includes(".com")){
+        estilizarInputCorreto(elementos["email-cadastro"], elementos["email-cadastro-erro"], elementos["img-email-erro"]);
+        inputsCadastroCorretos.emailCadastro = true;
+    }
+    else{
+        elementos["email-cadastro-erro"].innerText = 'Teste3';
+        estilizarInputIncorreto(elementos["email-cadastro"], elementos["email-cadastro-erro"], elementos["img-email-erro"]);
+        inputsCadastroCorretos.emailCadastro = false;
+    }
+});
+
+elementos["senha-cadastro"].addEventListener("blur", (e) => {
+    let valor = e.target.value;
+    if(valor == "" || valor.lenght > 6){
+        elementos["senha-cadastro-erro"].innerText = 'Teste 4';
+        estilizarInputIncorreto(elementos["senha-cadastro"], elementos["senha-cadastro-erro"], elementos["img-senha-erro"]);
+        inputsCadastroCorretos.sobrenomeCadastro = false;
+    }
+    else{
+        estilizarInputCorreto(elementos["senha-cadastro"], elementos["senha-cadastro-erro"], elementos["img-senha-erro"]);
+        inputsCadastroCorretos.sobrenomeCadastro = true;
+    }
+});
 /*
 elementos["sobrenome"].addEventListener()
 elementos["email-cadastro"].addEventListener()

@@ -74,6 +74,16 @@ html {
     color: #a19d9d;
 }
 
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
 .adress-info label {
     color: var(--bg-green);
     font-size: var(--small-font-size);
@@ -92,7 +102,8 @@ html {
     justify-content: space-between;
 }
 
-.error-message {
+.error-message,
+.invalid-cep {
     display: none;
 
     color: #ff0000;
@@ -100,7 +111,6 @@ html {
 }
 
 .red-input {
-
    background-color: #f6c5c5;
 }
 
@@ -120,7 +130,7 @@ fieldset .grid-1 {
 }
 
 fieldset .grid-2 {
-    /* width: 100px; */
+    width: 130px; 
 
     grid-column: 3/4;
 }

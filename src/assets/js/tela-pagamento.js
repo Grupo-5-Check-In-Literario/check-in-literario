@@ -65,7 +65,7 @@ rua.addEventListener('blur', (e) => {
 })
 
 cep.addEventListener('blur', (e) => {
-    if(cep.value.trim() == ''){
+    if(cep.value.trim() == '' || cep.value.length < 8 || cep.value.length > 8){
         e.preventDefault()
         errorMsg[1].style.display = 'block';
         cep.classList.add('red-input');

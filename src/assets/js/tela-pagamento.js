@@ -47,6 +47,7 @@ cep.addEventListener('blur', (e) => {
          errorMsg[1].style.display = 'none';
          userCep.classList.remove('error');
          confirmarDados.numCep = true;
+         console.log(userCep.value)
      } else {
          e.preventDefault()
          errorMsg[1].style.display = 'block';

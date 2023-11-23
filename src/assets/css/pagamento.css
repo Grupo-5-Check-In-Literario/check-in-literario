@@ -135,6 +135,10 @@ fieldset input::placeholder {
     font-size: 14px;
 }
 
+fieldset input:disabled {
+    color: #9e9c9c;
+}
+
 /* grid */
 .adress-info fieldset {
     max-width: 480px;

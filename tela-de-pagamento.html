@@ -95,7 +95,7 @@
                                 <label for="rua">Rua</label>
                                 <span class="error-message">*Obrigatório</span>
                             </div>
-                            <input type="text" placeholder="rua" id="rua">
+                            <input type="text" placeholder="rua" id="rua" required disabled>
                         </div>
 
                         <div class="adress-items grid-2">
@@ -103,7 +103,7 @@
                                 <label for="cep">Cep</label>
                                 <span class="error-message">*Obrigatório</span>
                             </div>
-                            <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==8) return false;" placeholder="Apenas dígitos" id="cep">
+                            <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==8) return false;" placeholder="Apenas dígitos" id="cep" required>
                         </div>
 
                         <div class="adress-items grid-3">
@@ -112,7 +112,7 @@
                                 <label for="bairro">Bairro</label>
                                 <span class="error-message">*Obrigatório</span>
                             </div>
-                            <input type="text" placeholder="bairro" id="bairro">
+                            <input type="text" placeholder="bairro" id="bairro" required disabled>
                         </div>
 
                         <div class="adress-items grid-4">
@@ -120,7 +120,7 @@
                                 <label for="num">Nº</label>
                                 <span class="error-message">*Obrigatório</span>
                             </div>
-                            <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" id="num" placeholder="numero" />
+                            <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" id="num" placeholder="numero"/>
                         </div>
 
                         <div class="adress-items grid-5">
@@ -128,7 +128,7 @@
                                 <label for="cidade">Cidade</label>
                                 <span class="error-message">*Obrigatório</span>
                             </div>
-                            <input type="text" placeholder="cidade" id="cidade">
+                            <input type="text" placeholder="cidade" id="cidade" required disabled>
                         </div>
 
                         <div class="adress-items grid-6">
@@ -136,7 +136,7 @@
                                 <label for="uf">UF</label>
                                 <span class="error-message">*Obrigatório</span>
                             </div>
-                            <input type="text" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"  placeholder="ex: RJ" id="uf">
+                            <input type="text" maxlength="2"  placeholder="ex: RJ" id="uf" required disabled>
                         </div>
 
                         <div class="adress-items grid-7">
@@ -151,7 +151,7 @@
                         <label for="info">Comentário adicional sobre a entrega</label>
                         <textarea name="info" id="info" cols="50" rows="3"></textarea>
                     </div>
-                    <button type="button">
+                    <button>
                         Alterar
                     </button>
                 </form>

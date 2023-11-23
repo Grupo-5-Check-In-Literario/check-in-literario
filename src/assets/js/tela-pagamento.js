@@ -1,3 +1,12 @@
+// let isNumeric = function (value) {
+//     return /^\d+(?:\.\d+)?$/.test(value);
+// };
+
+// String.prototype.isNumeric = function () {
+//     return isNumeric(this);
+// };
+
+
 form = document.querySelector('.adress-info');
 errorMsg = document.querySelectorAll('.error-message');
 
@@ -16,105 +25,76 @@ let comfirmarDados = {
     nomeBairro: false,
     nomeCidade: false,
     nomeUf: false,
-    numeroCasa: false
 }
 
 form.addEventListener('submit', (e) => {
     alert('Atualizado com sucesso')
 })
 
-
-//pegando valor dos inputs
-rua.addEventListener('change',(e) => {
-    console.log(e.target.value) 
-});
-
-cep.addEventListener('change',(e) => {
-    console.log(e.target.value) 
-});
-
-cidade.addEventListener('change',(e) => {
-    console.log(e.target.value) 
-});
-
-uf.addEventListener('change',(e) => {
-    console.log(e.target.value) 
-});
-
-numero.addEventListener('change',(e) => {
-    console.log(e.target.value) 
-});
-
-complemento.addEventListener('change',(e) => {
-    console.log(e.target.value) 
-});
-
-
 //validando os campos
 rua.addEventListener('blur', (e) => {
-
-    console.log(rua.value, 'a')
-    if(rua.value.trim() == ''){
+    if (rua.value.trim() == '') {
         e.preventDefault()
         errorMsg[0].style.display = 'block';
-        rua.classList.add('red-input');
-    } else{
+        rua.classList.add('error');
+    } else {
         errorMsg[0].style.display = 'none';
-        rua.classList.remove('red-input')
+        rua.classList.remove('error');
     }
 })
 
 cep.addEventListener('blur', (e) => {
-    if(cep.value.trim() == '' || cep.value.length < 8 || cep.value.length > 8){
+    if (cep.value.trim() == '' || cep.value.length < 8 || cep.value.length > 8) {
         e.preventDefault()
         errorMsg[1].style.display = 'block';
-        cep.classList.add('red-input');
-    } else{
+        cep.classList.add('error');
+    } else {
         errorMsg[1].style.display = 'none';
-        cep.classList.remove('red-input')
+        cep.classList.remove('error');
     }
 })
 
 bairro.addEventListener('blur', (e) => {
-    if(bairro.value.trim() == ''){
+    if (bairro.value.trim() == '') {
         e.preventDefault()
         errorMsg[2].style.display = 'block';
-        bairro.classList.add('red-input');
-    } else{
+        bairro.classList.add('error');
+    } else {
         errorMsg[2].style.display = 'none';
-        bairro.classList.remove('red-input')
+        bairro.classList.remove('error');
     }
 })
 
-numero.addEventListener('blur', (e) => {
-    if(numero.value.trim() == ''){
-        e.preventDefault()
-        errorMsg[3].style.display = 'block';
-        numero.classList.add('red-input');
-    } else{
-        errorMsg[3].style.display = 'none';
-        numero.classList.remove('red-input')
-    }
-})
+//numero.addEventListener('blur', (e) => {
+    // if (!isNumeric(numero.value.trim()) ) {
+    //     e.preventDefault()
+    //     errorMsg[3].style.display = 'block';
+    //     numero.classList.add('error');
+    // } else {
+    //     errorMsg[3].style.display = 'none';
+    //     numero.classList.remove('error')
+        
+    // }   
+//})
 
 cidade.addEventListener('blur', (e) => {
-    if(cidade.value.trim() == ''){
+    if (cidade.value.trim() == '') {
         e.preventDefault()
         errorMsg[4].style.display = 'block';
-        cidade.classList.add('red-input');
-    } else{
+        cidade.classList.add('error');
+    } else {
         errorMsg[4].style.display = 'none';
-        cidade.classList.remove('red-input')
+        cidade.classList.remove('error');
     }
 })
 
 uf.addEventListener('blur', (e) => {
-    if(uf.value.trim() == ''){
+    if (uf.value.trim() == '') {
         e.preventDefault()
         errorMsg[5].style.display = 'block';
-        uf.classList.add('red-input');
-    } else{
+        uf.classList.add('error');
+    } else {
         errorMsg[5].style.display = 'none';
-        uf.classList.remove('red-input')
+        uf.classList.remove('error');
     }
 })

@@ -99,11 +99,11 @@
                         </div>
 
                         <div class="adress-items grid-2">
-                            <div class="label-container"><label for="cep">Cep</label>
-                            <span class="error-message">*Informe 8 digitos</span>
-                           
-                        </div>
-                            <input type="number" placeholder="cep" id="cep">
+                            <div class="label-container">
+                                <label for="cep">Cep</label>
+                                <span class="error-message">*Obrigatório</span>
+                            </div>
+                            <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==8) return false;" placeholder="Apenas dígitos" id="cep">
                         </div>
 
                         <div class="adress-items grid-3">
@@ -120,7 +120,7 @@
                                 <label for="num">Nº</label>
                                 <span class="error-message">*Obrigatório</span>
                             </div>
-                            <input type="text" placeholder="número" id="num">
+                            <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" id="num" placeholder="numero" />
                         </div>
 
                         <div class="adress-items grid-5">
@@ -136,7 +136,7 @@
                                 <label for="uf">UF</label>
                                 <span class="error-message">*Obrigatório</span>
                             </div>
-                            <input type="text" placeholder="uf" id="uf">
+                            <input type="text" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==2) return false;"  placeholder="ex: RJ" id="uf">
                         </div>
 
                         <div class="adress-items grid-7">

@@ -12,3 +12,22 @@ for(let i = 0; i < listaDeCategorias.length; i++) {
     
     categoria.addEventListener('click', () => tituloCategoria.innerText = listaDeCategorias[i])
 }
+
+//API dos livros - ignorar por enquanto
+
+const searchInput = document.querySelector('#search');
+const searchBtn = document.querySelector('.search-btn');
+
+searchInput.addEventListener('blur',(e) => {
+    const input = e.target.value;
+
+   searchBtn.addEventListener('click',(e) => {
+         bookApi(input);
+    })
+})
+
+const bookApi = async (book) => {
+        const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${book}&key=AIzaSyCT5_PF4d5CFyw0x9KnQIpSklcfdFfdxpk`;
+
+        console.log(apiUrl);
+    }

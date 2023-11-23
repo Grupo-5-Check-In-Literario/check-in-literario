@@ -23,6 +23,7 @@ searchInput.addEventListener('blur',(e) => {
 
    searchBtn.addEventListener('click',(e) => {
          bookApi(input);
+         console.log('Click funciona')
     })
 })
 

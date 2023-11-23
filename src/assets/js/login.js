@@ -12,8 +12,6 @@ let inputsLoginCorretos = {
     senhaLogin: false
 }
 
-
-
 function estilizarInputIncorreto(input, helper, imagem){
     input.classList.remove('correct')
     input.classList.add('error')
@@ -42,7 +40,7 @@ emailLogin.addEventListener("change", (e) => {
 senhaLogin.addEventListener("blur", (e) => {
     let valor = e.target.value
     if (valor == "" || valor.length < 6) {
-        senhaLoginErro.innerText = 'Por favor, insira uma senha de, no mínio, 6 caracteres.'
+        senhaLoginErro.innerText = 'Por favor, insira uma senha de, no mínimo, 6 caracteres.'
         estilizarInputIncorreto(senhaLogin, senhaLoginErro, imgSenhaErro)
         inputsLoginCorretos.senhaLogin = false
     } else {
@@ -55,12 +53,11 @@ btnSubmitLogin.addEventListener(("click"), (e) =>{
     if (inputsLoginCorretos.emailLogin == false) {
         e.preventDefault()
         estilizarInputIncorreto(emailLogin, emailLoginErro, imgLoginErro)
-        emailLoginErro.innerText = 'Preencha este campo corretamente.'
-        estilizarInputIncorreto(senhaLogin, senhaLoginErro, imgSenhaErro)
-        senhaLoginErro.innerText = 'Preencha este campo corretamente.'
+        emailLoginErro.innerText = 'O email deve conter "@" e ".com".'
+        
     }else if( inputsLoginCorretos.senhaLogin == false){
         e.preventDefault()
         estilizarInputIncorreto(senhaLogin, senhaLoginErro, imgSenhaErro)
-        senhaLoginErro.innerText = 'Preencha este campo corretamente.'
+        senhaLoginErro.innerText = 'Por favor, insira uma senha de, no mínimo, 6 caracteres.'
     }
 })

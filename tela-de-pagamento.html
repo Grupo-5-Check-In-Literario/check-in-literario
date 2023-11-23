@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./src/assets/css/menu.css">
 
     <script src="./src/assets/js/navbar-component.js" defer></script>
+    <script src="src/assets/js/tela-pagamento.js" defer></script>
 </head>
 
 <body>
@@ -84,39 +85,65 @@
             </section>
 
             <section class="adress-section">
+
                 <form action="" class="adress-info">
                     <h3>O endereço para entrega está correto?</h3>
                     <!-- campo de endereço -->
                     <fieldset>
                         <div class="adress-items grid-1">
-                            <label for="rua">Rua</label>
-                            <input type="text" placeholder="xxxxxxxxx xxxxxxxxxx" id="rua">
+                            <div class="label-container">
+                                <label for="rua">Rua</label>
+                                <span class="error-message">*Obrigatório</span>
+                            </div>
+                            <input type="text" placeholder="rua" id="rua">
                         </div>
 
                         <div class="adress-items grid-2">
-                            <label for="cep">Cep</label>
-                            <input type="text" placeholder="xxxxx-xxx" id="cep">
+                            <div class="label-container"><label for="cep">Cep</label>
+                            <span class="error-message">*Informe 8 digitos</span>
+                           
+                        </div>
+                            <input type="number" placeholder="cep" id="cep">
                         </div>
 
                         <div class="adress-items grid-3">
 
-                            <label for="bairro">Bairro</label>
-                            <input type="text" placeholder="xxxxxxxxxxxxxxx" id="bairro">
+                            <div class="label-container">
+                                <label for="bairro">Bairro</label>
+                                <span class="error-message">*Obrigatório</span>
+                            </div>
+                            <input type="text" placeholder="bairro" id="bairro">
                         </div>
 
                         <div class="adress-items grid-4">
-                            <label for="mun">Município</label>
-                            <input type="text" placeholder="xxxxxxxxxxxxxx" id="mun">
+                            <div class="label-container">
+                                <label for="num">Nº</label>
+                                <span class="error-message">*Obrigatório</span>
+                            </div>
+                            <input type="text" placeholder="número" id="num">
                         </div>
 
                         <div class="adress-items grid-5">
-                            <label for="num">Nº</label>
-                            <input type="text" placeholder="xx" id="num">
+                            <div class="label-container">
+                                <label for="cidade">Cidade</label>
+                                <span class="error-message">*Obrigatório</span>
+                            </div>
+                            <input type="text" placeholder="cidade" id="cidade">
                         </div>
 
                         <div class="adress-items grid-6">
-                            <label for="comp">Complemento</label>
-                            <input type="text" placeholder="xxxxxxxxxxxxxxxxxxxxx" id="comp">
+                            <div class="label-container">
+                                <label for="uf">UF</label>
+                                <span class="error-message">*Obrigatório</span>
+                            </div>
+                            <input type="text" placeholder="uf" id="uf">
+                        </div>
+
+                        <div class="adress-items grid-7">
+                            <div class="label-container">
+                                <label for="comp">Complemento</label>
+                            </div>
+                            <input type="text" placeholder="complemento" id="comp">
                         </div>
                     </fieldset>
 

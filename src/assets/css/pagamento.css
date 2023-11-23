@@ -74,6 +74,16 @@ html {
     color: #a19d9d;
 }
 
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+    
+}
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+
+}
+
 .adress-info label {
     color: var(--bg-green);
     font-size: var(--small-font-size);
@@ -84,7 +94,24 @@ html {
     margin: 5px;
 
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
+}
+
+.label-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-message,
+.invalid-cep {
+    display: none;
+
+    color: #ff0000;
+    font-size: 12px;
+}
+
+.red-input {
+   background-color: #f6c5c5;
 }
 
 /* grid */
@@ -98,22 +125,35 @@ html {
 }
 
 fieldset .grid-1 {
+    
     grid-column: 1/3;
 }
 
 fieldset .grid-2 {
-    /* width: 100px; */
+    width: 130px; 
 
+    grid-column: 3/4;
+}
+fieldset .grid-3 {
+    grid-column: 1/3;
+ 
+}
+
+fieldset .grid-4 {
     grid-column: 3/4;
 }
 
 fieldset .grid-5 {
     /* width: 100px; */
 
-    grid-column: 3/4;
+    grid-column: 1/3;
 }
 
 fieldset .grid-6 {
+    grid-column: 3/4;
+}
+
+fieldset .grid-7 {
     grid-column: 1/4;
 }
 /* grid */

@@ -154,25 +154,26 @@ body{
     opacity: 0;
     margin: 2px;
 }
- /*---- ESTILOS DINÂMICOS ----*/
 
- .input-box{
+/*------ ESTILOS DINÂMICOS ------*/
+
+.input-box{
     display: flex;
     flex-direction: column;
- }
+}
 
- .img-erro{
+.img-erro{
     width: 28px;
     position: relative;
     align-self: flex-end;
     opacity: 0;
- }
+}
 
- .img-erro img{
+.img-erro img{
     position: absolute;
     right: 2px;
     bottom: 7px;
- }
+}
 
 .required-popup::after {
     content: "*Campo obrigatório";
@@ -185,25 +186,34 @@ body{
     width: auto;
     display: block;
     background-color: #202020;
-  }
+}
   
-  input.error {
+input.error {
     border: solid 2px #992020;
     color: #662020;
-    
-  }
+    animation-duration: 0.5s;
+    animation-name: surgir;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 
-  input.error::after{
-    content: url(../images/erro.png);
-    width: 25px;
-    height: 25px;
-  }
+
   
-  input.correct {
+input.correct {
     border: solid 2px #206620;
     color: #206620;
-  }
+}
 
 .visible{
     opacity: 1;
 }
+
+@keyframes surgir {
+	from {
+        border: solid 2px #992020; 
+	}
+  
+	to {
+        border: solid 2px #fc9595;
+	}
+  }

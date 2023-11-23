@@ -91,8 +91,8 @@ header {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding: 20px;
         width: 190px;
-        height: 150px;
         background-color: var(--secondary-color);
         opacity: 0.8;
         border-bottom-left-radius: 5px;
@@ -107,8 +107,8 @@ header {
         right: 20px;
         z-index: 1;
         flex-direction: column;
+        
     }
-
     .navbar nav .nav-items a{
         text-align: center;
     }
@@ -118,10 +118,12 @@ header {
 	from {
         height: 0;
 	    opacity: 0;
+        gap: 0;
 	}
   
 	to {
-        height: 150px;
+        height: 172px;
 	    opacity: 0.8;
+        gap: 20px;
 	}
   }

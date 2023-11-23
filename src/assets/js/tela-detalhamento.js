@@ -9,8 +9,6 @@ function esconderAparecer() {
 
 botaoSurgirEsconder.addEventListener('click', () =>{
     if(botaoSurgirEsconder.innerText == "MAIS"){
-        console.log('funcionou')
-        
         esconderAparecer()
         botaoSurgirEsconder.innerText = "MENOS"
     }else{

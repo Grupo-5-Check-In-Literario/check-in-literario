@@ -16,7 +16,7 @@
     gap: 15px;
 }
 
-.book-box .book-image{
+.book-box .img-book{
     width: 280px;
     height: auto;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -170,7 +170,7 @@
     .book-info{
         gap: 10px;
     }
-    .book-details .book-box .book-image{
+    .book-details .book-box .img-book{
         min-width: 220px;
     }
     .book-details .book-info .sinopse, .book-details .book-info .data{

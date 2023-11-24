@@ -83,8 +83,10 @@ main {
     transform: scale(1.1);
 }
 
-.card-item a {
+.card-item a img{
     cursor: pointer;
+    width: 160px;
+    max-height: 240px;
 }
 
 .card-item h3 {

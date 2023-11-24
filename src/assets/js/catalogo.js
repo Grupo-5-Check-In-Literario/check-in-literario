@@ -10,7 +10,10 @@ for(let i = 0; i < listaDeCategorias.length; i++) {
     categoria.innerText = listaDeCategorias[i]
     listaNaoOrdenada.appendChild(categoria)
     
-    categoria.addEventListener('click', () => tituloCategoria.innerText = listaDeCategorias[i])
+    categoria.addEventListener('click', () => {
+        tituloCategoria.innerText = listaDeCategorias[i]
+        bookApi(listaDeCategorias[i])
+    })
 }
 
 //API dos livros - ignorar por enquanto
@@ -28,14 +31,23 @@ searchInput.addEventListener('blur',(e) => {
     })
 })
 
+searchInput.addEventListener('keypress',(e) => {  
+    const input = e.target.value;
+    if(e.key === 'Enter'){
+        bookApi(input);
+    }
+    
+})
+
 const bookApi = async (book) => {
         const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${book}&key=AIzaSyCT5_PF4d5CFyw0x9KnQIpSklcfdFfdxpk`;
 
         const resp = await fetch(apiUrl);
         const data = await resp.json();
- 
+
         const bookData = data.items;
         const bookList = Array(bookData);
+        
 
         let selectbook = Array()
          bookList[0].map((items) => {
@@ -63,7 +75,7 @@ function showBook(items){
     for (let index = 0; index < imgBook.length + 1; index++) {
         if(items[index].imageLinks === undefined) {
             console.log('Filme nao tem thum')
-            imgBook[index].setAttribute('src',`../src/assets/images/livro1.jpg`); 
+            imgBook[index].setAttribute('src',`../src/assets/images/capa-ilustrativa.jpg`); 
         }else {
             imgBook[index].setAttribute('src',`${items[index].imageLinks.thumbnail}`); 
         }      

@@ -74,7 +74,8 @@ main {
     align-items: center;
     gap: 5px;
     transition: 0.3s all ease-in-out;
-   justify-content: space-between;
+    justify-content: space-between;
+    text-overflow: ellipsis;
 }
 
 .card-item:hover {
@@ -92,6 +93,10 @@ main {
 .card-item h3 {
     font-size: var(--default-font-size);
     color: var(--primary-color);
+    max-width: 205px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
 .stars-rating {

@@ -94,7 +94,9 @@ header .header-box .navbar {
 	border-top-left-radius: 30px;
 	border-bottom-left-radius: 30px;
 	background-color: var(--bg-card-green);
+	outline: 0;
 }
+
 
 .search-bar button {
 	padding: 4px 10px;

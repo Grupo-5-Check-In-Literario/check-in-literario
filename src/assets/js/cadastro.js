@@ -19,24 +19,24 @@ let inputsCadastroCorretos = {
     bairroCadastro: false,
     municipioCadastro: false,
     ufCadastro: false,
-}
+};
 
 function estilizarInputIncorreto(input, helper, imagem){
-    input.classList.remove('correct')
-    input.classList.add('error')
-    helper.classList.add('visible')
-    if (imagem) {
+    input.classList.remove('correct');
+    input.classList.add('error');
+    helper.classList.add('visible');
+    if(imagem){
         imagem.classList.add('visible');
     }
-}
+};
 function estilizarInputCorreto(input, helper, imagem){
-    input.classList.remove('error')
-    input.classList.add('correct')
-    helper.classList.remove('visible')
-    if (imagem) {
-        imagem.classList.add('visible');
+    input.classList.remove('error');
+    input.classList.add('correct');
+    helper.classList.remove('visible');
+    if(imagem){
+        imagem.classList.remove('visible');
     }
-}
+};
 
 elementos["nome"].addEventListener("blur", (e) => { 
     let valor = e.target.value;
@@ -81,11 +81,11 @@ elementos["senha-cadastro"].addEventListener("blur", (e) => {
     if(valor == "" || valor.lenght > 6){
         elementos["senha-cadastro-erro"].innerText = 'Por favor, insira uma senha de, no mínimo, 6 caracteres.';
         estilizarInputIncorreto(elementos["senha-cadastro"], elementos["senha-cadastro-erro"], elementos["img-nova-senha-erro"]);
-        inputsCadastroCorretos.sobrenomeCadastro = false;
+        inputsCadastroCorretos.senhaCadastro = false;
     }
     else{
         estilizarInputCorreto(elementos["senha-cadastro"], elementos["senha-cadastro-erro"], elementos["img-nova-senha-erro"]);
-        inputsCadastroCorretos.sobrenomeCadastro = true;
+        inputsCadastroCorretos.senhaCadastro = true;
     }
 });
 
@@ -97,7 +97,7 @@ elementos["data-nascimento"].addEventListener("change", (e) => {
     let ano_atual = data_atual.getFullYear();
     let ano = data.getFullYear();
 
-    if(valor=="" || ano > ano_atual){
+    if(valor=="" || ano > ano_atual || ano < ano_atual-150){
         elementos["data-cadastro-erro"].innerText = 'Digite a data corretamente.'
         estilizarInputIncorreto(elementos["data-nascimento"], elementos["data-cadastro-erro"])
         inputsLoginCorretos.dataCadastro = false;
@@ -108,27 +108,24 @@ elementos["data-nascimento"].addEventListener("change", (e) => {
     }
 })
 
-elementos["cep"].addEventListener("change", (e) => {
+elementos["cep"].addEventListener("blur", (e) => {
     let valor = e.target.value;
-    let tamanho_cep = valor.lenght;
-    console.log(tamanho_cep);
-    if(valor.lenght >= 8){
-        console.log("TO AQUI");
+    if(valor.length >= 8){
         getCep(valor);
         estilizarInputCorreto(elementos["cep"], elementos["cep-cadastro-erro"])
         inputsCadastroCorretos.cepCadastro = true;
     }
     else{
-        elementos["cep-cadastro-erro"].innerText = 'Teste 6'
+        elementos["cep-cadastro-erro"].innerText = 'Por favor, insira seu cep.'
         estilizarInputIncorreto(elementos["cep"], elementos["cep-cadastro-erro"])
         inputsLoginCorretos.cepCadastro = false;
     }
-})
+});
 
 elementos["logradouro"].addEventListener("blur", (e) => {
     let valor = e.target.value;
     if(valor==""){
-        elementos["logradouro-cadastro-erro"].innerText = 'Teste 7'
+        elementos["logradouro-cadastro-erro"].innerText = 'Por favor, insira seu logradouro'
         estilizarInputIncorreto(elementos["logradouro"], elementos["logradouro-cadastro-erro"])
         inputsLoginCorretos.logradouroCadastro = false;
     }
@@ -136,12 +133,12 @@ elementos["logradouro"].addEventListener("blur", (e) => {
         estilizarInputCorreto(elementos["logradouro"], elementos["logradouro-cadastro-erro"])
         inputsCadastroCorretos.logradouroCadastro = true;
     }
-})
+});
 
-elementos["numero"].addEventListener("blur", (e) => {
+elementos["numero"].addEventListener("change", (e) => {
     let valor = e.target.value;
     if(valor==""){
-        elementos["numero-cadastro-erro"].innerText = 'Teste 8'
+        elementos["numero-cadastro-erro"].innerText = 'Por favor, insira u'
         estilizarInputIncorreto(elementos["numero"], elementos["numero-cadastro-erro"])
         inputsLoginCorretos.numeroCadastro = false;
     }
@@ -149,7 +146,7 @@ elementos["numero"].addEventListener("blur", (e) => {
         estilizarInputCorreto(elementos["numero"], elementos["numero-cadastro-erro"])
         inputsCadastroCorretos.numeroCadastro = true;
     }
-})
+});
 
 elementos["bairro"].addEventListener("blur", (e) => {
     let valor = e.target.value;
@@ -162,7 +159,7 @@ elementos["bairro"].addEventListener("blur", (e) => {
         estilizarInputCorreto(elementos["bairro"], elementos["bairro-cadastro-erro"])
         inputsCadastroCorretos.bairroCadastro = true;
     }
-})
+});
 
 elementos["municipio"].addEventListener("blur", (e) => {
     let valor = e.target.value;
@@ -175,7 +172,7 @@ elementos["municipio"].addEventListener("blur", (e) => {
         estilizarInputCorreto(elementos["municipio"], elementos["municipio-cadastro-erro"])
         inputsCadastroCorretos.municipioCadastro = true;
     }
-})
+});
 
 elementos["uf"].addEventListener("blur", (e) => {
     let valor = e.target.value;
@@ -188,10 +185,21 @@ elementos["uf"].addEventListener("blur", (e) => {
         estilizarInputCorreto(elementos["uf"], elementos["uf-cadastro-erro"])
         inputsCadastroCorretos.ufCadastro = true;
     }
-})
+});
+
+btnSubmitCadastro.addEventListener("click", (e) => {
+    let cadastroCorreto = true;
+    Object.keys(inputsCadastroCorretos).forEach(chave => {
+        if(inputsCadastroCorretos[chave] == false){
+            e.preventDefault();
+            console.log("erro ", chave);
+            cadastroCorreto = false;
+        }
+    });
+    cadastroCorreto == true ? alert("Cadastro realizado com sucesso!") : alert("Faltam informações a serem preenchidas!");;
+});
 
 const getCep = async (cep) => {
-    console.log(cep)
     const apiUrl = `https://viacep.com.br/ws/${cep}/json/`;
     const response = await fetch(apiUrl);
     const data = await response.json();
@@ -200,15 +208,20 @@ const getCep = async (cep) => {
         alert('Cep inválido, tente novamente.')
         return;
     }
-    console.log(data.logradouro);
+
     elementos["logradouro"].value = data.logradouro;
     inputsCadastroCorretos.logradouroCadastro = true;
+    estilizarInputCorreto(elementos["logradouro"], elementos["logradouro-cadastro-erro"])
+
     elementos["bairro"].value = data.bairro;
     inputsCadastroCorretos.bairroCadastro = true;
+    estilizarInputCorreto(elementos["bairro"], elementos["bairro-cadastro-erro"])
 
     elementos["municipio"].value = data.localidade;
     inputsCadastroCorretos.municipioCadastro = true;
+    estilizarInputCorreto(elementos["municipio"], elementos["municipio-cadastro-erro"])
 
     elementos["uf"].value = data.uf;
     inputsCadastroCorretos.ufCadastro = true;
+    estilizarInputCorreto(elementos["uf"], elementos["uf-cadastro-erro"])
 }

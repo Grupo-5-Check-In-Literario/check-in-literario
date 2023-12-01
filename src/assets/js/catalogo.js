@@ -1,86 +1,46 @@
-const listaDeCategorias = [ "AUTO AJUDA", "CIÊNCIAS BIOLÓGICAS", "CIÊNCIAS EXATAS", "CIÊNCIAS SOCIAIS", "DIDÁTICOS", "ENGENHARIA", "EDUCAÇÃO", "ESOTERISMO", "LITERATURA NACIONAL", "LITERATURA INTERNACIONAL", "QUADRINHOS", "SEXUALIDADE", "SAUDE E BEM ESTAR", "TECNOLOGIA", "VIAGEM", "BIOGRAFIA"]
+import { bookApi } from "./navbar-component.js";
 
-const listaNaoOrdenada = document.querySelector('.catalog-menu')
+//Atualizando os livros pela categoria
+const listaDeCategorias = [ "AUTO AJUDA", "CIÊNCIAS BIOLÓGICAS", "CIÊNCIAS EXATAS", "CIÊNCIAS SOCIAIS", "DIDÁTICOS", "ENGENHARIA", "EDUCAÇÃO", "ESOTERISMO", "LITERATURA NACIONAL", "LITERATURA INTERNACIONAL", "QUADRINHOS", "SEXUALIDADE", "SAUDE E BEM ESTAR", "TECNOLOGIA", "VIAGEM", "BIOGRAFIA" ]
 
-let tituloCategoria = document.getElementById('titulo-categoria')
+const listaNaoOrdenada = document.querySelector('.catalog-menu');
+
+let tituloCategoria = document.getElementById('titulo-categoria');
 
 for(let i = 0; i < listaDeCategorias.length; i++) {
-    const categoria = document.createElement('li')
+    const categoria = document.createElement('li');
     
-    categoria.innerText = listaDeCategorias[i]
-    listaNaoOrdenada.appendChild(categoria)
+    categoria.innerText = listaDeCategorias[i];
+    listaNaoOrdenada.appendChild(categoria);
     
     categoria.addEventListener('click', () => {
-        tituloCategoria.innerText = listaDeCategorias[i]
-        bookApi(listaDeCategorias[i])
+        tituloCategoria.innerText = listaDeCategorias[i];
+        bookApi(listaDeCategorias[i]);
     })
-}
+};
 
-//API dos livros - ignorar por enquanto
-const searchInput = document.querySelector('#search');
-const searchBtn = document.querySelector('.search-btn');
-const cardBook = document.querySelector('.card-item');
-const bookTitle = document.querySelectorAll('.book-title');
-const imgBook = document.querySelectorAll('.img-book')
-
-searchInput.addEventListener('blur',(e) => {
-    const input = e.target.value;
-
-   searchBtn.addEventListener('click',(e) => {
-         bookApi(input);
-    })
-})
-
-searchInput.addEventListener('keypress',(e) => {  
-    const input = e.target.value;
-    if(e.key === 'Enter'){
-        bookApi(input);
-    }
+// função pra receber os parametrosde busca das outras telas
+function receivedParams(parameter) {  
+    var loc = location.search.substring(1, location.search.length);  
+    var param_value = loc;  
+    var params = loc.split("&");  
+    // for (i= 0 ; i < params.length; i++) {   
+      
+    //     param_name = params[i].substring(0,params[i].indexOf('='));   
+    //     if (param_name == parameter) {                                          
+    //         param_value = params[i].substring(params[i].indexOf('=') + 1)   
+    //     }   
+    // }   
+    if (param_value) {   
+        console.log('param',param_value)
+        return param_value;   
+    }   
+    else {   
+        return undefined;   
+    } 
     
-})
+};
 
-const bookApi = async (book) => {
-        const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${book}&key=AIzaSyCT5_PF4d5CFyw0x9KnQIpSklcfdFfdxpk`;
+bookApi(receivedParams());
 
-        const resp = await fetch(apiUrl);
-        const data = await resp.json();
-
-        const bookData = data.items;
-        const bookList = Array(bookData);
-        
-
-        let selectbook = Array()
-         bookList[0].map((items) => {
-           selectbook.push(items.volumeInfo);
-        })
-
-        showBook(selectbook);
-        console.log('this',selectbook);
-
-        if(data.erro === true){
-            alert('Livro não encontrado');
-            return;     
-    }
-}
-
-bookApi('TECNOLOGIA')
-
-//função para substituir dinamicamente os cards de livros no html
-
-
-function showBook(items){
-        console.log('a',imgBook[0])
-    for (let index = 0; index < bookTitle.length; index++) {
-          bookTitle[index].innerHTML = `${items[index].title}`;      
-    }
-   
-    for (let index = 0; index < imgBook.length + 1; index++) {
-        if(items[index].imageLinks === undefined) {
-            console.log('Filme nao tem thum')
-            imgBook[index].setAttribute('src',`./src/assets/images/capa-ilustrativa.jpg`); 
-        }else {
-            imgBook[index].setAttribute('src',`${items[index].imageLinks.thumbnail}`); 
-        }      
-    }
-}
-
+bookApi('em alta');

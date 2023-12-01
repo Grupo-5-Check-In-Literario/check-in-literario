@@ -70,3 +70,85 @@ linkSair.addEventListener('click', (e) =>{
     alert("Até a próxima!")
   }
 })
+
+//Todas as requisições da barra de busca ficam nesse .js
+const searchInput = document.querySelector("#search");
+const searchBtn = document.querySelector(".search-btn");
+const bookTitle = document.querySelectorAll(".book-title");
+const imgBook = document.querySelectorAll(".img-book");
+
+
+searchInput.addEventListener('blur',(e) => {
+  const input = e.target.value;
+
+ searchBtn.addEventListener('click',(e) => {
+  console.log('click')
+       bookApi(input);
+       sendParams(input);
+  })
+})
+
+searchInput.addEventListener('keypress',(e) => {  
+  const input = e.target.value;
+  if(e.key === 'Enter'){
+      bookApi(input);
+      sendParams(input);
+  }
+  
+});
+
+
+//api dos livros
+const bookApi = async (book) => {
+  const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${book}&key=AIzaSyCT5_PF4d5CFyw0x9KnQIpSklcfdFfdxpk`;
+
+  const resp = await fetch(apiUrl);
+  const data = await resp.json();
+
+  const bookData = data.items;
+  const bookList = Array(bookData);
+  console.log(book, apiUrl)
+
+  let selectbook = Array();
+  bookList[0].map((items) => {
+    selectbook.push(items.volumeInfo);
+  });
+
+  showBook(selectbook);
+  console.log("this", selectbook);
+
+  if (data.erro === true) {
+    alert("Livro não encontrado");
+    return;
+  }
+};
+
+//renderizar os livros dinâmicamente na tela de catálogo
+function showBook(items) {
+  console.log("a", imgBook[0]);
+  for (let index = 0; index < bookTitle.length; index++) {
+    bookTitle[index].innerHTML = `${items[index].title}`;
+  }
+
+  for (let index = 0; index < imgBook.length + 1; index++) {
+    if (items[index].imageLinks === undefined) {
+      console.log("Filme nao tem thum");
+      imgBook[index].setAttribute(
+        "src",
+        `./src/assets/images/capa-ilustrativa.jpg`
+      );
+    } else {
+      imgBook[index].setAttribute(
+        "src",
+        `${items[index].imageLinks.thumbnail}`
+      );
+    }
+  }
+};
+
+//passando a busca da barra de pesquisa para renderizar no catálogo
+var sendParams = function(valor){
+  window.location = "catalogo.html?"+valor;
+};
+
+export {bookApi, sendParams};

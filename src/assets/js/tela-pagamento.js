@@ -1,12 +1,3 @@
-// let isNumeric = function (value) {
-//     return /^\d+(?:\.\d+)?$/.test(value);
-// };
-
-// String.prototype.isNumeric = function () {
-//     return isNumeric(this);
-// };
-
-
 form = document.querySelector('.adress-info');
 errorMsg = document.querySelectorAll('.error-message');
 

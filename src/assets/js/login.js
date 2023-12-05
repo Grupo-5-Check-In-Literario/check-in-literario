@@ -12,6 +12,8 @@ let inputsLoginCorretos = {
     senhaLogin: false
 }
 
+
+
 function estilizarInputIncorreto(input, helper, imagem){
     input.classList.remove('correct')
     input.classList.add('error')

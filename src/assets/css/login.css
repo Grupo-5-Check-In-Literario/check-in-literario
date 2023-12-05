@@ -2,9 +2,12 @@ input{
     height: 30px;
     border: 1px solid #bbb8b8;
     border-radius: 5px;
-    padding-left: 15px;
+    padding-left: 10px;
     font-size: 14px;
     max-width: 340px;
+}
+input:focus{
+    outline: none;
 }
 
 p{
@@ -212,7 +215,7 @@ input.correct {
 	to {border: solid 2px #fc9595;}
 }
 
-/* ------  ESTILIZAÇÃO DO CARD CADASTRO  ------
+/* ------  ESTILIZAÇÃO DO CARD CADASTRO  ------ */
 
 .nome-sobrenome{
     display: flex;
@@ -240,6 +243,7 @@ input.correct {
 }
 
 .botao-submit input{
+    margin-top: 5px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background-color: var(--secondary-color);
     padding: 0;
@@ -256,4 +260,4 @@ input.correct {
     background-color: rgb(48, 151, 247);
     transform: scale(1.02);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-} */
+}

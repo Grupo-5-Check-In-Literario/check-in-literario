@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/assets/images/check-in.png" type="image/x-icon">
+    <title>Detalhes da compra | Checkin-Literário</title>
+
+    <link rel="stylesheet" href="./src/assets/css/navbar.css" />
+   <link rel="stylesheet" href="src/assets/css/footer.css">
+    <link rel="stylesheet" href="./src/assets/css/global.css" />
+    <link rel="stylesheet" href="src/assets/css/pagamento.css">
+    <link rel="stylesheet" href="./src/assets/css/menu.css">
+
+    <script src="./src/assets/js/navbar-component.js" type="module" defer></script>
+    <script src="src/assets/js/tela-pagamento.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-box">
+            <a href="./index.html" class="logo"><img class="logo-img" src="src/assets/images/logo.png" alt="Logo" /></a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="pesquisar..." id="search"/>
+                <button type="button" class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <path
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="navbar">
+                <input type="checkbox" id="menu-hamburguer">
+
+                <label for="menu-hamburguer">
+                    <div class="menu">
+                        <span class="hamburguer"></span>
+                    </div>
+                </label>
+
+                <ul class="nav-items">
+                    <li>
+                        <a href="./quem-somos.html">quem somos</a>
+                    </li>
+                    <li>
+                        <a href="./catalogo.html">catálogo</a>
+                    </li>
+                    <li>
+                        <div class="user-profile">
+                            <img src="src/assets/images/user_8742495.png" alt="foto do usuario">
+                            <div class="user-profile-buttons">
+                                <p>Olá, <strong>user</strong></p>
+                                <a href="./tela-de-perfil.html">Acesse seu perfil</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a id="sair" href="./login.html">sair</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- descrição do livro -->
+        <div class="container">
+            <section class="book-details">
+                <div class="book-img">
+                    <img src="src/assets/images/livro1.jpg" alt="imagem ilustrativa de um livro" />
+                </div>
+
+                <ul class="book-info">
+                    <li class="book-info-items" id="book-name">Nome do livro</li>
+                    <li class="book-info-items">Editora: xxxxxxxx</li>
+                    <li class="book-info-items">Autor: xxxxxxx</li>
+                    <li class="book-info-items">Ano: 0000</li>
+                    <li class="book-info-items">
+                        <img src="src/assets/images/stars.jpg" alt="estrelas do livro" class="book-fake-star">
+                    </li>
+                </ul>
+            </section>
+
+            <section class="adress-section">
+
+                <form action="" class="adress-info">
+                    <h3>O endereço para entrega está correto?</h3>
+                    <!-- campo de endereço -->
+                    <fieldset>
+                        <div class="adress-items grid-1">
+                            <div class="label-container">
+                                <label for="rua">Rua</label>
+                                <span class="error-message">*Obrigatório</span>
+                            </div>
+                            <input type="text" placeholder="rua" id="rua" required disabled>
+                        </div>
+
+                        <div class="adress-items grid-2">
+                            <div class="label-container">
+                                <label for="cep">Cep</label>
+                                <span class="error-message">*Obrigatório</span>
+                            </div>
+                            <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==8) return false;" placeholder="Apenas dígitos" id="cep" required>
+                        </div>
+
+                        <div class="adress-items grid-3">
+
+                            <div class="label-container">
+                                <label for="bairro">Bairro</label>
+                                <span class="error-message">*Obrigatório</span>
+                            </div>
+                            <input type="text" placeholder="bairro" id="bairro" required disabled>
+                        </div>
+
+                        <div class="adress-items grid-4">
+                            <div class="label-container">
+                                <label for="num">Nº</label>
+                                <span class="error-message">*Obrigatório</span>
+                            </div>
+                            <input type="number" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==4) return false;" id="num" placeholder="numero"/>
+                        </div>
+
+                        <div class="adress-items grid-5">
+                            <div class="label-container">
+                                <label for="cidade">Cidade</label>
+                                <span class="error-message">*Obrigatório</span>
+                            </div>
+                            <input type="text" placeholder="cidade" id="cidade" required disabled>
+                        </div>
+
+                        <div class="adress-items grid-6">
+                            <div class="label-container">
+                                <label for="uf">UF</label>
+                                <span class="error-message">*Obrigatório</span>
+                            </div>
+                            <input type="text" maxlength="2"  placeholder="ex: RJ" id="uf" required disabled>
+                        </div>
+
+                        <div class="adress-items grid-7">
+                            <div class="label-container">
+                                <label for="comp">Complemento</label>
+                            </div>
+                            <input type="text" placeholder="complemento" id="comp">
+                        </div>
+                    </fieldset>
+
+                    <div class="user-comments">
+                        <label for="info">Comentário adicional sobre a entrega</label>
+                        <textarea name="info" id="info" cols="50" rows="3"></textarea>
+                    </div>
+                    <button>
+                        Alterar
+                    </button>
+                </form>
+            </section>
+        </div>
+
+        <section class="request-section">
+            <h3>Escolha um usuário que tem esse livro</h3>
+
+            <ul class="sellers-list">
+                <li class="seller-card">
+                    <div class="seller">
+                        <img src="src/assets/images/user_8742495.png" alt="user thumbail">
+                        <p>User</p>
+                    </div>
+
+                    <div class="seller-data">
+                        <div class="seller-info">
+                            <p>Localização: xxxxxxx-xx</p>
+                            <p>Ultimo acesso: xx/xx/xxxx</p>
+                        </div>
+                        <div class="seller-comments">
+                            <p>Estado de conservação do livro:
+                            </p>
+                            <q>
+                                Livro em bom estado de conservação.
+                            </q>
+                        </div>
+
+                    </div>
+
+                    <div class="request-field">
+                        <p>Prazo máximo para sua solicitação ser aceita é de 3 dias úteis, após esse prazo caso
+                            não obtenha resposta do solicitado, o pedido é automáticamente cancelado. Você
+                            também pode cancelar sua solicitação a qualquer momento.</p>
+                        <a href="./tela-de-perfil.html">
+                            <button>
+                                Solicitar
+                            </button>
+                        </a>
+                    </div>
+                </li>
+                <li class="seller-card">
+                    <div class="seller">
+                        <img src="src/assets/images/user_8742495.png" alt="user thumbail">
+                        <p>User</p>
+                    </div>
+
+                    <div class="seller-data">
+                        <div class="seller-info">
+                            <p>Localização: xxxxxxx-xx</p>
+                            <p>Ultimo acesso: xx/xx/xxxx</p>
+                        </div>
+                        <div class="seller-comments">
+                            <p>Estado de conservação do livro:
+                            </p>
+                            <q>
+                                Livro em bom estado de conservação.
+                            </q>
+                        </div>
+
+                    </div>
+
+                    <div class="request-field">
+                        <p>Prazo máximo para sua solicitação ser aceita é de 3 dias úteis, após esse prazo caso
+                            não obtenha resposta do solicitado, o pedido é automáticamente cancelado. Você
+                            também pode cancelar sua solicitação a qualquer momento.</p>
+                        <a href="./tela-de-perfil.html">
+                            <button>
+                                Solicitar
+                            </button>
+                        </a>
+                    </div>
+                </li>
+                <li class="seller-card">
+                    <div class="seller">
+                        <img src="src/assets/images/user_8742495.png" alt="user thumbail">
+                        <p>User</p>
+                    </div>
+
+                    <div class="seller-data">
+                        <div class="seller-info">
+                            <p>Localização: xxxxxxx-xx</p>
+                            <p>Ultimo acesso: xx/xx/xxxx</p>
+                        </div>
+                        <div class="seller-comments">
+                            <p>Estado de conservação do livro:
+                            </p>
+                            <q>
+                                Livro em bom estado de conservação.
+                            </q>
+                        </div>
+
+                    </div>
+
+                    <div class="request-field">
+                        <p>Prazo máximo para sua solicitação ser aceita é de 3 dias úteis, após esse prazo caso
+                            não obtenha resposta do solicitado, o pedido é automáticamente cancelado. Você
+                            também pode cancelar sua solicitação a qualquer momento.</p>
+                        <a href="./tela-de-perfil.html">
+                            <button>
+                                Solicitar
+                            </button>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-box">
+			<div class="footer-section">
+				<h3>Atendimento</h2>
+					<p>Whatsapp: (xx)xxxx-xxxx</p>
+					<p>Email: checkinliterario.g5@gmail.com</p>
+			</div>
+	
+			<div class="footer-section">
+				<a href="https://github.com/Grupo-5-Check-In-Literario/check-in-literario" target="_blank">
+					Link do repositório no <strong>Github</strong>
+				</a>
+			</div>
+		</div>
+    </footer>
+</body>
+
+</html>

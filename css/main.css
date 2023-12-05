@@ -1,0 +1,166 @@
+:root {
+	/* Cores */
+	--primary-color: #fff;
+	--secondary-color: #345c73;
+	--tertiary-color: #81d463;
+	--black-color: #000;
+	--bg-green: #94bc9d;
+	--bg-card-green: #e8f4ed;
+
+	/* Fontes */
+	--font-inter: "Inter", sans-serif;
+	--font-pinyon: "Pinyon Script", cursive;
+
+	/* Tamanhos de Fonte */
+	--button-font-size: 14px;
+	--default-font-size: 16px;
+	--h1-font-size: 36px;
+	--h2-font-size: 24px;
+	--h3-font-size: 20px;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+	font-family: var(--font-inter);
+	font-size: var(--default-font-size);
+	color: var(--black-color);
+	background-color: var(--primary-color);
+}
+
+button {
+	font-size: var(--button-font-size);
+}
+
+h1 {
+	font-size: var(--h1-font-size);
+}
+
+h2 {
+	font-size: var(--h2-font-size);
+}
+
+h3 {
+	font-size: var(--h3-font-size);
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  margin-left: 5%;
+  z-index: 101;
+  height: auto;
+  max-width: 15%;
+  width: calc(192px + 0.13333vw);  /* 192px at 1440px screen width */
+  height: calc(72px + 0.05vw);  
+}
+
+.nav-items {
+  display: flex;
+  margin-left: 5%;
+}
+
+.nav-items a {
+  padding: 14px 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.search-bar {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.search-bar input {
+  padding: 10px;
+  font-size: var(--default-font-size);
+}
+
+.auth-buttons {
+  margin-right: 5%;
+}
+
+.auth-buttons button {
+  padding: 10px 20px;
+  font-size: var(--button-font-size);
+  margin-left: 10px;
+}
+
+.carrinho {
+  margin-right: 5%;
+  max-width: 10%;
+}
+
+.carrinho svg {
+  width: calc(46px + 0.03125vw);
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  .logo {
+    max-width: 20%;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav-items {
+    display: none;
+  }
+
+  .auth-buttons {
+    margin-right: 2%;
+  }
+
+  .carrinho {
+    margin-right: 2%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    max-width: 30%;
+  }
+
+  .search-bar {
+    flex-grow: 1;
+    text-align: left;
+    margin-left: 5%;
+  }
+
+  .auth-buttons {
+    margin-right: 2%;
+  }
+
+  .carrinho {
+    margin-right: 2%;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    max-width: 40%;
+  }
+
+  .search-bar input {
+    padding: 5px;
+  }
+
+  .auth-buttons button {
+    padding: 5px 10px;
+  }
+}

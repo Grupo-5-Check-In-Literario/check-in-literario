@@ -1,0 +1,60 @@
+:root {
+	/* Cores */
+	--primary-color: #fff;
+	--secondary-color: #305a72;
+	--tertiary-color: #7ed957;
+	--black-color: #000;
+	--bg-green: #94bc9d;
+	--bg-card-green: #e8f4ed;
+	--fundo-dark-blue: #203643;
+	--fundo-card-dark: #21323C;
+	--button-blue:#345C73;
+	--thumb-span-color: #549437;
+
+	/* Fontes */
+	--font-inter: "Inter", sans-serif;
+	--font-pinyon: "Pinyon Script", cursive;
+
+	/* Tamanhos de Fonte */
+	--small-font-size: 14px;
+	--button-font-size: 14px;
+	--default-font-size: clamp(14px, 14px + 1vw, 16px);;
+	--h1-font-size: clamp(24px, 24px + 1vw, 36px);
+	--h2-font-size: clamp(20px, 20px + 1vw, 24px);
+	--h3-font-size: clamp(16px, 16px + 1vw, 20px);
+
+	/* Margem */
+	--base-margin: 73px;
+	--base-viewport-width: 1440px;
+	--scaled-margin: calc(
+		1vw * var(--base-margin) / var(--base-viewport-width)
+	);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--font-inter);
+	font-size: var(--default-font-size);
+	color: var(--black-color);
+	border: none;
+	text-decoration: none;
+	list-style: none;
+}
+
+h1{font-size: var(--h1-font-size);}
+h2{font-size: var(--h2-font-size);}
+h3{font-size: var(--h3-font-size);}
+
+button {
+	text-align: center;
+	font-size: var(--button-font-size);
+	padding: 8px;
+	height: 34px;
+	cursor: pointer;
+}
+
+img {
+	width: 100%;
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="shortcut icon" href="./src/assets/images/check-in.png" type="image/x-icon">
+	<title>Detalhes do livro | Checkin Literário</title>
+	<link rel="stylesheet" href="./src/assets/css/navbar.css" />
+	<link rel="stylesheet" href="src/assets/css/footer.css">
+	<link rel="stylesheet" href="./src/assets/css/global.css" />
+	<link rel="stylesheet" href="./src/assets/css/detalhamento-livro.css">
+	<link rel="stylesheet" href="src/assets/css/scroll-bar.css">
+	<link rel="stylesheet" href="./src/assets/css/menu.css">
+
+	<script src="./src/assets/js/navbar-component.js" type="module" defer></script>
+	<script src="./src/assets/js/tela-detalhamento.js" defer></script>
+</head>
+
+<body>
+	<header>
+        <div class="header-box">
+            <a href="./index.html" class="logo"><img class="logo-img" src="src/assets/images/logo.png" alt="Logo" /></a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="pesquisar..." id="search"/>
+                <button type="button" class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <path
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="navbar">
+                <input type="checkbox" id="menu-hamburguer">
+
+                <label for="menu-hamburguer">
+                    <div class="menu">
+                        <span class="hamburguer"></span>
+                    </div>
+                </label>
+
+                <ul class="nav-items">
+                    <li>
+                        <a href="./quem-somos.html">quem somos</a>
+                    </li>
+                    <li>
+                        <a href="./catalogo.html">catálogo</a>
+                    </li>
+                    <li>
+                        <div class="user-profile">
+                            <img src="src/assets/images/user_8742495.png" alt="foto do usuario">
+                            <div class="user-profile-buttons">
+                                <p>Olá, <strong>user</strong></p>
+                                <a href="./tela-de-perfil.html">Acesse seu perfil</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a id="sair" href="./login.html">sair</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+	<main class="book-details">
+		<div class="book-box">
+			<h2 class="book-title">Nome do Livro</h2>
+			<img class="img-book" src="./src/assets/images/livro1.jpg" alt="capa do livro">
+			<div class="book-rating">
+				<img src="./src/assets/images/stars.jpg" alt="Estrelas de avaliação">
+			</div>
+			<div class="book-buttons">
+				<a href="./tela-de-pagamento.html">
+					<button class="book-request">SOLICITAR</button>
+				</a>
+				<a href="./tela-de-perfil.html"><button class="search-signaling">PROCURO</button></a>
+			</div>
+			<a href="./tela-de-perfil.html"><button class="change-signaling">TENHO PARA TROCAR</button></a>
+		</div>
+		<div class="book-data">
+			<div class="book-info">
+				<div class="sinopse">
+					<h3>Sinopse</h3>
+					<p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sapiente obcaecati quae? Sequi
+						accusamus odit aut rerum. Libero dolore dicta inventore enim? Quod impedit deserunt
+						necessitatibus debitis obcaecati laborum sint?
+					</p>
+				</div>
+				<div class="data-box">
+					<div class="data">
+						<p>Autor</p>
+						<p class="autor-data">XXXXXX</p>
+					</div>
+					<div class="data">
+						<p>Editora</p>
+						<p class="publishing-company-data">XXXXXX</p>
+					</div>
+					<div class="data">
+						<p>Gênero</p>
+						<p class="gender-data">XXXXXX</p>
+					</div>
+					<div class="data">
+						<p>Edição</p>
+						<p class="edition-data">XXXXXX</p>
+					</div>
+					<div class="data">
+						<p>Idioma</p>
+						<p class="language-data">XXXXXX</p>
+					</div>
+					<div class="data">
+						<p>ISBN-13</p>
+						<p class="isbn-13">0000000000000</p>
+					</div>
+				</div>
+			</div>
+			<h2 class="coments-title-box">Comentários</h2>
+			<div class="coments-and-more">
+				<div class="about-coments">
+					<div class="about-coment">
+					<div class="user">
+						<img class="user-photo" src="src/assets/images/perfil-usuario.jpg"
+							alt="imagem de perfil do usuário">
+						<div class="user-name">
+							<p><strong>Usuário</strong></p>
+							<p>Escreve:</p>
+						</div>
+					</div>
+					<div class="coment">
+						<p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+							been the industry's standard dummy text ever since the 1500s”</p>
+						<p class="day">xx/xx/xxxx</p>
+					</div>
+					</div>
+					<div class="about-coment">
+					<div class="user">
+						<img class="user-photo" src="src/assets/images/perfil-usuario2.jpg"
+							alt="imagem de perfil do usuário">
+						<div class="user-name">
+							<p><strong>Usuário</strong></p>
+							<p>Escreve:</p>
+						</div>
+					</div>
+					<div class="coment">
+						<p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+							been the industry's standard dummy text ever since the 1500s”</p>
+						<p class="day">xx/xx/xxxx</p>
+					</div>
+					</div>
+					<div class="about-coment user-hidden hidden">
+					<div class="user">
+						<img class="user-photo" src="src/assets/images/perfil-usuario3.jpg"
+							alt="imagem de perfil do usuário">
+						<div class="user-name">
+							<p><strong>Usuário</strong></p>
+							<p>Escreve:</p>
+						</div>
+					</div>
+					<div class="coment">
+						<p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+							been the industry's standard dummy text ever since the 1500s”</p>
+						<p class="day">xx/xx/xxxx</p>
+					</div>
+					</div>
+					<div class="about-coment user-hidden hidden">
+					<div class="user">
+						<img class="user-photo" src="src/assets/images/perfil-usuario4.jpg"
+							alt="imagem de perfil do usuário">
+						<div class="user-name">
+							<p><strong>Usuário</strong></p>
+							<p>Escreve:</p>
+						</div>
+					</div>
+					<div class="coment">
+						<p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+							been the industry's standard dummy text ever since the 1500s”</p>
+						<p class="day">xx/xx/xxxx</p>
+					</div>
+					</div>
+					<div class="about-coment user-hidden hidden">
+					<div class="user">
+						<img class="user-photo" src="src/assets/images/perfil-usuario5.jpg"
+							alt="imagem de perfil do usuário">
+						<div class="user-name">
+							<p><strong>Usuário</strong></p>
+							<p>Escreve:</p>
+						</div>
+					</div>
+					<div class="coment">
+						<p>“Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+							been the industry's standard dummy text ever since the 1500s”</p>
+						<p class="day">xx/xx/xxxx</p>
+					</div>
+					</div>
+				</div>
+				<button class="more-info">MAIS</button>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+        <div class="footer-box">
+			<div class="footer-section">
+				<h3>Atendimento</h2>
+					<p>Whatsapp: (xx)xxxx-xxxx</p>
+					<p>Email: checkinliterario.g5@gmail.com</p>
+			</div>
+	
+			<div class="footer-section">
+				<a href="https://github.com/Grupo-5-Check-In-Literario/check-in-literario" target="_blank">
+					Link do repositório no <strong>Github</strong>
+				</a>
+			</div>
+		</div>
+    </footer>
+</body>
+
+</html>

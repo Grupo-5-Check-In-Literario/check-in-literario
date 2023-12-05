@@ -1,0 +1,219 @@
+input{
+    height: 30px;
+    border: 1px solid #bbb8b8;
+    border-radius: 5px;
+    padding-left: 15px;
+    font-size: 14px;
+}
+
+p{
+    font-size: 12px;
+}
+
+body{
+    /* background: linear-gradient(to left, var(--secondary-color)); */
+    background: -webkit-linear-gradient(top right,  #031f3f 0%,#305a72 40%,#4d83a1 60%,#7bc3f7 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.thumb-e-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin: 30px;
+}
+
+.thumb-e-login .thumb img{
+    position: absolute;
+    transform: rotateX(180deg) rotateZ(-90deg);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 580px;
+    margin: auto;
+    max-width: 640px;
+    min-width: 250px;
+    z-index: -1;
+}
+
+@media(max-width:1017px) {
+    .thumb-e-login .thumb img{
+        position: fixed;
+        right: 0;
+        opacity: 0.7;
+    }
+}
+
+.thumb-e-login .thumb .thumb-copy{
+    max-width: 510px;
+}
+
+.thumb-e-login .thumb .thumb-copy .titulo span, .thumb-e-login .thumb .thumb-copy .titulo{
+    font-family: 'Pinyon Script', cursive;
+    font-size: clamp(40px, 40px + 1vw, 64px);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.thumb-e-login .thumb .thumb-copy .titulo span{
+    color: var(--tertiary-color);
+}
+
+.thumb-e-login .thumb .thumb-copy .titulo, .thumb-e-login .thumb .thumb-copy p, .thumb-e-login .thumb .thumb-copy p strong{
+    color: var(--primary-color);
+}
+
+.thumb-e-login .thumb .thumb-copy p, .thumb-e-login .thumb .thumb-copy p strong{
+    font-size: var(--h2-font-size);
+    text-align: center;
+}
+
+.secao-login-cadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 370px;
+    min-width: 220px;
+}
+
+.secao-login-cadastro .ou{
+    width: 50px;
+    position: relative;
+}
+
+.secao-login-cadastro .ou span{
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.login-e-cadastro{
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.login-e-cadastro .mensagem-inicial{
+    padding-bottom: 5px;
+    border-bottom: 1px solid #bbb8b8;
+    margin-bottom: 12px;
+}
+
+.login-e-cadastro .login form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-e-cadastro .login form input {
+    width: 100%;
+}
+
+.login-e-cadastro .login form button{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: var(--thumb-span-color);
+    border-radius: 5px;
+    padding-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.15s all ease-in-out;
+}
+.login-e-cadastro .login form button:hover{
+    background-color: var(--tertiary-color);
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.login-e-cadastro .login form a{
+    align-self: center;
+    margin-top: 12px;
+    color: var(--thumb-span-color);
+    transition: 0.15s all ease-in-out;
+}
+.login-e-cadastro .login form a:hover{
+    color: var(--secondary-color);
+}
+
+.mensagem-de-erro {
+    color: #a70f0f;
+    opacity: 0;
+    margin: 2px;
+}
+
+/*------ ESTILOS DINÂMICOS ------*/
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-erro{
+    width: 28px;
+    position: relative;
+    align-self: flex-end;
+    opacity: 0;
+}
+
+.img-erro img{
+    position: absolute;
+    right: 2px;
+    bottom: 7px;
+}
+
+.required-popup::after {
+    content: "*Campo obrigatório";
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #DFDFDF;
+    font-size: .65rem;
+    padding: .2rem .3rem;
+    width: auto;
+    display: block;
+    background-color: #202020;
+}
+  
+input.error {
+    border: solid 2px #992020;
+    color: #662020;
+    animation-duration: 0.5s;
+    animation-name: surgir;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+  
+input.correct {
+    border: solid 2px #206620;
+    color: #206620;
+}
+
+.visible{
+    opacity: 1;
+}
+
+@keyframes surgir {
+	from {
+        border: solid 2px #992020; 
+	}
+  
+	to {
+        border: solid 2px #fc9595;
+	}
+  }

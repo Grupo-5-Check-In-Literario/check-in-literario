@@ -1,0 +1,129 @@
+/* responsive */
+header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.header-box  .menu{
+    display: none;
+    width: 30px;
+    height: 60px;
+}
+.header-box .navbar .nav-items .carrinho .text{
+    display: none;
+    width: 100%;
+}
+
+.header-box .hamburguer{
+    background-color: var(--primary-color);
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    top: 31px;
+    right: 9px;
+    border-radius: 2px;
+    transition: 0.2s ease-in-out;
+    
+}
+
+.header-box .hamburguer:before, .header-box .hamburguer:after{
+    background-color: var(--primary-color);
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+    border-radius: 2px;
+}
+
+.header-box .hamburguer:before{
+    top: -10px;
+}
+
+.header-box .hamburguer:after{
+    bottom: -10px;
+}
+
+.header-box .navbar input{
+    display: none;
+}
+
+.header-box .navbar input:checked ~ label .hamburguer{
+    transform: rotate(45deg);
+}
+
+.header-box .navbar input:checked ~ label .hamburguer:before{
+    transform: rotate(90deg);
+    top: 0;
+}
+
+.header-box .navbar input:checked ~ label .hamburguer:after{
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+@media(max-width: 1024px){ 
+    .navbar .menu{
+        display: block;
+        cursor: pointer;
+    }
+    .navbar label{
+        display: flex;
+        align-self: flex-end;
+        margin-bottom: 15px;
+    }
+    .navbar .nav-items, .navbar .nav-items .user-profile img,  .navbar .nav-items .user-profile .user-profile-buttons p{
+        display: none;
+    }
+
+    .navbar .nav-items .user-profile .user-profile-buttons a{
+        text-transform: uppercase;
+        color: var(--bg-green);
+    }
+    .navbar .nav-items .user-profile .user-profile-buttons a:hover{
+        color: var(--tertiary-color);
+    }
+
+    .header-box .navbar input:checked ~ .nav-items{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        width: 190px;
+        background-color: var(--secondary-color);
+        opacity: 0.8;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        margin-right: 8px;
+        animation-duration: 1s;
+	    animation-name: surgir;
+    }
+    .navbar{
+        position: absolute;
+        top: 8px;
+        right: 20px;
+        z-index: 1;
+        flex-direction: column;
+        
+    }
+    .navbar nav .nav-items a{
+        text-align: center;
+    }
+}
+
+@keyframes surgir {
+	from {
+        height: 0;
+	    opacity: 0;
+        gap: 0;
+	}
+  
+	to {
+        height: 172px;
+	    opacity: 0.8;
+        gap: 20px;
+	}
+  }

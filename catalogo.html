@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="./src/assets/images/check-in.png" type="image/x-icon">
+	<title>Catálogo | Checkin Literário</title>
+	<link rel="stylesheet" href="src/assets/css/footer.css">
+	<link rel="stylesheet" href="./src/assets/css/global.css">
+	<link rel="stylesheet" href="src/assets/css/navbar.css">
+	<link rel="stylesheet" href="./src/assets/css/menu.css">
+	<link rel="stylesheet" href="src/assets/css/catalogo.css">
+
+	<script src="./src/assets/js/catalogo.js" type="module" defer></script>
+	<script src="./src/assets/js/navbar-component.js" type="module" defer></script>
+	
+</head>
+
+<body>
+	<header>
+        <div class="header-box">
+            <a href="./index.html" class="logo"><img class="logo-img" src="src/assets/images/logo.png" alt="Logo" /></a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="pesquisar..." id="search"/>
+                <button type="button" class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <path
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="navbar">
+                <input type="checkbox" id="menu-hamburguer">
+
+                <label for="menu-hamburguer">
+                    <div class="menu">
+                        <span class="hamburguer"></span>
+                    </div>
+                </label>
+
+                <ul class="nav-items">
+                    <li>
+                        <a href="./quem-somos.html">quem somos</a>
+                    </li>
+                    <li>
+                        <a href="./catalogo.html">catálogo</a>
+                    </li>
+                    <li>
+                        <div class="user-profile">
+                            <img src="src/assets/images/user_8742495.png" alt="foto do usuario">
+                            <div class="user-profile-buttons">
+                                <p>Olá, <strong>user</strong></p>
+                                <a href="./tela-de-perfil.html">Acesse seu perfil</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a id="sair" href="./login.html">sair</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+	<main>
+		<div class="catalog">
+
+			<div id="catalog-title">
+				<div id="catalog-text">
+					<h1>CATÁLOGO</h1>
+				</div>
+			</div>
+
+			<ul class="catalog-menu">
+			</ul>
+
+			<section class="content">
+				<h2 id="titulo-categoria">CATÁLOGO</h2>
+				<div class="card-wrapper">
+
+					<div class="card-item">				
+						<a href="./tela-detalhamento.html">
+							<img src="./src/assets/images/livro1.jpg" alt=" Livro de Python" class="img-book">
+						</a>
+						<h3 class="book-title">Python para Data Science</h3>
+						<div class="stars-rating">★★★☆☆</div>
+						<p class="availability-status">Disponível</p>
+						<div class="book-buttons">
+							<a href="./tela-de-pagamento.html">
+								<button class="request-button">SOLICITAR</button>
+							</a>
+							<a href="./tela-detalhamento.html">
+								<button class="details-button">DETALHES</button>
+							</a>
+						</div>
+					</div>
+
+					<div class="card-item">				
+						<a href="./tela-detalhamento.html">
+							<img src="./src/assets/images/livro1.jpg" alt=" Livro de Python" class="img-book">
+						</a>
+						<h3 class="book-title">Python para Data Science</h3>
+						<div class="stars-rating">★★★☆☆</div>
+						<p class="availability-status">Disponível</p>
+						<div class="book-buttons">
+							<a href="./tela-de-pagamento.html">
+								<button class="request-button">SOLICITAR</button>
+							</a>
+							<a href="./tela-detalhamento.html">
+								<button class="details-button">DETALHES</button>
+							</a>
+						</div>
+					</div>
+
+
+					<div class="card-item">				
+						<a href="./tela-detalhamento.html">
+							<img src="./src/assets/images/livro1.jpg" alt=" Livro de Python" class="img-book">
+						</a>
+						<h3 class="book-title">Python para Data Science</h3>
+						<div class="stars-rating">★★★☆☆</div>
+						<p class="availability-status">Disponível</p>
+						<div class="book-buttons">
+							<a href="./tela-de-pagamento.html">
+								<button class="request-button">SOLICITAR</button>
+							</a>
+							<a href="./tela-detalhamento.html">
+								<button class="details-button">DETALHES</button>
+							</a>
+						</div>
+					</div>
+
+
+
+					<div class="card-item">				
+						<a href="./tela-detalhamento.html">
+							<img src="./src/assets/images/livro1.jpg" alt=" Livro de Python" class="img-book">
+						</a>
+						<h3 class="book-title">Python para Data Science</h3>
+						<div class="stars-rating">★★★☆☆</div>
+						<p class="availability-status">Disponível</p>
+						<div class="book-buttons">
+							<a href="./tela-de-pagamento.html">
+								<button class="request-button">SOLICITAR</button>
+							</a>
+							<a href="./tela-detalhamento.html">
+								<button class="details-button">DETALHES</button>
+							</a>
+						</div>
+					</div>
+
+
+
+					<div class="card-item">				
+						<a href="./tela-detalhamento.html">
+							<img src="./src/assets/images/livro1.jpg" alt=" Livro de Python" class="img-book">
+						</a>
+						<h3 class="book-title">Python para Data Science</h3>
+						<div class="stars-rating">★★★☆☆</div>
+						<p class="availability-status">Disponível</p>
+						<div class="book-buttons">
+							<a href="./tela-de-pagamento.html">
+								<button class="request-button">SOLICITAR</button>
+							</a>
+							<a href="./tela-detalhamento.html">
+								<button class="details-button">DETALHES</button>
+							</a>
+						</div>
+					</div>
+
+
+
+					<div class="card-item">				
+						<a href="./tela-detalhamento.html">
+							<img src="./src/assets/images/livro1.jpg" alt=" Livro de Python" class="img-book">
+						</a>
+						<h3 class="book-title">Python para Data Science</h3>
+						<div class="stars-rating">★★★☆☆</div>
+						<p class="availability-status">Disponível</p>
+						<div class="book-buttons">
+							<a href="./tela-de-pagamento.html">
+								<button class="request-button">SOLICITAR</button>
+							</a>
+							<a href="./tela-detalhamento.html">
+								<button class="details-button">DETALHES</button>
+							</a>
+						</div>
+					</div>
+
+					<div class="card-item">				
+						<a href="./tela-detalhamento.html">
+							<img src="./src/assets/images/livro1.jpg" alt=" Livro de Python" class="img-book">
+						</a>
+						<h3 class="book-title">Python para Data Science</h3>
+						<div class="stars-rating">★★★☆☆</div>
+						<p class="availability-status">Disponível</p>
+						<div class="book-buttons">
+							<a href="./tela-de-pagamento.html">
+								<button class="request-button">SOLICITAR</button>
+							</a>
+							<a href="./tela-detalhamento.html">
+								<button class="details-button">DETALHES</button>
+							</a>
+						</div>
+					</div>
+
+					<div class="card-item">				
+						<a href="./tela-detalhamento.html">
+							<img src="./src/assets/images/livro1.jpg" alt=" Livro de Python" class="img-book">
+						</a>
+						<h3 class="book-title">Python para Data Science</h3>
+						<div class="stars-rating">★★★☆☆</div>
+						<p class="availability-status">Disponível</p>
+						<div class="book-buttons">
+							<a href="./tela-de-pagamento.html">
+								<button class="request-button">SOLICITAR</button>
+							</a>
+							<a href="./tela-detalhamento.html">
+								<button class="details-button">DETALHES</button>
+							</a>
+						</div>
+					</div>
+
+				</div>
+				<button class="see-moore">Ver Mais</button>
+			</section>
+		</div>
+	</main>
+
+	<footer>
+        <div class="footer-box">
+			<div class="footer-section">
+				<h3>Atendimento</h2>
+					<p>Whatsapp: (xx)xxxx-xxxx</p>
+					<p>Email: checkinliterario.g5@gmail.com</p>
+			</div>
+	
+			<div class="footer-section">
+				<a href="https://github.com/Grupo-5-Check-In-Literario/check-in-literario" target="_blank">
+					Link do repositório no <strong>Github</strong>
+				</a>
+			</div>
+		</div>
+    </footer>
+</body>
+
+</html>

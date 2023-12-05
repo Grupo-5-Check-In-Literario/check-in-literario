@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="shortcut icon" href="./src/assets/images/check-in.png" type="image/x-icon">
+	<title>Checkin Literário</title>
+	<link rel="stylesheet" href="./src/assets/css/footer.css" />
+	<link rel="stylesheet" href="./src/assets/css/global.css" />
+	<link rel="stylesheet" href="./src/assets/css/homepage.css" />
+	<link rel="stylesheet" href="./src/assets/css/navbar.css" />
+	<link rel="stylesheet" href="./src/assets/css/menu.css">
+
+	<script src="./src/assets/js/navbar-component.js" type="module" defer></script>
+	<script src="./src/assets/js/index.js" type="module" defer></script>
+</head>
+
+<body>
+	<header>
+        <div class="header-box">
+            <a href="./index.html" class="logo"><img class="logo-img" src="src/assets/images/logo.png" alt="Logo" /></a>
+
+            <div class="search-bar">
+                <input type="text" placeholder="pesquisar..." id="search"/>
+                <button type="button" class="search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                        <path
+                            d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="navbar">
+                <input type="checkbox" id="menu-hamburguer">
+
+                <label for="menu-hamburguer">
+                    <div class="menu">
+                        <span class="hamburguer"></span>
+                    </div>
+                </label>
+
+                <ul class="nav-items">
+                    <li>
+                        <a href="./quem-somos.html">quem somos</a>
+                    </li>
+                    <li>
+                        <a href="./catalogo.html">catálogo</a>
+                    </li>
+                    <li>
+                        <div class="user-profile">
+                            <img src="src/assets/images/user_8742495.png" alt="foto do usuario">
+                            <div class="user-profile-buttons">
+                                <p>Olá, <strong>user</strong></p>
+                                <a href="./tela-de-perfil.html">Acesse seu perfil</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a id="sair" href="./login.html">sair</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+	<section class="hero">
+	<div class="hero-box">
+		<h1 class="thumb">Troque livros, descubra novos autores, se aventure em histórias inéditas. E o melhor: <span>economize dinheiro</span>.</h1>
+	<img src="./src/assets/images/caixa-de-livros-2.jpeg" alt="" class="thumb-image">
+	</div>
+	</section>
+	<section class="intro">
+		<div class="intro-box">
+			<h1 class="intro-title">O que é o Check-in Literário?</h1>
+			<p class="intro-description">
+				Uma comunidade de apaixonados por livros, que desejam conhecer novos títulos e novas aventuras pagando pouco. Por aqui você irá trocar livros com outros usuários, pagando apenas pelo frete de envio. Após 10 trocas de livros registrados, você <strong>ganha um mês de  frete grátis</strong>. 
+					<br><br>
+				Venha você também participar dessa comunidade que ama trocar livros e fazer checkins pelo Brasil!!!
+			</p>
+		</div>
+	</section>
+	<section class="info-section">
+		
+	<div class="como-funciona">
+		<h1>Como Funciona?</h1>
+	</div>
+		<div class="steps-card-container">
+			<div class="step-card-odd one">
+				<h2>1. Cadastre</h2> 
+				<div class="sc-odd-description">
+					<p>Cadastre-se em nosso Site</p>
+				</div>
+			</div>
+			<div class="step-card-even two">
+				<h2>2. Cadastre seus Livros</h2>
+				<div class="sc-even-description">
+					<p>
+						Utilize o ISBN ou ISNN (você pode encontra Verso da página de título (folha de rosto) ou nas páginas de direitos autorais.)
+					</p>
+					<p>
+						obs: Registre ao menos 1 livro para começar a receber pedidos.
+					</p>
+				</div>
+			</div>
+			<div class="step-card-odd three">
+				<h2>3. Receba pedidos</h2>
+				<div class="sc-odd-description">
+					<p>
+						Algum usuário se interessou pelo seu Livro? Você receberá notificação aqui e por e-mail. Embale bem o livro e leve-o até Correio.
+					</p>
+					<p>
+						Pague a taxa de envio, insira o recibo no site e será reembolsado em 48h.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="steps-info">
+				<h2>OBS: Você tem até 72 horas para enviar o livro!</h2>
+		</div>
+
+		<div class="steps-card-container">
+			<div class="step-card-even four">
+				<h2>4. Faça um pedido</h2>
+				<div class="sc-even-description">
+					<p>
+							Selecione um livro de seu interesse, pague o frete
+							informado no site e aguarde o envio.
+					</p>
+				</div>
+			</div>
+			<div class="step-card-odd five">
+					<h2>5. Receba em casa</h2>
+					<div class="sc-odd-description">
+						<p>Você receberá o livro em casa.</p>
+					</div>
+			</div>
+			<div class="step-card-even six">
+				<h2>6. Ganhe um selo</h2>
+				<div class="sc-even-description">
+					<p>
+						Após completar um ciclo de troca (solicitar e enviar
+						livros), você ganha um selo.
+					</p>
+					<p>
+						Completando 10 selos, você ganha frete grátis para
+						ler novos exemplares.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="steps-info">
+			<h3>
+				Repita o processo quantas vezes desejar, e não esqueça:
+				cadastre com muita atenção seu endereço.
+			</h3>
+		</div>
+		<div class="encaixe">
+			<span class="black-block"></span>
+		</div>
+	</section>
+	
+	<section class="reviews-section">
+		<h1>Melhores Avaliações</h1>
+		<div class="reviews-grid">
+			<div class="book-card">
+				<div class="book-image">
+					<a class="link" href="./tela-detalhamento.html">
+						<img src="./src/assets/images/livro1.jpg" alt="Livro capa" class="img-book"/>
+					</a>
+				</div>
+				<h2 class="book-title">Python para Data Science</h2>
+				<div class="stars-rating">★★★☆☆</div>
+				<p class="availability-status">DISPONÍVEL</p>
+				<div class="button-box">
+					<a href="./tela-de-pagamento.html">
+					<button class="request-button">SOLICITAR</button>
+				</a>
+				<a href="./tela-detalhamento.html">
+					<button class="details-button">DETALHES</button>
+				</a>
+				</div>
+			</div>
+			<div class="book-card">
+				<div class="book-image">
+					<a class="link" href="./tela-detalhamento.html">
+						<img src="./src/assets/images/livro2.jpg" alt="Livro capa" class="img-book"/>
+					</a>
+				</div>
+				<h2 class="book-title">CLEAN CODE</h2>
+				<div class="stars-rating">★★★☆☆</div>
+				<p class="availability-status">DISPONÍVEL</p>
+				<div class="button-box">
+					<a href="./tela-de-pagamento.html">
+					<button class="request-button">SOLICITAR</button>
+				</a>
+				<a href="./tela-detalhamento.html">
+					<button class="details-button">DETALHES</button>
+				</a>
+				</div>
+			</div>
+			<div class="book-card">
+				<div class="book-image">
+					<a class="link" href="./tela-detalhamento.html">
+						<img src="./src/assets/images/livro3.jpg" alt="Livro capa" class="img-book"/>
+					</a>
+				</div>
+				<h2 class="book-title">Data Science do Zero</h2>
+				<div class="stars-rating">★★★☆☆</div>
+				<p class="availability-status">DISPONÍVEL</p>
+				<div class="button-box">
+					<a href="./tela-de-pagamento.html">
+					<button class="request-button">SOLICITAR</button>
+				</a>
+				<a href="./tela-detalhamento.html">
+					<button class="details-button">DETALHES</button>
+				</a>
+				</div>
+			</div>
+			<div class="book-card">
+				<div class="book-image">
+					<a class="link" href="./tela-detalhamento.html">
+						<img src="./src/assets/images/livro-exemplo-(2).jpg" alt="Livro capa" class="img-book"/>
+					</a>
+				</div>
+				<h2 class="book-title">Harry Potter e a Criança Amaldiçoada</h2>
+				<div class="stars-rating">★★★☆☆</div>
+				<p class="availability-status">DISPONÍVEL</p>
+				<div class="button-box">
+					<a href="./tela-de-pagamento.html">
+					<button class="request-button">SOLICITAR</button>
+				</a>
+				<a href="./tela-detalhamento.html">
+					<button class="details-button">DETALHES</button>
+				</a>
+				</div>
+			</div>
+			<div class="book-card">
+				<div class="book-image">
+					<a class="link" href="./tela-detalhamento.html">
+						<img src="./src/assets/images/livro1.jpg" alt="Livro capa" class="img-book"/>
+					</a>
+				</div>
+				<h2 class="book-title">Python para Data Science</h2>
+				<div class="stars-rating">★★★☆☆</div>
+				<p class="availability-status">DISPONÍVEL</p>
+				<div class="button-box">
+					<a href="./tela-de-pagamento.html">
+					<button class="request-button">SOLICITAR</button>
+				</a>
+				<a href="./tela-detalhamento.html">
+					<button class="details-button">DETALHES</button>
+				</a>
+				</div>
+			</div>
+			<div class="book-card">
+				<div class="book-image">
+					<a class="link" href="./tela-detalhamento.html">
+						<img src="./src/assets/images/livro2.jpg" alt="Livro capa" class="img-book"/>
+					</a>
+				</div>
+				<h2 class="book-title">CLEAN CODE</h2>
+				<div class="stars-rating">★★★☆☆</div>
+				<p class="availability-status">DISPONÍVEL</p>
+				<div class="button-box">
+					<a href="./tela-de-pagamento.html">
+					<button class="request-button">SOLICITAR</button>
+				</a>
+				<a href="./tela-detalhamento.html">
+					<button class="details-button">DETALHES</button>
+				</a>
+				</div>
+			</div>
+			<div class="book-card">
+				<div class="book-image">
+					<a class="link" href="./tela-detalhamento.html">
+						<img src="./src/assets/images/livro3.jpg" alt="Livro capa" class="img-book"/>
+					</a>
+				</div>
+				<h2 class="book-title">Data Science do Zero</h2>
+				<div class="stars-rating">★★★☆☆</div>
+				<p class="availability-status">DISPONÍVEL</p>
+				<div class="button-box">
+					<a href="./tela-de-pagamento.html">
+						<button class="request-button">SOLICITAR</button>
+					</a>
+					<a href="./tela-detalhamento.html">
+						<button class="details-button">DETALHES</button>
+					</a>
+				</div>
+			</div>
+			<div class="book-card">
+				<div class="book-image">
+					<a class="link" href="./tela-detalhamento.html">
+						<img src="./src/assets/images/livro-exemplo-(2).jpg" alt="Livro capa" class="img-book"/>
+					</a>
+				</div>
+				<h2 class="book-title">Harry Potter e a Criança Amaldiçoada</h2>
+				<div class="stars-rating">★★★☆☆</div>
+				<p class="availability-status">DISPONÍVEL</p>
+				<div class="button-box">
+					<a href="./tela-de-pagamento.html">
+						<button class="request-button">SOLICITAR</button>
+					</a>
+					<a href="./tela-detalhamento.html">
+						<button class="details-button">DETALHES</button>
+					</a>
+				</div>
+			</div>
+		</div>
+		<a href="./catalogo.html">
+			<button class="view-more-button">VER MAIS</button>
+		</a>
+	</section>
+	<footer>
+        <div class="footer-box">
+			<div class="footer-section">
+				<h3>Atendimento</h2>
+					<p>Whatsapp: (xx)xxxx-xxxx</p>
+					<p>Email: checkinliterario.g5@gmail.com</p>
+			</div>
+	
+			<div class="footer-section">
+				<a href="https://github.com/Grupo-5-Check-In-Literario/check-in-literario" target="_blank">
+					Link do repositório no <strong>Github</strong>
+				</a>
+			</div>
+		</div>
+    </footer>
+</body>
+
+</html>

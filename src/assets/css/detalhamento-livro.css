@@ -1,10 +1,16 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 95vh;
+}
+
+
 .book-details{
-    padding: 150px 30px 90px;
+    padding: 150px 30px 70px;
     display: flex;
     max-width: 1440px;
-    min-height: 80vh;
     margin: 0 auto;
-    align-items: flex-start;
     justify-content: space-around;
     gap: 10px;
 }

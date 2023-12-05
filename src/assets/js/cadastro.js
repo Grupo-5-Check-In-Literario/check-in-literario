@@ -76,7 +76,7 @@ elementos["senha-cadastro"].addEventListener("blur", (e) => {
     let valor = e.target.value;
     if(valor == "" || valor.lenght > 6){
         elementos["senha-cadastro-erro"].innerText = 'Teste 4';
-        estilizarInputIncorreto(elementos["senha-cadastro"], elementos["senha-cadastro-erro"], elementos["img-senha-erro"]);
+        estilizarInputIncorreto(elementos["senha-cadastro"], elementos["senha-cadastro-erro"], elementos["img-nova-senha-erro"]);
         inputsCadastroCorretos.sobrenomeCadastro = false;
     }
     else{

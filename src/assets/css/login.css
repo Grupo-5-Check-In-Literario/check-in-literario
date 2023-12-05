@@ -4,6 +4,7 @@ input{
     border-radius: 5px;
     padding-left: 15px;
     font-size: 14px;
+    max-width: 340px;
 }
 
 p{
@@ -110,7 +111,7 @@ body{
 .login-e-cadastro .mensagem-inicial{
     padding-bottom: 5px;
     border-bottom: 1px solid #bbb8b8;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
 .login-e-cadastro .login form{
@@ -149,13 +150,13 @@ body{
     color: var(--secondary-color);
 }
 
+/*------ ESTILOS DINÂMICOS ------*/
+
 .mensagem-de-erro {
     color: #a70f0f;
     opacity: 0;
     margin: 2px;
 }
-
-/*------ ESTILOS DINÂMICOS ------*/
 
 .input-box{
     display: flex;
@@ -196,8 +197,6 @@ input.error {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-
-
   
 input.correct {
     border: solid 2px #206620;
@@ -209,11 +208,52 @@ input.correct {
 }
 
 @keyframes surgir {
-	from {
-        border: solid 2px #992020; 
-	}
-  
-	to {
-        border: solid 2px #fc9595;
-	}
-  }
+	from {border: solid 2px #992020;}
+	to {border: solid 2px #fc9595;}
+}
+
+/* ------  ESTILIZAÇÃO DO CARD CADASTRO  ------
+
+.nome-sobrenome{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.nome-sobrenome .input-box input, .endereco .box input{
+    width: 100%;
+}
+
+.data h4, .endereco h4{
+    margin: 5px 0;
+}
+
+.cep-rua-numero, .bairro-municipio-uf{
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    gap: 10px;
+}
+
+.botao-submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-submit input{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: var(--secondary-color);
+    padding: 0;
+    height: 42px;
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 600;
+    width: 80%;
+    cursor: pointer;
+    transition: 0.15s all ease-in-out;
+    border: none;
+}
+.botao-submit input:hover{
+    background-color: rgb(48, 151, 247);
+    transform: scale(1.02);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+} */

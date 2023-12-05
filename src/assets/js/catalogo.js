@@ -19,6 +19,9 @@ for(let i = 0; i < listaDeCategorias.length; i++) {
     })
 };
 
+//apresentação padrão da tela de catálogo
+bookApi('em alta');
+
 // função pra receber os parametrosde busca das outras telas
 function receivedParams(parameter) {  
     var loc = location.search.substring(1, location.search.length);  
@@ -42,4 +45,3 @@ function receivedParams(parameter) {
 };
 
 bookApi(receivedParams());
-bookApi('em alta');

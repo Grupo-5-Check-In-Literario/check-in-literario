@@ -7,6 +7,7 @@ const elementos = {}
 ElementsIds.forEach(id => { elementos[id] = document.getElementById(id); });
 
 let btnSubmitCadastro = document.querySelector('#submit-cadastro[type="submit"]');
+
 let inputsCadastroCorretos = {
     nomeCadastro: false,
     sobrenomeCadastro: false,
@@ -20,6 +21,8 @@ let inputsCadastroCorretos = {
     municipioCadastro: false,
     ufCadastro: false,
 };
+
+/* ------  FUNÇÕES  ------ */
 
 function estilizarInputIncorreto(input, helper, imagem){
     input.classList.remove('correct');
@@ -38,6 +41,56 @@ function estilizarInputCorreto(input, helper, imagem){
     }
 };
 
+function limparCampos() {
+    elementos["municipio"].value = "";
+    elementos["municipio"].classList.remove('correct')
+
+    elementos["logradouro"].value = "";
+    elementos["logradouro"].classList.remove('correct')
+
+    elementos["uf"].value = "";
+    elementos["uf"].classList.remove('correct')
+
+    elementos["bairro"].value = "";
+    elementos["bairro"].classList.remove('correct')
+}
+
+const getCep = async (cep) => {
+    const apiUrl = `https://viacep.com.br/ws/${cep}/json/`;
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    console.log(data)
+   
+    if(data.erro === true){
+        console.log('erro')
+        elementos["cep-cadastro-erro"].innerText = 'Cep inválido.'
+        estilizarInputIncorreto(elementos["cep"], elementos["cep-cadastro-erro"])
+        limparCampos()
+        return;
+    }
+    estilizarInputCorreto(elementos["cep"], elementos["cep-cadastro-erro"])
+    inputsCadastroCorretos.cepCadastro = true;
+    
+
+    elementos["logradouro"].value = data.logradouro;
+    inputsCadastroCorretos.logradouroCadastro = true;
+    estilizarInputCorreto(elementos["logradouro"], elementos["logradouro-cadastro-erro"])
+
+    elementos["bairro"].value = data.bairro;
+    inputsCadastroCorretos.bairroCadastro = true;
+    estilizarInputCorreto(elementos["bairro"], elementos["bairro-cadastro-erro"])
+
+    elementos["municipio"].value = data.localidade;
+    inputsCadastroCorretos.municipioCadastro = true;
+    estilizarInputCorreto(elementos["municipio"], elementos["municipio-cadastro-erro"])
+
+    elementos["uf"].value = data.uf;
+    inputsCadastroCorretos.ufCadastro = true;
+    estilizarInputCorreto(elementos["uf"], elementos["uf-cadastro-erro"])
+}
+
+/* ------  EVENTOS  ------ */
+
 elementos["nome"].addEventListener("blur", (e) => { 
     let valor = e.target.value;
     if(valor == ""){
@@ -54,7 +107,7 @@ elementos["nome"].addEventListener("blur", (e) => {
 elementos["sobrenome"].addEventListener("blur", (e) => {
     let valor = e.target.value;
     if(valor == ""){
-        elementos["sobrenome-cadastro-erro"].innerText = 'Por favor, insira seu sobrenome.';
+        elementos["sobrenome-cadastro-erro"].innerText = 'Insira seu sobrenome.';
         estilizarInputIncorreto(elementos.sobrenome, elementos["sobrenome-cadastro-erro"], elementos["img-sobrenome-erro"]);
         inputsCadastroCorretos.sobrenomeCadastro = false;
     }
@@ -63,7 +116,7 @@ elementos["sobrenome"].addEventListener("blur", (e) => {
         inputsCadastroCorretos.sobrenomeCadastro = true;
     }
 });
-elementos["email-cadastro"].addEventListener("change", (e) => {
+elementos["email-cadastro"].addEventListener("blur", (e) => {
     let valor = e.target.value;
     if(valor.includes("@") && valor.includes(".com")){
         estilizarInputCorreto(elementos["email-cadastro"], elementos["email-cadastro-erro"], elementos["img-email-erro"]);
@@ -108,24 +161,28 @@ elementos["data-nascimento"].addEventListener("change", (e) => {
     }
 })
 
+elementos["cep"].addEventListener('keyup', () =>{
+    let valor = elementos["cep"].value.replace(/[^0-9]/g, "").replace(/^([\d]{5})([\d]{3})$/, "$1-$2");
+    elementos["cep"].value = valor;
+})
+
 elementos["cep"].addEventListener("blur", (e) => {
     let valor = e.target.value;
-    if(valor.length >= 8){
-        getCep(valor);
-        estilizarInputCorreto(elementos["cep"], elementos["cep-cadastro-erro"])
-        inputsCadastroCorretos.cepCadastro = true;
-    }
-    else{
-        elementos["cep-cadastro-erro"].innerText = 'Por favor, insira seu cep.'
+    if(valor.length !== 9){
+        elementos["cep-cadastro-erro"].innerText = 'Cep inválido.'
         estilizarInputIncorreto(elementos["cep"], elementos["cep-cadastro-erro"])
         inputsLoginCorretos.cepCadastro = false;
+        limparCampos()
+    }
+    else{
+        getCep(valor)
     }
 });
 
 elementos["logradouro"].addEventListener("blur", (e) => {
     let valor = e.target.value;
     if(valor==""){
-        elementos["logradouro-cadastro-erro"].innerText = 'Por favor, insira seu logradouro'
+        elementos["logradouro-cadastro-erro"].innerText = 'Insira seu logradouro'
         estilizarInputIncorreto(elementos["logradouro"], elementos["logradouro-cadastro-erro"])
         inputsLoginCorretos.logradouroCadastro = false;
     }
@@ -151,7 +208,7 @@ elementos["numero"].addEventListener("change", (e) => {
 elementos["bairro"].addEventListener("blur", (e) => {
     let valor = e.target.value;
     if(valor==""){
-        elementos["bairro-cadastro-erro"].innerText = 'Teste 9'
+        elementos["bairro-cadastro-erro"].innerText = 'Insira seu bairro.'
         estilizarInputIncorreto(elementos["bairro"], elementos["bairro-cadastro-erro"])
         inputsLoginCorretos.bairroCadastro = false;
     }
@@ -164,7 +221,7 @@ elementos["bairro"].addEventListener("blur", (e) => {
 elementos["municipio"].addEventListener("blur", (e) => {
     let valor = e.target.value;
     if(valor==""){
-        elementos["municipio-cadastro-erro"].innerText = 'Teste 10'
+        elementos["municipio-cadastro-erro"].innerText = 'Insira seu município.'
         estilizarInputIncorreto(elementos["municipio"], elementos["municipio-cadastro-erro"])
         inputsLoginCorretos.municipioCadastro = false;
     }
@@ -177,7 +234,7 @@ elementos["municipio"].addEventListener("blur", (e) => {
 elementos["uf"].addEventListener("blur", (e) => {
     let valor = e.target.value;
     if(valor==""){
-        elementos["uf-cadastro-erro"].innerText = 'Teste 11'
+        elementos["uf-cadastro-erro"].innerText = ''
         estilizarInputIncorreto(elementos["uf"], elementos["uf-cadastro-erro"])
         inputsLoginCorretos.ufCadastro = false;
     }
@@ -198,30 +255,3 @@ btnSubmitCadastro.addEventListener("click", (e) => {
     });
     cadastroCorreto == true ? alert("Cadastro realizado com sucesso!") : alert("Faltam informações a serem preenchidas!");;
 });
-
-const getCep = async (cep) => {
-    const apiUrl = `https://viacep.com.br/ws/${cep}/json/`;
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-   
-    if(data.erro === true){
-        alert('Cep inválido, tente novamente.')
-        return;
-    }
-
-    elementos["logradouro"].value = data.logradouro;
-    inputsCadastroCorretos.logradouroCadastro = true;
-    estilizarInputCorreto(elementos["logradouro"], elementos["logradouro-cadastro-erro"])
-
-    elementos["bairro"].value = data.bairro;
-    inputsCadastroCorretos.bairroCadastro = true;
-    estilizarInputCorreto(elementos["bairro"], elementos["bairro-cadastro-erro"])
-
-    elementos["municipio"].value = data.localidade;
-    inputsCadastroCorretos.municipioCadastro = true;
-    estilizarInputCorreto(elementos["municipio"], elementos["municipio-cadastro-erro"])
-
-    elementos["uf"].value = data.uf;
-    inputsCadastroCorretos.ufCadastro = true;
-    estilizarInputCorreto(elementos["uf"], elementos["uf-cadastro-erro"])
-}

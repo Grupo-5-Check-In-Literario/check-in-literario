@@ -42,5 +42,4 @@ function receivedParams(parameter) {
 };
 
 bookApi(receivedParams());
-
 bookApi('em alta');

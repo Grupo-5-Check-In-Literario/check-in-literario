@@ -139,6 +139,10 @@ header .header-box .navbar {
 		padding: 5px 15px 10px;
 		
 	}
+	.header-box .navbar input:checked ~ .nav-items{
+        transform: translateX(29px);
+        margin-top: 22px;
+	}
 }
 
 .search-bar button svg {

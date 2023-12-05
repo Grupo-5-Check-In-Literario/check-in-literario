@@ -12,6 +12,8 @@ let inputsLoginCorretos = {
     senhaLogin: false
 }
 
+
+
 function estilizarInputIncorreto(input, helper, imagem){
     input.classList.remove('correct')
     input.classList.add('error')
@@ -25,7 +27,7 @@ function estilizarInputCorreto(input, helper, imagem){
     imagem.classList.remove('visible')
 }
 
-emailLogin.addEventListener("change", (e) => {
+emailLogin.addEventListener("blur", (e) => {
     let valor = e.target.value
     if(valor.includes('@') && valor.includes('.com')){
         estilizarInputCorreto(emailLogin, emailLoginErro, imgLoginErro)

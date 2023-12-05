@@ -27,7 +27,7 @@ function estilizarInputCorreto(input, helper, imagem){
     imagem.classList.remove('visible')
 }
 
-emailLogin.addEventListener("change", (e) => {
+emailLogin.addEventListener("blur", (e) => {
     let valor = e.target.value
     if(valor.includes('@') && valor.includes('.com')){
         estilizarInputCorreto(emailLogin, emailLoginErro, imgLoginErro)

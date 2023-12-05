@@ -116,7 +116,7 @@ elementos["sobrenome"].addEventListener("blur", (e) => {
         inputsCadastroCorretos.sobrenomeCadastro = true;
     }
 });
-elementos["email-cadastro"].addEventListener("change", (e) => {
+elementos["email-cadastro"].addEventListener("blur", (e) => {
     let valor = e.target.value;
     if(valor.includes("@") && valor.includes(".com")){
         estilizarInputCorreto(elementos["email-cadastro"], elementos["email-cadastro-erro"], elementos["img-email-erro"]);

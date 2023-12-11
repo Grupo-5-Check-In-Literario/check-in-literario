@@ -37,4 +37,3 @@ function receivedParams() {
 };
 
 bookApi(receivedParams());
-console.log(bookApi(receivedParams()))

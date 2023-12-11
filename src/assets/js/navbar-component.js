@@ -14,25 +14,32 @@ const searchInput = document.querySelector("#search");
 const searchBtn = document.querySelector(".search-btn");
 const bookTitle = document.querySelectorAll(".book-title");
 const imgBook = document.querySelectorAll(".img-book");
-
+let tituloCategoria = document.getElementById('titulo-categoria');
 
 searchInput.addEventListener('blur',(e) => {
   const input = e.target.value;
-
- searchBtn.addEventListener('click',(e) => {
-  console.log('click')
-       bookApi(input);
-       sendParams(input);
+  searchBtn.addEventListener('click',(e) => {
+    bookApi(input);
+    if(window.location.pathname != '/catalogo.html'){
+        sendParams(input); 
+        sessionStorage.setItem('pesquisa', input) 
+    }else{
+      tituloCategoria.innerText = `Resultados para "${input}"`
+    }
   })
 })
 
 searchInput.addEventListener('keypress',(e) => {  
   const input = e.target.value;
   if(e.key === 'Enter'){
-      bookApi(input);
+    bookApi(input);
+    if(window.location.pathname != '/catalogo.html'){
       sendParams(input);
+      sessionStorage.setItem('pesquisa', input) 
+    }else{
+    tituloCategoria.innerText = `Resultados para "${input}"`
+    }
   }
-  
 });
 
 
@@ -45,7 +52,6 @@ const bookApi = async (book) => {
 
   const bookData = data.items;
   const bookList = Array(bookData);
-  console.log(book, apiUrl)
 
   let selectbook = Array();
   bookList[0].map((items) => {
@@ -53,7 +59,6 @@ const bookApi = async (book) => {
   });
 
   showBook(selectbook);
-  console.log("this", selectbook);
 
   if (data.erro === true) {
     alert("Livro não encontrado");
@@ -63,14 +68,12 @@ const bookApi = async (book) => {
 
 //renderizar os livros dinâmicamente na tela de catálogo
 function showBook(items) {
-  console.log("a", imgBook[0]);
   for (let index = 0; index < bookTitle.length; index++) {
     bookTitle[index].innerHTML = `${items[index].title}`;
   }
 
   for (let index = 0; index < imgBook.length + 1; index++) {
     if (items[index].imageLinks === undefined) {
-      console.log("Filme nao tem thum");
       imgBook[index].setAttribute(
         "src",
         `./src/assets/images/capa-ilustrativa.jpg`

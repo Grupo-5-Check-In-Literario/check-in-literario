@@ -253,5 +253,6 @@ btnSubmitCadastro.addEventListener("click", (e) => {
             cadastroCorreto = false;
         }
     });
-    cadastroCorreto == true ? alert("Cadastro realizado com sucesso!") : alert("Faltam informações a serem preenchidas!");;
+    cadastroCorreto == true ? alert("Cadastro realizado com sucesso!")
+     : alert("Faltam informações a serem preenchidas!");;
 });

@@ -1,4 +1,4 @@
-import {bookApi, sendParams} from './navbar-component.js';
+import {bookApi} from './navbar-component.js';
 
 bookApi('em alta');
 

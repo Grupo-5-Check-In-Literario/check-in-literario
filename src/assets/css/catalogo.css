@@ -173,3 +173,10 @@ main {
         height: 120px;
     }
 }
+
+#resultado-pesquisa{
+    color: var(--primary-color);
+}
+.hidden{
+    display: none;
+}

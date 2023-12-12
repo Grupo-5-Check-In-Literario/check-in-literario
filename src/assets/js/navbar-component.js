@@ -45,7 +45,7 @@ searchInput.addEventListener('keypress',(e) => {
 
 //api dos livros
 const bookApi = async (book) => {
-  const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${book}&key=AIzaSyCT5_PF4d5CFyw0x9KnQIpSklcfdFfdxpk`;
+  const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=${book}&key=AIzaSyCT5_PF4d5CFyw0x9KnQIpSklcfdFfdxpk&maxResults=20`;
 
   const resp = await fetch(apiUrl);
   const data = await resp.json();

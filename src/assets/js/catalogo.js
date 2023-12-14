@@ -1,4 +1,4 @@
-import { bookApi } from "./navbar-component.js";
+import { bookApi } from "./navigation.js";
 
 //Atualizando os livros pela categoria
 const listaDeCategorias = [ "AUTO AJUDA", "CIÊNCIAS BIOLÓGICAS", "CIÊNCIAS EXATAS", "CIÊNCIAS SOCIAIS", "DIDÁTICOS", "ENGENHARIA", "EDUCAÇÃO", "ESOTERISMO", "LITERATURA NACIONAL", "LITERATURA INTERNACIONAL", "QUADRINHOS", "SEXUALIDADE", "SAUDE E BEM ESTAR", "TECNOLOGIA", "VIAGEM", "BIOGRAFIA" ]
@@ -31,9 +31,15 @@ function receivedParams() {
     }   
     else { 
         bookApi("Em alta")
-        return undefined;   
+        return  undefined;   
     }
 
 };
 
 bookApi(receivedParams());
+
+window.onload = function() {
+        sessionStorage.clear();
+        bookApi("Em alta");
+}
+

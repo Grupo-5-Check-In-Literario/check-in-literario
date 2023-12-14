@@ -106,7 +106,7 @@ const getCep = async (cep) => {
     //mostrar erro e resetar form
     if(data.erro === true){
         // form.reset();
-        alert('Cep inválido, tente novamente.')
+        alert('Cep inválido, tente novamente.'); 
         return;
     }
 

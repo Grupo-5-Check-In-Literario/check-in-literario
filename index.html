@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="./src/assets/css/navbar.css" />
 	<link rel="stylesheet" href="./src/assets/css/menu.css">
 
-	<script src="./src/assets/js/navbar-component.js" type="module" defer></script>
+	<script src="./src/assets/js/navigation.js" type="module" defer></script>
 	<script src="./src/assets/js/index.js" type="module" defer></script>
 </head>
 
@@ -74,11 +74,13 @@
 	<section class="intro">
 		<div class="intro-box">
 			<h1 class="intro-title">O que é o Check-in Literário?</h1>
-			<p class="intro-description">
-				Uma comunidade de apaixonados por livros, que desejam conhecer novos títulos e novas aventuras pagando pouco. Por aqui você irá trocar livros com outros usuários, pagando apenas pelo frete de envio. Após 10 trocas de livros registrados, você <strong>ganha um mês de  frete grátis</strong>. 
-					<br><br>
-				Venha você também participar dessa comunidade que ama trocar livros e fazer checkins pelo Brasil!!!
-			</p>
+			<div class="intro-description">
+
+				<p>Uma comunidade de apaixonados por livros, que desejam conhecer novos títulos e novas aventuras pagando pouco. Por aqui você irá trocar livros com outros usuários, <strong>pagando apenas pelo frete de envio</strong>.</p> 
+				<br>
+				<p>Venha você também participar dessa comunidade que ama trocar livros e fazer checkins pelo Brasil!!!</p>		
+			</d>
+			
 		</div>
 	</section>
 	<section class="info-section">
@@ -108,17 +110,16 @@
 				<h2>3. Receba pedidos</h2>
 				<div class="sc-odd-description">
 					<p>
-						Algum usuário se interessou pelo seu Livro? Você receberá notificação aqui e por e-mail. Embale bem o livro e leve-o até Correio.
+						Algum usuário se interessou pelo seu Livro? Converse diretamente com ele. 
 					</p>
-					<p>
-						Pague a taxa de envio, insira o recibo no site e será reembolsado em 48h.
-					</p>
+					<p>Você receberá notificação aqui e por e-mail. </p>
+				
 				</div>
 			</div>
 		</div>
 
 		<div class="steps-info">
-				<h2>OBS: Você tem até 72 horas para enviar o livro!</h2>
+				<h2>OBS: Você tem até 72 horas para responder a solicitação!</h2>
 		</div>
 
 		<div class="steps-card-container">
@@ -126,8 +127,7 @@
 				<h2>4. Faça um pedido</h2>
 				<div class="sc-even-description">
 					<p>
-							Selecione um livro de seu interesse, pague o frete
-							informado no site e aguarde o envio.
+							Selecione um livro de seu interesse, faça contato com usuários que o possuem, tire suas dúvidas e verifique o valor do frete.
 					</p>
 				</div>
 			</div>
@@ -138,15 +138,10 @@
 					</div>
 			</div>
 			<div class="step-card-even six">
-				<h2>6. Ganhe um selo</h2>
+				<h2>6. Seja avaliado</h2>
 				<div class="sc-even-description">
 					<p>
-						Após completar um ciclo de troca (solicitar e enviar
-						livros), você ganha um selo.
-					</p>
-					<p>
-						Completando 10 selos, você ganha frete grátis para
-						ler novos exemplares.
+						Quanto mais avaliações positivas, mais livros você poderá solicitar no futuro, porém se você for mal avaliado por cobranças indevidas (fora do acordado entre você e o solicitante), você poderá ser banido!
 					</p>
 				</div>
 			</div>
@@ -169,10 +164,10 @@
 			<div class="book-card">
 				<div class="book-image">
 					<a class="link" href="./tela-detalhamento.html">
-						<img src="./src/assets/images/livro1.jpg" alt="Livro capa" class="img-book"/>
+						<img src="./src/assets/images/capa-ilustrativa.jpg" alt="Livro capa" class="img-book"/>
 					</a>
 				</div>
-				<h2 class="book-title">Python para Data Science</h2>
+				<h2 class="book-title">Título Ilustrativo</h2>
 				<div class="stars-rating">★★★☆☆</div>
 				<p class="availability-status">DISPONÍVEL</p>
 				<div class="button-box">
@@ -187,10 +182,10 @@
 			<div class="book-card">
 				<div class="book-image">
 					<a class="link" href="./tela-detalhamento.html">
-						<img src="./src/assets/images/livro2.jpg" alt="Livro capa" class="img-book"/>
+						<img src="./src/assets/images/capa-ilustrativa.jpg" alt="Livro capa" class="img-book"/>
 					</a>
 				</div>
-				<h2 class="book-title">CLEAN CODE</h2>
+				<h2 class="book-title">Título Ilustrativo</h2>
 				<div class="stars-rating">★★★☆☆</div>
 				<p class="availability-status">DISPONÍVEL</p>
 				<div class="button-box">
@@ -205,10 +200,10 @@
 			<div class="book-card">
 				<div class="book-image">
 					<a class="link" href="./tela-detalhamento.html">
-						<img src="./src/assets/images/livro3.jpg" alt="Livro capa" class="img-book"/>
+						<img src="./src/assets/images/capa-ilustrativa.jpg" alt="Livro capa" class="img-book"/>
 					</a>
 				</div>
-				<h2 class="book-title">Data Science do Zero</h2>
+				<h2 class="book-title">Título Ilustrativo</h2>
 				<div class="stars-rating">★★★☆☆</div>
 				<p class="availability-status">DISPONÍVEL</p>
 				<div class="button-box">
@@ -223,10 +218,10 @@
 			<div class="book-card">
 				<div class="book-image">
 					<a class="link" href="./tela-detalhamento.html">
-						<img src="./src/assets/images/livro-exemplo-(2).jpg" alt="Livro capa" class="img-book"/>
+						<img src="./src/assets/images/capa-ilustrativa.jpg" alt="Livro capa" class="img-book"/>
 					</a>
 				</div>
-				<h2 class="book-title">Harry Potter e a Criança Amaldiçoada</h2>
+				<h2 class="book-title">Título Ilustrativo</h2>
 				<div class="stars-rating">★★★☆☆</div>
 				<p class="availability-status">DISPONÍVEL</p>
 				<div class="button-box">
@@ -241,10 +236,10 @@
 			<div class="book-card">
 				<div class="book-image">
 					<a class="link" href="./tela-detalhamento.html">
-						<img src="./src/assets/images/livro1.jpg" alt="Livro capa" class="img-book"/>
+						<img src="./src/assets/images/capa-ilustrativa.jpg" alt="Livro capa" class="img-book"/>
 					</a>
 				</div>
-				<h2 class="book-title">Python para Data Science</h2>
+				<h2 class="book-title">Título Ilustrativo</h2>
 				<div class="stars-rating">★★★☆☆</div>
 				<p class="availability-status">DISPONÍVEL</p>
 				<div class="button-box">
@@ -259,10 +254,10 @@
 			<div class="book-card">
 				<div class="book-image">
 					<a class="link" href="./tela-detalhamento.html">
-						<img src="./src/assets/images/livro2.jpg" alt="Livro capa" class="img-book"/>
+						<img src="./src/assets/images/capa-ilustrativa.jpg" alt="Livro capa" class="img-book"/>
 					</a>
 				</div>
-				<h2 class="book-title">CLEAN CODE</h2>
+				<h2 class="book-title">Título Ilustrativo</h2>
 				<div class="stars-rating">★★★☆☆</div>
 				<p class="availability-status">DISPONÍVEL</p>
 				<div class="button-box">
@@ -277,10 +272,10 @@
 			<div class="book-card">
 				<div class="book-image">
 					<a class="link" href="./tela-detalhamento.html">
-						<img src="./src/assets/images/livro3.jpg" alt="Livro capa" class="img-book"/>
+						<img src="./src/assets/images/capa-ilustrativa.jpg" alt="Livro capa" class="img-book"/>
 					</a>
 				</div>
-				<h2 class="book-title">Data Science do Zero</h2>
+				<h2 class="book-title">Título Ilustrativo</h2>
 				<div class="stars-rating">★★★☆☆</div>
 				<p class="availability-status">DISPONÍVEL</p>
 				<div class="button-box">
@@ -295,10 +290,10 @@
 			<div class="book-card">
 				<div class="book-image">
 					<a class="link" href="./tela-detalhamento.html">
-						<img src="./src/assets/images/livro-exemplo-(2).jpg" alt="Livro capa" class="img-book"/>
+						<img src="./src/assets/images/capa-ilustrativa.jpg" alt="Livro capa" class="img-book"/>
 					</a>
 				</div>
-				<h2 class="book-title">Harry Potter e a Criança Amaldiçoada</h2>
+				<h2 class="book-title">Título Ilustrativo</h2>
 				<div class="stars-rating">★★★☆☆</div>
 				<p class="availability-status">DISPONÍVEL</p>
 				<div class="button-box">

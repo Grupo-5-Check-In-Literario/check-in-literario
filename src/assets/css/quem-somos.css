@@ -24,6 +24,7 @@ h1{
 
 .person{
     /* width: 100%; */
+  
     padding: 20px 10px;
     margin: 30px 10px;
     display: flex;
@@ -45,10 +46,13 @@ h1{
     text-align: center;
 }
 .container p{
+    max-width: 500px;
+    width: 100%;
+    line-height: 22px;
     color: var(--primary-color);
     text-align: center;
     font-family: var(--font-inter);
-    font-size: 20px;
+    font-size: 16px;
 }
 .contact-button{
    display: flex;
@@ -71,7 +75,11 @@ h1{
     background-color: var(--button-blue);
 }
 
- @media(min-width:427px){
+ @media(min-width: 427px){
+    .container {
+        padding: 0 15px;
+    }
+
     .person:hover{
         background-color: #80b38c;
         border-radius: 10%;

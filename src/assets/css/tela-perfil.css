@@ -49,8 +49,6 @@ p#username {
 }
 
 p#email {
-    margin: 0px 0px 53px;
-
     color: #3695B2;
     font-family: var(--font-inter);
     font-size: 16px;
@@ -87,6 +85,12 @@ p#email {
 
 .user-data span {
     font-weight: bold;
+}
+
+.stars-rating {
+    font-size: 25px;
+	color: #ffd700;
+    margin-bottom: 20px;
 }
 
 .user-actions {

@@ -1,0 +1,69 @@
+-- <<<<<<<<  TABELAS  >>>>>>>>
+CREATE TABLE endereco (
+  cep integer PRIMARY KEY,
+  logradouro varchar,
+  numero INTEGER,
+  bairro varchar,
+  cidade varchar,
+  uf varchar,
+  fk_usuario_id integer
+);
+
+CREATE TABLE usuario (
+  id_usuario serial PRIMARY KEY,
+  nome varchar,
+  email varchar,
+  senha varchar,
+  tel_contato BIGINT,
+  fk_endereco INTEGER
+);
+
+CREATE TABLE biblioteca (
+  id_biblioteca serial PRIMARY KEY,
+  fk_usuario_id integer,
+  fk_livro_isbn BIGINT,
+  estado_conservacao varchar(8),
+  solicitado BOOLEAN,
+  vendido BOOLEAN
+);
+
+CREATE TABLE livro (
+  titulo varchar,
+  ano integer,
+  autor varchar,
+  editora varchar,
+  genero varchar,
+  isbn BIGINT PRIMARY KEY
+);
+
+create table solicitacao (
+	id_solicitacao serial primary key,
+  fk_usuario_id int not null,
+  fk_biblioteca_id int not null,
+  status varchar(9)
+);
+
+create table registro_trocas (
+	id_troca serial PRIMARY key,
+  	fk_solicitacao_id int,
+  	fk_solicitador_id int not null,
+  	fk_proprietario_livro int not null,
+  	fk_isbn bigint,
+  	estado_conservacao VARCHAR(8)
+);
+
+-- <<<<<<<<  CHAVES ESTRANGEIRAS  >>>>>>>>
+ALTER TABLE usuario ADD FOREIGN KEY (fk_endereco) REFERENCES endereco (cep);
+
+ALTER TABLE endereco ADD FOREIGN KEY (fk_usuario_id) REFERENCES usuario (id_usuario);
+
+ALTER TABLE biblioteca ADD FOREIGN KEY (fk_usuario_id) REFERENCES usuario (id_usuario);
+ALTER TABLE biblioteca ADD FOREIGN KEY (fk_livro_isbn) REFERENCES livro (isbn);
+
+ALTER TABLE solicitacao ADD FOREIGN KEY (fk_usuario_id) REFERENCES usuario(id_usuario);
+ALTER TABLE solicitacao ADD FOREIGN KEY (fk_biblioteca_id) REFERENCES biblioteca(id_biblioteca);
+
+ALTER TABLE registro_trocas ADD FOREIGN KEY (fk_solicitador_id) REFERENCES usuario(id_usuario);
+ALTER TABLE registro_trocas ADD FOREIGN KEY (fk_proprietario_livro) REFERENCES usuario(id_usuario);
+ALTER TABLE registro_trocas ADD FOREIGN KEY (fk_solicitacao_id) REFERENCES usuario(id_usuario);
+ALTER TABLE registro_trocas ADD FOREIGN KEY (fk_isbn) REFERENCES livro (isbn);

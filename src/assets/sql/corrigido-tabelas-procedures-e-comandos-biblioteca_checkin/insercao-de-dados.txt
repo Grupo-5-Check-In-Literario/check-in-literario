@@ -1,0 +1,186 @@
+-- <<<<<<<<  INSERÇÃO DE DADOS  >>>>>>>>
+
+INSERT into usuario (nome, email, senha, tel_contato) VALUES
+	('Ana Silva','aninha@gmail.com','12345', 1112345678),
+	('Carlos Oliveira','carlos_o@gmail.com','12345', 2223456789),
+	('Maria Santos', 'mari@gmail.com','12345',3334567890),
+	('João Pereira', 'joaozinho@gmail.com','12345',4445678901),
+	('Fernando Lima','fernandinho@gmail.com','12345',5556789012),
+	('Ricardo Almeida','ricardo_a@gmail.com','12345',6667890123),
+	('Juliano Costa','juliano_costa@gmail.com','12345',7778901234),
+	('Pedro Souza','pedro@gmail.com','12345',8889012345),
+	('Beatriz Ferreira','beaah@gmail.com','12345',9990123456),
+	('Eduardo  santos', 'dudu@gmail.com','123451',1001234567),
+	('Izabel Pereira','belbel@gmail.com','12345',7101234567),
+	('Lucas Martins','lucas_martins@gmail.com','12345',0123456789),
+	('Bruno Costa','brunocosta1@gmail.com','12345',0234567890),
+	('Aline lima', 'aline@gmail.com','12345',0345678901),
+	('Camila Rocha','camilota@gmail.com','12345',0456789012);
+
+INSERT INTO endereco (cep, logradouro, numero, bairro, cidade, uf) VALUES
+	(12345678,'Rua A','123','Bairro A','Rio de Janeiro','RJ'),
+	(23456789,'Rua B','234','Bairro B','Minas Gerais','MG'),
+    (34567890,'Rua C','456','Bairro C','São Paulo','SP'),
+    (45678901,'Rua D','789','Bairro D','Rio de Janeiro','RJ'),
+    (56789012,'Rua E','890','Bairro E','Pernambuco','PE'),
+    (67890123,'Rua F','123','Bairro F','São Paulo','SP'),
+    (78901234,'Rua G','234','Bairro G','Pernambuco','PE'),
+    (89012345,'Rua H','345','Bairro H','Rio de Janeiro','RJ'),
+    (90123456,'Rua I','456','Bairro I','Minas Gerais','MG'),
+    (09876543,'Rua J','567','Bairro J','Pernambuco','PE'),
+    (65432109,'Rua K','789','Bairro K','Minas Gerais','MG'),
+    (54321098,'Rua L','890','Bairro L','Pernambuco','PE'),
+    (98765432,'Rua M','789','Bairro N','São Paulo','SP'),
+    (87654321,'Rua N','901','Bairro N','Rio de Janeiro','RJ'),
+    (76543210,'Rua O','012','Bairro O','Minas Gerais','MG');
+    
+-- Referenciando o usuario ao endereço --
+UPDATE endereco
+set fk_usuario_id = 1
+WHERE cep = 12345678;
+
+UPDATE endereco
+set fk_usuario_id = 2
+WHERE cep = 23456789;
+
+UPDATE endereco
+set fk_usuario_id = 3
+WHERE cep = 34567890;
+
+UPDATE endereco
+set fk_usuario_id = 4
+WHERE cep = 45678901;
+
+UPDATE endereco
+set fk_usuario_id = 5
+WHERE cep = 67890123;
+
+UPDATE endereco
+set fk_usuario_id = 6
+WHERE cep = 56789012;
+
+UPDATE endereco
+set fk_usuario_id = 7
+WHERE cep = 78901234;
+
+UPDATE endereco
+set fk_usuario_id = 8
+WHERE cep = 89012345;
+
+UPDATE endereco
+set fk_usuario_id = 9
+WHERE cep = 90123456;
+
+UPDATE endereco
+set fk_usuario_id = 10
+WHERE cep = 09876543;
+
+UPDATE endereco
+set fk_usuario_id = 11
+WHERE cep = 65432109;
+
+UPDATE endereco
+set fk_usuario_id = 12
+WHERE cep = 54321098;
+
+UPDATE endereco
+set fk_usuario_id = 13
+WHERE cep = 98765432;
+
+UPDATE endereco
+set fk_usuario_id = 14
+WHERE cep = 87654321;
+
+UPDATE endereco
+set fk_usuario_id = 15
+WHERE cep = 76543210;
+
+-- adicionando fk_endereco no usuario --
+UPDATE usuario
+set fk_endereco = 12345678
+WHERE id_usuario = 1;
+
+UPDATE usuario
+set fk_endereco = 23456789
+WHERE id_usuario = 2;
+
+UPDATE usuario
+set fk_endereco = 34567890
+WHERE id_usuario = 3;
+
+UPDATE usuario
+set fk_endereco = 45678901
+WHERE id_usuario = 4;
+
+UPDATE usuario
+set fk_endereco = 56789012
+WHERE id_usuario = 5;
+
+UPDATE usuario
+set fk_endereco = 67890123
+WHERE id_usuario = 6 ;
+
+UPDATE usuario
+set fk_endereco = 78901234
+WHERE id_usuario = 7;
+
+UPDATE usuario
+set fk_endereco = 89012345
+WHERE id_usuario = 8;
+
+UPDATE usuario
+set fk_endereco = 90123456
+WHERE id_usuario = 9;
+
+UPDATE usuario
+set fk_endereco = 09876543
+WHERE id_usuario = 10;
+
+UPDATE usuario
+set fk_endereco = 65432109
+WHERE id_usuario = 11;
+
+UPDATE usuario
+set fk_endereco = 54321098
+WHERE id_usuario = 12;
+
+UPDATE usuario
+set fk_endereco = 98765432
+WHERE id_usuario = 13;
+
+UPDATE usuario
+set fk_endereco = 87654321
+WHERE id_usuario = 14;
+
+UPDATE usuario
+set fk_endereco = 76543210
+WHERE id_usuario = 15;
+    
+INSERT into livro (titulo, ano, autor, editora, genero, isbn) VALUES
+	('Zilda Arns: Uma Biografia', 2018, 'Ernesto Rodrigues', 'Editora Rocco Ltda','Literatura brasileira', 9788569474340),
+	('A floresta dos cinco poderes', 2019, 'Cleyson Lima', 'Pandorga Editora e Produtora LTDA','Literatura brasileira',9788584423033),
+    ('Estrela da tarde', 2012, 'Manuel Bandeira', 'Grupo Editorial Globo','Literatura brasileira',9788526017023),
+    ('O cortiço', 2019, 'Aluisio Azevedo', 'Ciranda Cultural Editora e Distribuidora LTDA','Literatura brasileira', 9788594318831),
+    ('Uma janela em Copacabana', 2001, 'Luis Alfredo Garcia-Roza', 'Editora Schwarcz SA','Literatura brasileira',9788535901801),
+    ('BLACKOUT - VOL 02', 2022,'Chris Tex, Santtos', 'Japorama Editora e Comunicação Ltda','Quadrinhos', 9786555942019),
+    ('My Hero Academia - Vol 29', 2021,'Kohei Horikoshi', 'Japorama Editora e Comunicação Ltda', 'Quadrinhos', 9786555942194),
+    ('300 Capa Dura', 2022,'Franklyn Miller, Lynn Varley', 'Devir Livraria', 'Quadrinhos',9786555140699),
+    ('A Republica de Platão',2010, 'Platão','Editora Perspectiva Ltda', 'Ciencias Sociais', 9788527307673),
+    ('Historia do Pensamento Ocidental',2017,'Bertrand Russel','Editora Nova Fronteira Participações S/A','Ciencias Sociais',9788520936689),
+    ('Sociologia Geral',2011, 'Antonio Carlos Gil', 'Editora Atlas Ltda','Ciencias Sociais',9788522463688),
+    ('Cultura Popular Brasileira',2022, 'Alceu Maynard Araujo','Editora WMF Martins Fontes Ltda','Ciencias Sociais', 9788546903610),
+    ('Matemática Aplicada',1990, 'Oscar João Abdounur, Seiji Hariki', 'Saraiva Educação S. A','Tecnologia',9788502028029),
+    ('Robótica', 2013,'John J. Craig','Pearson Education do Brasil S.A','Tecnologia', 9788581431284),
+    ('Algebra linear e suas aplicações', 2018,'Lay, David C.; Lay, Steven R.; McDonald, Judi J','LTC - Livros Técnicos e Científicos Editora Ltda','Tecnologia',9788521634959);
+  
+INSERT Into biblioteca (fk_usuario_id, fk_livro_isbn, estado_conservacao, solicitado, vendido) VALUES
+	(1,9788502028029,'ÓTIMO', FALSE, FALSE),
+    (1,9786555140699,'BOM', FALSE, FALSE),
+    (3,9786555942019,'BOM', FALSE, FALSE),
+    (4,9788569474340,'BOM', FALSE, FALSE),
+    (5,9788581431284,'ÓTIMO', FALSE, FALSE),
+    (6,9788502028029,'REGULAR', FALSE, FALSE),
+    (7,9788520936689,'BOM', FALSE, FALSE),
+    (8,9788521634959,'REGULAR', FALSE, FALSE),
+    (11,9788522463688,'REGULAR', FALSE, FALSE),
+    (15, 9788527307673,'BOM', FALSE, FALSE);

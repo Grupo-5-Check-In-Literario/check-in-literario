@@ -1,0 +1,38 @@
+--  <<<<<<<< COMANDOS >>>>>>>>  --
+
+SELECT * from usuario;
+SELECT * from endereco;
+SELECT * from livro;
+SELECT * FROM biblioteca;
+select*from solicitacao;
+SELECT * from registro_trocas;
+
+
+--visualizando os livros que cada usuario possui.
+SELECT (fk_usuario_id,fk_livro_isbn) from biblioteca where fk_usuario_id = 1;
+SELECT (fk_usuario_id,fk_livro_isbn) from biblioteca where fk_usuario_id = 15;
+
+
+-- visualizando o nome do usuario e o livro registrado junto do isbn:
+SELECT biblioteca.id as id_biblioteca, 
+	usuario.id_usuario as id_do_usuario, 
+	usuario.nome as nome_do_usuario, 
+	livro.titulo as livro_registrado, 
+	biblioteca.solicitado
+from biblioteca INNER join usuario
+	on usuario.id_usuario = biblioteca.fk_usuario_id
+INNER join livro
+	on livro.isbn = biblioteca.fk_livro_isbn
+order by id_biblioteca;
+
+
+select biblioteca.fk_usuario_id 
+from biblioteca inner join solicitacao 
+on biblioteca.id_biblioteca = solicitacao.fk_biblioteca_id 
+where id_solicitacao = 1
+
+
+select biblioteca.estado_conservacao 
+from biblioteca inner join solicitacao 
+on biblioteca.id_biblioteca = solicitacao.fk_biblioteca_id 
+where id_solicitacao = 1

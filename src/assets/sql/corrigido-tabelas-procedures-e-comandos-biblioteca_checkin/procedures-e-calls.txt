@@ -1,0 +1,127 @@
+-- <<<<<<<<  PROCEDURES E CALLS  >>>>>>>>
+
+--   REGISTRAR UM LIVRO  --
+select * from biblioteca
+order by id_biblioteca;
+
+create or replace procedure registrar_livro (id_do_usuario int, isbn_do_livro BIGINT, estado_livro varchar) 
+as $$
+BEGIN 
+	INSERT INTO biblioteca (fk_usuario_id, fk_livro_isbn, estado_conservacao, solicitado, vendido) 
+	values 
+    (id_do_usuario, isbn_do_livro, estado_livro, FALSE, FALSE);
+end ;
+$$ language 'plpgsql';
+
+CALL registrar_livro(2, 9788521634959, 'REGULAR');
+
+
+
+
+--  SOLICITAR UM LIVRO  --
+SELECT biblioteca.id_biblioteca, 
+	usuario.id_usuario as id_do_usuario, 
+	usuario.nome as nome_do_usuario, 
+    livro.titulo as livro_registrado, 
+	biblioteca.solicitado
+from biblioteca INNER join usuario
+	on usuario.id_usuario = biblioteca.fk_usuario_id
+INNER join livro
+	on livro.isbn = biblioteca.fk_livro_isbn
+order by id_biblioteca;
+
+SELECT * FROM 
+solicitacao;
+
+SELECT biblioteca.id_biblioteca, 
+	usuario.id_usuario as id_do_usuario, 
+	usuario.nome as nome_do_usuario, 
+    livro.titulo as livro_registrado, 
+	biblioteca.solicitado
+from biblioteca INNER join usuario
+	on usuario.id_usuario = biblioteca.fk_usuario_id
+INNER join livro
+	on livro.isbn = biblioteca.fk_livro_isbn
+order by id_biblioteca;
+
+create or replace procedure solicitar_livro (id_do_usuario_solicitador int, id_da_biblioteca INT) 
+as $$
+BEGIN
+	INSERT into solicitacao (fk_usuario_id, fk_biblioteca_id, status)
+    values 
+    	(id_do_usuario_solicitador, id_da_biblioteca, 'PENDENTE');
+
+	UPDATE biblioteca 
+    SET solicitado = true
+    WHERE id_biblioteca = id_da_biblioteca;
+end ;
+$$ language 'plpgsql';
+
+call solicitar_livro(2, 8);
+
+
+
+--  CANCELAR SOLICITACAO  --
+SELECT * FROM 
+solicitacao;
+
+CREATE PROCEDURE cancelar_solicitacao(solicitacao_id int, cancelar BOOLEAN)
+as $$
+BEGIN
+	if cancelar = true then
+   		update solicitacao
+    		set status = 'CANCELADO'
+    		where id_solicitacao = solicitacao_id;
+        
+    		update biblioteca
+    		set solicitado = FALSE
+    		where id_biblioteca = (select solicitacao.fk_biblioteca_id from solicitacao  where id_solicitacao = solicitacao_id);
+    end if;    
+end ;
+$$ language 'plpgsql';
+
+call cancelar_solicitacao(1, true);
+
+
+
+--  RESPOSTA À SOLICITACAO  --
+SELECT * FROM 
+solicitacao;
+
+CREATE or replace PROCEDURE resposta_solicitacao(solicitacao_id int,resposta boolean)
+as $$
+BEGIN
+	if resposta = false THEN
+    	update solicitacao
+        set status = 'RECUSADO'
+        where id_solicitacao = solicitacao_id;
+        
+        update biblioteca
+        set solicitado = FALSE
+        where biblioteca.id_biblioteca = (select solicitacao.fk_biblioteca_id from solicitacao where id_solicitacao = solicitacao_id);
+        
+    ELSE
+    	update solicitacao
+        set status = 'TROCADO'
+        where id_solicitacao = solicitacao_id;
+        
+        update biblioteca
+        set vendido = true
+        where biblioteca.id_biblioteca = (select solicitacao.fk_biblioteca_id from solicitacao where id_solicitacao = solicitacao_id);
+        
+       	 insert into registro_trocas (fk_solicitacao_id, fk_solicitador_id, fk_proprietario_livro, fk_isbn, estado_conservacao)
+        	VALUES
+            	(
+              		(select solicitacao.id_solicitacao from solicitacao where id_solicitacao = solicitacao_id),
+             		(select solicitacao.fk_usuario_id from solicitacao where id_solicitacao = solicitacao_id),
+              		(select biblioteca.fk_usuario_id from biblioteca inner join solicitacao on biblioteca.id_biblioteca = solicitacao.fk_biblioteca_id where id_solicitacao = solicitacao_id),
+              		(select biblioteca.fk_livro_isbn from biblioteca inner join solicitacao on biblioteca.id_biblioteca = solicitacao.fk_biblioteca_id where id_solicitacao = solicitacao_id),
+              		(select biblioteca.estado_conservacao from biblioteca inner join solicitacao on biblioteca.id_biblioteca = solicitacao.fk_biblioteca_id where id_solicitacao = solicitacao_id)
+            	);
+        
+    end if;
+end ;
+$$ language 'plpgsql';
+
+
+call resposta_solicitacao(1 , true);

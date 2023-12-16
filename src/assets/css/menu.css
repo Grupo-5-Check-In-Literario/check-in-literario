@@ -105,7 +105,6 @@ header {
         position: absolute;
         top: 8px;
         right: 20px;
-        z-index: 1;
         flex-direction: column;
         
     }
@@ -127,79 +126,3 @@ header {
         gap: 20px;
 	}
   }
-
-.box-alerta{
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    background-color: rgba(52, 52, 50, 0.749);
-    opacity: 1;
-    animation-duration: 1s;
-	animation-name: lento;
-}
-
-.alerta-saida{
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    max-width: 429px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: -webkit-linear-gradient(top right,  #031f3f 0%,#305a72 40%,#4d83a1 60%,#7bc3f7 100%);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}
-
-.alerta-saida img{
-    max-width: 180px;
-}
-
-.alerta-saida .saida-msg{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.alerta-saida .saida-msg h3{
-    color: #f7bd53;
-}
-
-.alerta-saida .saida-msg p, .alerta-saida .saida-msg a{
-    color: var(--primary-color);
-    font-family: var(--font-pinyon);
-    text-align: center;
-}
-
-.alerta-saida .saida-msg a{
-    padding: 5px;
-    width: 50px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.sim{background-color: var(--bg-green);
-    margin-right: 15px;}
-.sim:hover{background-color: var(--tertiary-color);}
-
-.nao{background-color: #b46161;}
-.nao:hover{background-color: #b11212;}
-
-.escondido{
-    display: none;
-}
-
-@keyframes lento{
-    from {opacity: 0;}
-    to{opacity: 1;}
-}

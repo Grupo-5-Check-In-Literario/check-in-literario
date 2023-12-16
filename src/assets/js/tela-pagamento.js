@@ -18,6 +18,14 @@ let confirmarDados = {
     nomeUf: false,
 }
 
+function limparCampos() {
+
+    logradouro.value = "";
+    bairro.value = "";
+    cidade.value = "";
+    uf.value = "";
+}
+
 //validando os campos
 logradouro.addEventListener('blur', (e) => {
     if (logradouro.value.trim() == '') {
@@ -41,6 +49,7 @@ cep.addEventListener('blur', (e) => {
          console.log(userCep.value)
      } else {
          e.preventDefault()
+         limparCampos();
          errorMsg[1].style.display = 'block';
          userCep.classList.add('error');
          confirmarDados.numCep = false;
@@ -105,7 +114,7 @@ const getCep = async (cep) => {
    
     //mostrar erro e resetar form
     if(data.erro === true){
-        // form.reset();
+        limparCampos();
         alert('Cep inválido, tente novamente.'); 
         return;
     }

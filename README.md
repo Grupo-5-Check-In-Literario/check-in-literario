@@ -13,7 +13,7 @@ Check-In Literário é um portal online dedicado à troca de livros entre usuár
 - Página de solicitação dos livros;
 - Página de Quem Somos,com um pouco sobre os fundadores do site e onde encontrá-los nas redes LinkedIn e GitHub.
 
-###Tecnologias usadas:
+## Tecnologias usadas
 - HTML
 - CSS
 - JavaScript 

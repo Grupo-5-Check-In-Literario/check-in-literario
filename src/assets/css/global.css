@@ -43,9 +43,13 @@
 	list-style: none;
 }
 
-h1{font-size: var(--h1-font-size);}
+h1{	font-size: var(--h1-font-size);}
 h2{font-size: var(--h2-font-size);}
 h3{font-size: var(--h3-font-size);}
+
+h1,h2,h3{
+	font-family: var(--font-pinyon);
+}
 
 button {
 	text-align: center;

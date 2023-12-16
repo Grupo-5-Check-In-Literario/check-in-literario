@@ -66,13 +66,18 @@ header .header-box .navbar {
 }
 
 .nav-items a {
-	/* padding: 14px 20px; */
 	color: var(--primary-color);
 	transition: 0.3s ease-in-out;
 	text-decoration: none;
-	font-family: var(--font-pinyon);
+	font-family: var(--font-architects);
 	font-size: var(--small-font-size);
 	text-transform: uppercase;
+}
+
+@media(max-width: 1024px){
+	.nav-items a{
+		font-size: 20px;
+	}
 }
 
 .nav-items a:hover {
@@ -209,7 +214,7 @@ button {
 .user-text span {
 	display: block;
 	color: white;
-	font-size: var(--default-font-size);
+	font-size: 'Architects Daughter', cursive;
 }
 
 .user-text small {

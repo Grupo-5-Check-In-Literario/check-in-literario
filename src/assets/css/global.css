@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kalam&family=Pinyon+Script&display=swap');
+
 :root {
 	/* Cores */
 	--primary-color: #fff;
@@ -14,6 +16,7 @@
 	/* Fontes */
 	--font-inter: "Inter", sans-serif;
 	--font-pinyon: "Pinyon Script", cursive;
+	--font-architects: 'Architects Daughter', cursive;
 
 	/* Tamanhos de Fonte */
 	--small-font-size: 14px;
@@ -58,7 +61,7 @@ h2{font-size: var(--h2-font-size);}
 h3{font-size: var(--h3-font-size);}
 
 h1,h2,h3{
-	font-family: cursive;
+	font-family: var(--font-architects);
 }
 
 button {
@@ -137,17 +140,20 @@ img {
     gap: 20px;
 }
 
-.alerta-saida .saida-msg h3{
+.alerta-saida .saida-msg h2{
     color: #b46161;
 }
 
-.alerta-saida .alerta-msg h3{
+.alerta-saida .alerta-msg h2{
     color: #f7bd53;
 }
 
+.alerta-saida p{
+	font-size: 18px;
+}
 .alerta-saida p, .alerta-saida a{
     color: var(--primary-color);
-    font-family: cursive;
+    font-family: 'Architects Daughter', cursive;
     text-align: center;
 }
 

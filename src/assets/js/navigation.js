@@ -4,7 +4,7 @@ mensagemAlerta.innerHTML = `
     <div class="alerta-saida ">
       <img src="./src/assets/images/logo-duvida.png" alt="logo de alerta" />
       <div class="saida-msg">
-        <h3>SAIR?</h3>
+        <h2>SAIR?</h2>
         <p>Tem certeza que deseja sair?</p>
         <div class="buttons-resposta">
           <a href="./login.html" class="sim">SIM</a>

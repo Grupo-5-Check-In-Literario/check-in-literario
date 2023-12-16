@@ -92,7 +92,7 @@ header {
         flex-direction: column;
         justify-content: center;
         padding: 20px;
-        width: 190px;
+        width: 240px;
         background-color: var(--secondary-color);
         opacity: 0.8;
         border-bottom-left-radius: 5px;
@@ -103,13 +103,12 @@ header {
     }
     .navbar{
         position: absolute;
-        top: 8px;
+        top: 5px;
         right: 20px;
         flex-direction: column;
-        
     }
     .navbar nav .nav-items a{
-        text-align: center;
+        font-size: 30px;
     }
 }
 

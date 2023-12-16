@@ -11,8 +11,7 @@ let inputsLoginCorretos = {
     emailLogin: false,
     senhaLogin: false
 }
-
-
+let mensagemAlerta = document.querySelector('.box-alerta');
 
 function estilizarInputIncorreto(input, helper, imagem){
     input.classList.remove('correct')
@@ -56,10 +55,21 @@ btnSubmitLogin.addEventListener(("click"), (e) =>{
         e.preventDefault()
         estilizarInputIncorreto(emailLogin, emailLoginErro, imgLoginErro)
         emailLoginErro.innerText = 'O email deve conter "@" e ".com".'
+        msgAlert()
         
     }else if( inputsLoginCorretos.senhaLogin == false){
         e.preventDefault()
         estilizarInputIncorreto(senhaLogin, senhaLoginErro, imgSenhaErro)
         senhaLoginErro.innerText = 'Por favor, insira uma senha de, no mínimo, 6 caracteres.'
+        msgAlert()
     }
 })
+
+function msgAlert(){
+    mensagemAlerta.classList.toggle('escondido')
+  }
+  let linkOk = document.querySelector('.ok')
+  linkOk.addEventListener('click', (e) =>{
+    e.preventDefault()
+    msgAlert()
+  })

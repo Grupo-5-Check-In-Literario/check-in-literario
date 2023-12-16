@@ -1,5 +1,6 @@
 .hero{
 	background-color: var(--bg-card-green);
+	position: relative;
 }
 
 .hero .hero-box{
@@ -13,6 +14,7 @@
 .hero .hero-box .thumb{
 	text-align: center;
 	color: var(--secondary-color);
+	animation: var(--da-esquerda) 3s;
 }
 
 .hero .hero-box .thumb span{
@@ -24,6 +26,8 @@
 .hero .hero-box .thumb-image{
 	border-radius: 50px;
 	height: auto;
+	transform: translateX(0);
+	animation: var(--da-direita) 3s;
 }
 
 @media(max-width:1170px){
@@ -45,13 +49,77 @@
 }
 
 .intro .intro-box .intro-title{
-	color: var(--tertiary-color);
+	color: var(--primary-color);
 	text-align: center;
+	position: relative;
+	max-width: 650px;
+	min-height: 80px;
+	padding: 15px 80px 15px 15px;
+	background-color: var(--bg-green);
+	animation: var(--da-direita);
+	animation-timeline: view();
+	animation-range: cover 0% cover 60%;
+}
+
+.intro-title::before{
+	content: "";
+	position: absolute;
+	background-color: rgb(223, 204, 34);
+	bottom: 0px;
+	left: -10px;
+	width: 10px;
+	height: 80px;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+	border-right: 2px dashed var(--primary-color);
+}
+
+.intro-title::after{
+	content: "";
+	position: absolute;
+	background-color: var(--primary-color);
+	bottom: 12px;
+	right: -28px;
+	padding: 28px;
+	transform: rotate(45deg);
+}
+
+@media(max-width: 597px){
+	.intro .intro-box{
+		gap: 10px;
+	}
+	.intro .intro-box .intro-title {
+		padding-right: 15px;
+		color: var(--thumb-span-color);
+		background-color: transparent;
+	}
+	.intro-title::after{
+		padding: 0;
+	}
+	.intro-title::before{
+		height: 0;
+	}
+	.intro-box::after{
+		content: "";
+		width: 400px;
+		height: 400px;
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		background-image: url(../images/fundo-logo3.png);
+		background-size: cover;
+		opacity: 0.15;
+	}
 }
 
 .intro .intro-box .intro-description{
 	text-align: center;
 	max-width: 1010px;
+	opacity: 1;
+	animation: var(--da-esquerda);
+	animation-timeline: view();
+	animation-range: cover 0% cover 60%;
 }
 
 .intro .intro-box .intro-description strong{
@@ -72,6 +140,7 @@
 	bottom: 40px;
 	margin: 0 auto;
 	max-width: 474px;
+	z-index: 1;
 }
 .como-funciona h1{
 	font-size: var(--h1-font-size);
@@ -129,16 +198,27 @@
 
 .step-card-odd.one{
 	align-self: flex-start;
+	animation: var(--para-esquerda);
+	animation-timeline: view();
+	animation-range: cover 0% cover 30%;
 }
 .step-card-odd.three{
 	align-self: flex-end;
-	/* margin-top: 6rem; */
+	animation: var(--para-direita);
+	animation-timeline: view();
+	animation-range: cover 0% cover 30%;
 }
 .step-card-even.four{
 	align-self: flex-end;
+	animation: var(--para-direita);
+	animation-timeline: view();
+	animation-range: cover 0% cover 30%;
 }
 .step-card-even.six{
 	align-self: flex-start;
+	animation: var(--para-esquerda);
+	animation-timeline: view();
+	animation-range: cover 0% cover 30%;
 }
 
 @media(max-width: 390px){
@@ -191,12 +271,27 @@
 .reviews-section {
 	padding: 90px 0;
 	text-align: center;
+	animation: var(--surgir-lento);
+	animation-timeline: view();
+	animation-range: cover 0% cover 30%;
 }
 
 .reviews-section h1{
 	padding: 90px 0 110px 0;
 	text-align: center;
 	color: var(--secondary-color);
+	position: relative;
+}
+
+.reviews-section h1::after{
+	content: "";
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	background-image: url(../images/fundo-logo.png);
+	background-size: cover;
+	bottom: -5px;
+	right: calc(50% - 50px);
 }
 
 .reviews-grid {

@@ -2,9 +2,9 @@ let linkSair = document.getElementById('sair');
 let mensagemAlerta = document.querySelector('.box-alerta');
 mensagemAlerta.innerHTML = `
     <div class="alerta-saida ">
-      <img src="./src/assets/images/logo-alerta.png" alt="logo de alerta" />
+      <img src="./src/assets/images/logo-duvida.png" alt="logo de alerta" />
       <div class="saida-msg">
-        <h3>SAIR</h3>
+        <h3>SAIR?</h3>
         <p>Tem certeza que deseja sair?</p>
         <div class="buttons-resposta">
           <a href="./login.html" class="sim">SIM</a>

@@ -2,6 +2,7 @@ header{
 	background-color: var(--secondary-color);
 	margin: 0 auto;
 	transition: all;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 header .header-box{
@@ -133,11 +134,12 @@ header .header-box .navbar {
 		width: 100%;
 		display: flex;
 		background-color: var(--secondary-color);
-		max-width: 420px;
+		max-width: 450px;
 		top: 65px;
 		right: 0;
 		left: 0;
 		padding: 5px 15px 10px;
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 		
 	}
 	.header-box .navbar input:checked ~ .nav-items{

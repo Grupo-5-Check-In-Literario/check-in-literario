@@ -8,9 +8,7 @@ main{
 h1{
     padding: 50px 0;
     color: var(--primary-color);
-    font-family: var(--font-inter);
     font-size: 36px;
-    font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
@@ -23,8 +21,6 @@ h1{
 }
 
 .person{
-    /* width: 100%; */
-  
     padding: 20px 10px;
     margin: 30px 10px;
     display: flex;
@@ -39,7 +35,9 @@ h1{
     max-height: 280px;
     flex-shrink: 0;
     border-radius: 50%;
+    transition: all 1s ease-in-out;
 }
+
 .container h2{
     margin: 8px;
     color: var(--primary-color);
@@ -58,8 +56,6 @@ h1{
    display: flex;
    margin-top: 15px;
    gap: 10px;
-    /* width: auto;
-    height: auto; */
 }
 
 .contact-button button{

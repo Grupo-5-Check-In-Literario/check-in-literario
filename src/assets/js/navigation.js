@@ -1,12 +1,31 @@
-let linkSair = document.getElementById('sair')
+let linkSair = document.getElementById('sair');
+let mensagemAlerta = document.querySelector('.box-alerta');
+mensagemAlerta.innerHTML = `
+    <div class="alerta-saida ">
+      <img src="./src/assets/images/logo-alerta.png" alt="logo de alerta" />
+      <div class="saida-msg">
+        <h3>SAIR</h3>
+        <p>Tem certeza que deseja sair?</p>
+        <div class="buttons-resposta">
+          <a href="./login.html" class="sim">SIM</a>
+          <a href="#" class="nao">NÃO</a>
+        </div>
+      </div>
+    </div>
+`;
+
+function msgAlert(){
+  mensagemAlerta.classList.toggle('escondido')
+}
 
 linkSair.addEventListener('click', (e) =>{
-  let alertaSaida = confirm('Tem certeza que deseja sair?')
-  if (!alertaSaida){
-    e.preventDefault()
-  }else{
-    alert("Até a próxima!")
-  }
+  e.preventDefault()
+  msgAlert()
+})
+let linkNao = document.querySelector('.nao')
+linkNao.addEventListener('click', (e) =>{
+  e.preventDefault()
+  msgAlert()
 })
 
 //Todas as requisições da barra de busca ficam nesse .js
@@ -91,5 +110,8 @@ function showBook(items) {
 var sendParams = function(valor){
   window.location = "catalogo.html?"+valor;
 };
+
+// criação de resposta antes de sair 
+
 
 export {bookApi, sendParams};

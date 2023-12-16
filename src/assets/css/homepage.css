@@ -17,6 +17,7 @@
 
 .hero .hero-box .thumb span{
 	font-size: var(--h1-font-size);
+	font-family: var(--font-pinyon);
 	color: var(--thumb-span-color);
 }
 

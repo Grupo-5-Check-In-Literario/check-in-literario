@@ -168,12 +168,6 @@ main {
     }
 }
 
-@media(max-width:420px){
-    header{
-        height: 120px;
-    }
-}
-
 #resultado-pesquisa{
     color: var(--primary-color);
 }

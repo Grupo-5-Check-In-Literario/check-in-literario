@@ -27,7 +27,7 @@
 	border-radius: 50px;
 	height: auto;
 	transform: translateX(0);
-	animation: var(--da-direita) 3s;
+	animation: var(--da-esquerda) 3s;
 }
 
 @media(max-width:1170px){
@@ -101,8 +101,8 @@
 	}
 	.intro-box::after{
 		content: "";
-		width: 400px;
-		height: 400px;
+		width: 360px;
+		height: 360px;
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -140,7 +140,6 @@
 	bottom: 40px;
 	margin: 0 auto;
 	max-width: 474px;
-	z-index: 1;
 }
 .como-funciona h1{
 	font-size: var(--h1-font-size);

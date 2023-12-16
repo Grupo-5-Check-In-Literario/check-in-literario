@@ -5,15 +5,13 @@
 ## Descrição
 
 Check-In Literário é um portal online dedicado à troca de livros entre usuários. O projeto tem como objetivo fomentar a cultura da leitura e oferecer uma plataforma segura e eficiente para a troca de livros usados. No site podemos encontrar: 
-- Homepage: com informações principais sobre o projeto;
-- Páginas de login e cadastro do usuário na plataforma;
+- Homepage com informações principais sobre o projeto;
+- Página de login e cadastro do usuário na plataforma;
 - Página de pefil do usuário, com informações sobre cadastro e solicitações de livro;
-- Página de edição do perfil do usuário;
 - Uma página de catálogo dos livros na plataforma;
-- A página de compra/troca dos livros;
-- A página de Quem Somos, um pouco sobre os fundadores do site;
-- E a página para entrar em contato com os fundadores do site
-
+- Página de detalhes e comentários sobre o livro;
+- Página de solicitação dos livros;
+- Página de Quem Somos,com um pouco sobre os fundadores do site e onde encontrá-los nas redes LinkedIn e GitHub.
 
 Layout do projeto: 
 <br>

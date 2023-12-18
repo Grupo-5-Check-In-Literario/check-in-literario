@@ -58,6 +58,10 @@ p#email {
     text-decoration-line: underline;
 }
 
+p#user-coins{
+    padding-bottom: 10px;
+}
+
 .user-data {
     display: flex;
     flex-direction: column;

@@ -2,8 +2,7 @@
 
  <img src="./design/imgs/image-7.png" width="1200"/>
 
-[![Vídeo de Apresentação]
-()](https://youtu.be/-HAkIxei8OM?si=DAUO8tVIQLYtNrrB)
+[![Vídeo de Apresentação](https://www.youtube.com/watch?v=-HAkIxei8OM&t=1s)](https://youtu.be/-HAkIxei8OM?si=DAUO8tVIQLYtNrrB)
 
 ## Descrição
 

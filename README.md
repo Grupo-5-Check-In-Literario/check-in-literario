@@ -5,7 +5,7 @@
 # Vídeo de Apresentação
 
 <div style="display: flex; justify-content: center;">
-  <a href="https://youtu.be/-HAkIxei8OM?si=DAUO8tVIQLYtNrrB">
+  <a href="https://youtu.be/-HAkIxei8OM?si=DAUO8tVIQLYtNrrB" target="_blank">
     <img src="https://i.ytimg.com/an_webp/-HAkIxei8OM/mqdefault_6s.webp?du=3000&sqp=CL-ki6wG&rs=AOn4CLDLm-8ez92_6ze9aq48iVcrMzDB0w" alt="Vídeo de Apresentação" style="max-width: 100%;">
   </a>
 </div>

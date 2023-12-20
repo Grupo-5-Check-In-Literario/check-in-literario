@@ -2,7 +2,7 @@
 
  <img src="./design/imgs/image-7.png" width="1200"/>
 
-[![Vídeo de Apresentação](https://www.youtube.com/watch?v=-HAkIxei8OM&t=1s)](https://youtu.be/-HAkIxei8OM?si=DAUO8tVIQLYtNrrB)
+[![Vídeo de Apresentação]([https://www.youtube.com/watch?v=-HAkIxei8OM&t=1s](https://i.ytimg.com/an_webp/-HAkIxei8OM/mqdefault_6s.webp?du=3000&sqp=CL-ki6wG&rs=AOn4CLDLm-8ez92_6ze9aq48iVcrMzDB0w))](https://youtu.be/-HAkIxei8OM?si=DAUO8tVIQLYtNrrB)
 
 ## Descrição
 
@@ -30,5 +30,4 @@ https://www.figma.com/file/1OiB6BwICLu9lfjWCyiKuY/Main?type=design&node-id=0-1&m
 - Jeovan Delavechea - https://github.com/jeovan-delavechea
 - Patricia Taha - https://github.com/patytaha123
 - Taise Souza - https://github.com/TaiseSouza92
-- Caio Daniel -
-https://github.com/Caio2a7
+- Caio Daniel - https://github.com/Caio2a7
